@@ -13,5 +13,7 @@ public class Problem3 {
         float area;
         area=(length*breadth);
         System.out.println("The area of the rectangle is "+area);
+        input.close();
     }
 }
+
