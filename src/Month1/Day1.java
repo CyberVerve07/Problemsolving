@@ -1,3 +1,5 @@
+package Month1;
+
 public class Day1 {
     public static void main(String[] args) {
         //byte//short//int

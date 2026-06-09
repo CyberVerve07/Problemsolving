@@ -1,3 +1,5 @@
+package Month1;
+
 import java.util.Scanner;
 //code for using airthmatix operators
 public class Day4 {
