@@ -1,9 +1,8 @@
-package Practice1;
+package loops;
 
-public class Problem7 {
+public class code1 {
     public static void main(String[] args) {
         for (int i=1;i<=10;i++){
-            
             System.out.println(i);
         }
     }
