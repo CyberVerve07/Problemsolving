@@ -6,7 +6,7 @@ public class Day9 {
     public static void main(String[] args) {
         //Types of variables in java
         Day9 obj=new Day9();//object ya heap ma hoga
-        Day9 onj2 = new Day9();
+    //    Day9 onj2 = new Day9();
         int a=6;
         System.out.println(a);
         System.out.println(Day9.a);
