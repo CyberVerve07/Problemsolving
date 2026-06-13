@@ -16,9 +16,8 @@ class Day11 {
         System.out.println(x);
     }
 
-    static void addtwoNumbers(int a, int b) {
-        int sum;
-        sum = a + b;
+    static void addtwoNumbers(int a, int b ) {
+        int sum = a + b;
         System.out.println("The sum of a and b is" + sum);
 
 //
@@ -28,8 +27,6 @@ class Day11 {
         int res = 0;
         for (int i : arr) {
             res += i;
-
-
         }
         return res;
     }
