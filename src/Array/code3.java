@@ -13,15 +13,16 @@ public class code3 {
     }
 
     static void add() {
-        int arr[] = {10, 10};
+        int[] arr = {10, 10};
         int n = arr.length;
         for (int i = 0; i <= n - 1; i++) {
             System.out.println(arr[i]);
+            int val=arr[i];
             int sum = 0;
-            sum = sum + arr[i];
+            sum = sum +val;
+            System.out.println(sum);
         }
 
-        System.out.println("The of the the elements of array is " );
 
 
 }
