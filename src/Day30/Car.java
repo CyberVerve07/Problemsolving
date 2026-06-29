@@ -1,0 +1,12 @@
+package Day30;
+
+public class Car {
+    public String carName;
+    public  int carModel;
+    public  int manuFacture;
+
+      //constructor
+    Car(){
+        System.out.println("Car is Start");
+    }
+}

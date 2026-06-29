@@ -5,6 +5,12 @@ public class Dav {
   public String name;
    public int  age;
    public int  rollNo;
+   private String gf;
+
+   //getters or setters
+    public String getName(){
+        return this.name;
+    }
 
     //Constructor
    public Dav() {
@@ -12,8 +18,8 @@ public class Dav {
    }
 
         //Parameterized constructor:
-     public Dav(String name, int age, int rollNo) {
-         this.name = name;
+     public Dav(String name, int age, int rollNo,String gf) {
+         this.name = name;  //
          this.age = age;
          this.rollNo = rollNo;
      }
@@ -29,6 +35,12 @@ public class Dav {
      }
      void  bunk(){
          System.out.println(name+"he is into bunk ");
+     }
+     void lunch(){
+         System.out.println(name+"Eating lunch");
+     }
+     private  void gfChatting(){
+         System.out.println(name+"Bro is chatting ");
      }
 
 
