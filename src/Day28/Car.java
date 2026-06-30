@@ -1,4 +1,4 @@
-package Day30;
+package Day28;
 
 public class Car {
     public String carName;

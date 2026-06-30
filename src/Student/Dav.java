@@ -26,7 +26,7 @@ public class Dav {
 
      //Methods
     void  study(){
-        System.out.println(name+"Study");
+        System.out.println(name+"Problems.Study");
     }
     //Method2
      void  sleep(){
