@@ -7,7 +7,7 @@ public class Bike extends  Vehicle{
     Bike(String name,int number,int model,String company,int price,String handel){
 
 
-        //USe super keywors
+        //USe super keyword
         super(name,number,model,company,price,handel);
         this.price=price;
         this.handel=handel;
@@ -16,6 +16,10 @@ public class Bike extends  Vehicle{
 
     }
     public  void stopBike(){
-        System.out.println("Bike is Stop "+name);
+        System.out.printf("Bike is Stop \n "+name,model);
+
+    }
+    public  void  openTank(){
+        System.out.printf("Open fuel tank \n"+name,model);
     }
 }

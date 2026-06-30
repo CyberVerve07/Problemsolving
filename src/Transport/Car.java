@@ -13,7 +13,7 @@ public class Car  extends  Vehicle{
           this.transMissiontype=transMissiontype;
       }
       void  startCar(){
-          System.out.println("Car is Start ");
+          System.out.printf( "Car is Start  \n"+name ,model);
 
           super.start();
 

@@ -6,13 +6,13 @@ public class Vehicle {
     public int model;
     public String company;
      //Default Constructor
-    Vehicle(){
+    Vehicle(){ //default constructor
 
     }
 
     //
-    Vehicle(String name, int number, int model, String company){ //Constructor Parameterized
-    //This rederence current instance
+    Vehicle(String name, int number, int model, String company){ //Constructor Parameterized for car
+    //This reference current instance
        this.name=name;
        this.model=model;
        this.number=number;
@@ -21,6 +21,17 @@ public class Vehicle {
     }
 
     public Vehicle(String name, int number, int model, String company, int price, String handel) {
+       //for Bike
+        this.name=name;
+        this.model=model;
+        this.number=number;
+        this.company=company;
+    }
+    public Vehicle(String name,int number,int model,String company,String Driver,String Condition){
+        this.name=name;
+        this.model=model;
+        this.number=number;
+        this.company=company;
     }
 
     void  start(){
