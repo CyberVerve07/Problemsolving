@@ -5,7 +5,7 @@ public class code11 {
         int arr[]={10,303,40,30,4,8};
         int smallestElement=arr[0];
         //For loop
-        for (int i=1;i<=arr.length;i++){
+        for (int i=1;i<arr.length;i++){
             if (arr[i]<smallestElement) {
 
                 smallestElement = arr[i];
