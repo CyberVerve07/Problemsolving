@@ -1,4 +1,4 @@
-package BankAccount;
+package Oops.BankAccount;
 
 public class Details {
     private String name;

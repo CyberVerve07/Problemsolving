@@ -10,7 +10,7 @@ public class Vehicle {
 
     }
 
-    //
+    //Parameter
     Vehicle(String name, int number, int model, String company){ //Constructor Parameterized for car
     //This reference current instance
        this.name=name;
@@ -37,6 +37,7 @@ public class Vehicle {
     void  start(){
            System.out.println("Vehicle is Start"+name);
        }
+
 
          void stop(){
              System.out.println("Vehicle is Stop"+name);

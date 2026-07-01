@@ -1,4 +1,4 @@
-package Day27;
+package Month1.Day27;
 import java.util.Arrays;
 
     //Write a program that takes an array of strings (e.g., {"apple", "banana", "cherry"}) and

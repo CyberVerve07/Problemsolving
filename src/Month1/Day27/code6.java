@@ -1,4 +1,4 @@
- package Day27;
+ package Month1.Day27;
 import java.util.Scanner;
 
  class ArraySum {
