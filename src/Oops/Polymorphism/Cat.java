@@ -1,7 +1,8 @@
 package Oops.Polymorphism;
 
 // Subclass overriding the parent class method
-public class Cat extends Animal {
+public class
+Cat extends Animal {
 
     // Overriding the sound method
     @Override
