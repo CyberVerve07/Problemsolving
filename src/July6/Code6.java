@@ -7,7 +7,7 @@ public class Code6 {
         for (int i = str.length() - 1; i >= 0; i--) {
             reversed += str.charAt(i);
         }
-
+// Reverse a String::
         System.out.println("Reversed: " + reversed);
     }
 }
