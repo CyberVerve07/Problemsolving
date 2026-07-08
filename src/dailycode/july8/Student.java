@@ -1,27 +1,6 @@
 package dailycode.july8;
 
 public class Student {
-    ///*
-    //Question 1: Student Management
-    //
-    //Create a Student class.
-    //
-    //Private Variables:
-    //- name
-    //- age
-    //- marks
-    //
-    //Methods:
-    //- Constructor
-    //- Getters & Setters
-    //
-    //Conditions:
-    //- Age > 0
-    //- Marks must be between 0 and 100.
-    //
-    //Create object in main() and print all details.
-    //*/
-
     private String name;
     private int age;
     private int marks;
@@ -52,7 +31,6 @@ public class Student {
             System.out.println("Invalid age! Age must be greater than 0.");
         }
     }
-
     public int getMarks() {
         return marks;
     }
