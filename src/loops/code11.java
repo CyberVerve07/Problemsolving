@@ -1,6 +1,6 @@
 package loops;
 import java.util.*;
-public class Code11 {
+class Code11 {
     public static void main(String[] args) {
         System.out.println("Enter the Posstive number");
         Scanner sc=new Scanner(System.in);

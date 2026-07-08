@@ -1,6 +1,6 @@
 package loops;
 
-public class Code14 {
+class Code14 {
     //printing statement
     //for each row
     public static void main(String[] args) {

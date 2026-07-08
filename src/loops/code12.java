@@ -1,6 +1,5 @@
 package loops;
-
-public class Code12 {
+class Code12 {
     public static void main(String[] args) {
         //code of pattern printing
         int n=3;

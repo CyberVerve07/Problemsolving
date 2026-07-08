@@ -2,7 +2,7 @@ package loops;
 
 import java.util.Scanner;
 
-public class Code20 {
+class Code20 {
     public static void main(String[] args) {
 
 

@@ -1,6 +1,6 @@
 package loops;
 
-public class Code17 {
+class Code17 {
     //solid rombhus patern
     public static void main(String[] args) {
 
