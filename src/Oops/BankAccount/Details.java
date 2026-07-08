@@ -1,4 +1,4 @@
-package Oops.BankAccount;
+package oops.bankaccount;
 
 public class Details {
     private String name;

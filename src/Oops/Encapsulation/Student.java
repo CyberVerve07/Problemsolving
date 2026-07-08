@@ -1,4 +1,4 @@
-package Oops.Encapsulation;
+package oops.encapsulation;
 
 // Class student ::
 public class Student {

@@ -1,6 +1,6 @@
-package Array;
+package array;
 
-public class code10 {
+public class Code10 {
     //2d array
     public void main(String[] args) {
 

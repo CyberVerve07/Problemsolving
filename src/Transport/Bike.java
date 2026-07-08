@@ -1,4 +1,4 @@
-package Transport;
+package transport;
 
 public class Bike extends  Vehicle{
     public int price;

@@ -1,4 +1,4 @@
-package Oops.Polymorphism;
+package oops.polymorphism;
 
 // Class demonstrating Compile-time Polymorphism (Method Overloading)
 public class MathOperation {

@@ -1,4 +1,4 @@
-package Oops.Abstraction;
+package oops.abstraction;
 
 // Concrete class extending the abstract class
 public class Dog extends Animal {

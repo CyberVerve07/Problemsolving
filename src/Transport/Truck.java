@@ -1,4 +1,4 @@
-package Transport;
+package transport;
 
 public class Truck extends Vehicle{
     public String Driver;

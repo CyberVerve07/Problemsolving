@@ -1,4 +1,4 @@
-package Oops.Polymorphism;
+package oops.polymorphism;
 
 // Subclass overriding the parent class method
 public class

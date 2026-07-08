@@ -1,4 +1,4 @@
-package Oops.BankAccount;
+package oops.bankaccount;
 
 public class Main {
     public static void main(String[] args) {

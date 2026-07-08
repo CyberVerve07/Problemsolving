@@ -2,7 +2,7 @@ package loops;
 
 import java.util.Scanner;
 
-public class code21 {
+public class Code21 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the number ");

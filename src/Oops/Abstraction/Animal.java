@@ -1,4 +1,4 @@
-package Oops.Abstraction;
+package oops.abstraction;
 
 // Abstract class: cannot be instantiated directly
 public abstract class Animal {

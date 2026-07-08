@@ -1,6 +1,8 @@
+package loops;
+
 import java.util.Scanner;
 
- class Main {
+ class Code10 {
 
     public static void main(String[] args) {
 

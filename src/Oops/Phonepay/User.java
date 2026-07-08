@@ -1,4 +1,4 @@
-package Oops.Phonepay;
+package oops.phonepay;
 
 public class User {
     private String userName;

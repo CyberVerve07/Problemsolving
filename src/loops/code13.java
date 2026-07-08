@@ -1,6 +1,6 @@
 package loops;
 
-public class code13 {
+public class Code13 {
     //pattern printing is ma 3 row and 5 collum ha
     public static void main(String[] args) {
         int n = 3;

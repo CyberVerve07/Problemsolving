@@ -1,4 +1,4 @@
-package Oops.Polymorphism;
+package oops.polymorphism;
 
 // Parent class for demonstrating Runtime Polymorphism (Method Overriding)
 public class Animal {
