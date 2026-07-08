@@ -2,10 +2,10 @@ package dailycode.july8;
 
 public class Check4{
     public static void main(String[] args) {
-        Student ck=new Student("Aditya",20,87);
-        ck.setName("Aditya");
-        ck.setAge(19);
-        ck.setMarks(89);
+        Student ck=new Student("Aditya",0,200);
+       // ck.setName("Aditya");
+        //ck.setAge(19);
+        //ck.setMarks(89);
 
 
         System.out.println("Name of the student is :"+ck.getName());

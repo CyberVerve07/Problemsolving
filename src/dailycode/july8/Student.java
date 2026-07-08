@@ -22,15 +22,16 @@ public class Student {
     //Create object in main() and print all details.
     //*/
 
-           private  String name;
-           private  int age;
-           private  int marks;
+    private String name;
+    private int age;
+    private int marks;
 
-
-                 //Methods
-                Student(String name,int age ,int marks ){
-
-                }
+    // Constructor - initializing using setters to ensure validation
+    public Student(String name, int age, int marks) {
+        setName(name);
+        setAge(age);
+        setMarks(marks);
+    }
 
     public String getName() {
         return name;
@@ -44,21 +45,23 @@ public class Student {
         return age;
     }
 
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        } else {
+            System.out.println("Invalid age! Age must be greater than 0.");
+        }
+    }
+
     public int getMarks() {
         return marks;
     }
 
     public void setMarks(int marks) {
-                    if (marks >100)
-                        System.out.println("Extra marks for good handwriting:");
-        this.marks = marks;
-    }
-
-    public void setAge(int age)
-    {
-        if (age<0){
-            System.out.println("Invalid age::");
+        if (marks >= 0 && marks <= 100) {
+            this.marks = marks;
+        } else {
+            System.out.println("Invalid marks! Must be between 0 and 100.");
         }
-        this.age = age;
     }
 }
