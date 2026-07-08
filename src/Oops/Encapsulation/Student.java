@@ -1,27 +1,30 @@
 package Oops.Encapsulation;
 
-// Simple class demonstrating Encapsulation
+// Class student ::
 public class Student {
-    // 1. Private variables: accessible only within this class
+    // 1. Private variables: Bs class ka andar honge acess ::
     private String name;
     private int age;
 
     // 2. Getter for Name
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
     // Setter for Name
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    // Getter for Age
+    // Getter for Age ,age get ka liya
     public int getAge() {
+
         return age;
     }
 
-    // Setter for Age (with a simple check)
+    // Setter for Age (agar age 0 h to age can not be negative show kra ga
     public void setAge(int age) {
         if (age > 0) {
             this.age = age;

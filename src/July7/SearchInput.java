@@ -1,8 +1,8 @@
 package July7;
 public class SearchInput {
 
-    Integer empId;
-    Double salary;
+    Integer empId;   //Wrapper class  -- int
+    Double salary;   // double
     String department;
 
 }

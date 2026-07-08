@@ -1,15 +1,15 @@
 package Oops.Encapsulation;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) {   //Main method
         System.out.println("--- Encapsulation Demo ---");
 
         // Create Student object
         Student s = new Student();
 
         // Set values using Setters
-        s.setName("Aman");
-        s.setAge(21);
+        s.setName("Aditya");
+        s.setAge(20);
 
         // Get values using Getters
         System.out.println("Name: " + s.getName());
