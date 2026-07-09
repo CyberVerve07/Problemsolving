@@ -1,6 +1,6 @@
 package student;
 
-public class UseStudent {
+public class UseStudent extends  Dav{
     public static void main(String[] args) {
         // Dav class ka object create kiya
         Dav student1 = new Dav();
@@ -19,5 +19,7 @@ public class UseStudent {
         student1.study();
         student1.sleep();
         student1.bunk();
+        int i = student1.hashCode();
+        System.out.println(i);
     }
 }

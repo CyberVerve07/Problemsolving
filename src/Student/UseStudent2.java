@@ -1,6 +1,6 @@
 package student;
 
-public class UseStudent2 {
+public class UseStudent2 extends  Dav {
     public static void main(String[] args) {
        //Dav ka student 2
         Dav Student2=new Dav();//object

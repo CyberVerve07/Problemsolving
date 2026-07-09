@@ -8,12 +8,14 @@ public class Dav {
    private String gf;
 
    //getters or setters
-    public String getName(){
+    public String getName()
+    {
         return this.name;
     }
 
     //Constructor
-   public Dav() {
+   public Dav()
+   {
     System.out.println("Constructor is call");
    }
 
@@ -24,23 +26,38 @@ public class Dav {
          this.rollNo = rollNo;
      }
 
+
      //Methods
-    void  study(){
-        System.out.println(name+"Problems.Study");
+    void  study()
+    {
+        System.out.println(name+" Problems.Study ");
     }
     //Method2
-     void  sleep(){
+     void  sleep()
+     {
          System.out.println(name+" sleeping ");
 
      }
-     void  bunk(){
-         System.out.println(name+"he is into bunk ");
+     void  bunk()
+     {
+         System.out.println(name+" he is into bunk ");
      }
-     void lunch(){
-         System.out.println(name+"Eating lunch");
+     void lunch()
+     {
+         System.out.println(name+" Eating lunch ");
      }
-     private  void gfChatting(){
-         System.out.println(name+"Bro is chatting ");
+
+    public String getGf() {
+        return gf;
+    }
+
+    public void setGf(String gf) {
+        this.gf = gf;
+    }
+
+    private  void gfChatting()
+     {
+         System.out.println(name+ "Bro is chatting ");
      }
 
 

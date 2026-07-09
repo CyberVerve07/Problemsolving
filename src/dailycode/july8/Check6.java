@@ -8,9 +8,12 @@ public class Check6 {
 
          sc.returnBook(15);
 
+
         System.out.println("The Author name is "+sc.getAuthor());
         System.out.println("The Book name is "+sc.getBookName());
         System.out.println("Avilabe copies are "+sc.getAvilableCopies());
+        System.out.println("Borrow books are:");
+        sc.borrowBook();
 
     }
 }

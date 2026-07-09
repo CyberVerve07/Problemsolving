@@ -21,7 +21,7 @@ public class Liabrary {
     //- Returning a book increases copies.
     //- Copies should never become negative.
     //
-    //Use encapsulation and constructor.
+    //Use encapsulation and const+ructor.
     //*/
 
     private String bookName;
@@ -42,14 +42,16 @@ public class Liabrary {
         this.avilableCopies = avilableCopies;
     }
 
-    void borrowBook(int avilableCopies) {
-        if (avilableCopies <= 0) {
-            System.out.println("Borrow Book:");
-            this.avilableCopies=avilableCopies;
+    void borrowBook() {
+        if (this.avilableCopies > 0) { // check karo copies bachi hain ya nahi
+            this.avilableCopies--;     // 1 copy kam kar do
+            System.out.println("Book borrowed successfully. Remaining copies: " + this.avilableCopies);
         } else {
-            System.out.println("Can not avilable copy:");
+            System.out.println("Cannot borrow! No copies available.");
         }
     }
+
+
 
     public String getAuthor() {
         return author;
