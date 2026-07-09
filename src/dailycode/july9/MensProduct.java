@@ -1,6 +1,6 @@
 package dailycode.july9;
 
-public class MensProduct extends Product {
+public class MensProduct extends ChothingProduct {
 
     String mensShirts;
     String mensPants;
@@ -12,8 +12,8 @@ public class MensProduct extends Product {
     }
     // Parameterized constructor
     public MensProduct(String productName, int productId, String productSize,
-                       double price, String mensShirts, String mensPants, String mensShoes) {
-        super(productName, productId, productSize, price);  // parent constructor
+                       double price, String mensShirts, String mensPants, String mensShoes,String fabric,String season) {
+        super(productName,productId,productSize,price,fabric,season);  // parent constructor
         this.mensShirts = mensShirts;
         this.mensPants  = mensPants;
         this.mensShoes  = mensShoes;
