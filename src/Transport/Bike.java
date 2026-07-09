@@ -7,7 +7,7 @@ public class Bike extends  Vehicle{
     Bike(String name,int number,int model,String company,int price,String handel){
 
 
-        //USe super keyword
+        //USe super keyword for parent class object access
         super(name,number,model,company,price,handel);
         this.price=price;
         this.handel=handel;
