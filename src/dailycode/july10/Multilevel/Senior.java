@@ -1,4 +1,4 @@
-package dailycode.july10;
+package dailycode.july10.Multilevel;
 
 public class Senior extends Devolper {   // Multiple
 

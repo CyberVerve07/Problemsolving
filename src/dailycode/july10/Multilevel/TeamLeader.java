@@ -1,4 +1,4 @@
-package dailycode.july10;
+package dailycode.july10.Multilevel;
 
 public interface TeamLeader {
     void leadTeam();

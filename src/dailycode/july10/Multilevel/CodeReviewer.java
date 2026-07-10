@@ -1,4 +1,4 @@
-package dailycode.july10.example1;
+package dailycode.july10.Multilevel;
 
 public interface CodeReviewer {
     void reviewCode();
