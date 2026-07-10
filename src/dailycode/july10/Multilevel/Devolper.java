@@ -9,6 +9,7 @@ public class Devolper extends Employee {
     }
 
     void  writeCode(){
+
            System.out.println("Devolper is write code :"+this.name);
 
        }
