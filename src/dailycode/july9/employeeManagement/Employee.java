@@ -1,32 +1,6 @@
 package dailycode.july9.employeeManagement;
 
 public class Employee {
-    // Question 2: Employee Management
-    //
-    // Parent Class:
-    // Employee
-    //
-    // Private Variables:
-    // - id
-    // - name
-    // - salary
-    //
-    // Methods:
-    // - getters/setters
-    // - displayDetails()
-    //
-    // Child Class:
-    // Developer
-    //
-    // Private Variable:
-    // - programmingLanguage
-    //
-    // Method:
-    // - writeCode()
-    //
-    // Condition:
-    // - Salary cannot be negative.
-    // - ID should be initialized using constructor only.
 
     private int id;
     private String name;
