@@ -6,19 +6,23 @@ public class Employee {
     private String name;
     private double salary;
 
-    public Employee(int id) {
+    public Employee(int id)
+    {
         this.id = id;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public double getSalary() {
+    public double getSalary()
+    {
         return salary;
     }
 
