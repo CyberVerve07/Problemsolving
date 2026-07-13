@@ -6,11 +6,10 @@ public class ClothingProduct extends Product {
         super(name, price);
     }
 
-    // Method Overriding
-    @Override
-    public double discount() {
+@Override
+    public double discount(){
         // Clothing par 20% discount
         double discount = this.productPrice * 0.20;
-        return this.productPrice - discount;
+        return this.productPrice;
     }
 }

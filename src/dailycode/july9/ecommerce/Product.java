@@ -4,10 +4,6 @@ public class Product {
     String productName;
     double productPrice;
 
-     Product(){
-
-     }
-
 
 
     Product(String productName, double productPrice) {
@@ -17,7 +13,9 @@ public class Product {
     }
 
     public double discount() {
+
           return this.productPrice;
+
 
 
     }
