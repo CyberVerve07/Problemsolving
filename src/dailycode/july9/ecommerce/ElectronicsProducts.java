@@ -7,10 +7,10 @@ package dailycode.july9.ecommerce;
         }
 
         @Override
-        public double discount() {
+       public double discount() {
                 // Electronics par 10% discount
                 double discount = this.productPrice * 0.10;
-                return this.productPrice-discount();
+                return this.productPrice - discount;
 
 
         }

@@ -6,11 +6,12 @@ public class Book extends Product {
     }
 
 
-    @Override
+    @Override //Same Method name only chane the  business logic ::
     public double discount() {
 
+          // Discount foe a book is ::
            double discount=this.productPrice*0.50;
-           return  this.productPrice;
+           return  this.productPrice - discount;
 
     }
 }
