@@ -8,6 +8,6 @@ public class ExpressDelivery extends Order{
     @Override
     void placeOrder() {
         super.placeOrder();
-        System.out.println(" Your Order  is Delivered in 5 minuts with a special gift  "+getProductId());
+        System.out.println(" Your Order is Delivered in 5 minutes with a special gift  "+getProductId());
     }
 }

@@ -11,14 +11,12 @@ public class Order {
     }
 
     public void setCustomerName(String customerName) {
-        if (Objects.equals(customerName, " Aditya")) {
+        if (customerName != null && !customerName.trim().isEmpty()) {
             this.customerName = customerName;
         }
         else{
-            System.out.println("Customer name is not Match :  ");
+            System.out.println("Customer name is not valid!");
          }
-
-
     }
 
     public String getProductId() {
@@ -26,24 +24,21 @@ public class Order {
     }
 
     public void setProductId(String productId) {
-         if ( Objects.equals(productId,"98789")) {
-
-
-
+         if (productId != null && !productId.trim().isEmpty()) {
              this.productId = productId;
          }
           else {
-             System.out.println(" Product id is not Matched: ");
+             System.out.println("Product ID is not valid!");
          }
     }
 
     public Order(String customerName, String productId) {
-        this.customerName = customerName;
-        this.productId = productId;
+        setCustomerName(customerName);
+        setProductId(productId);
     }
       void  placeOrder(){
           System.out.println("==================");
-          System.out.println(" You Order is shortly delivered :: Please check the Status in App ::");
+          System.out.println(" Your Order is shortly delivered :: Please check the Status in App ::");
           System.out.println("===================");
       }
 

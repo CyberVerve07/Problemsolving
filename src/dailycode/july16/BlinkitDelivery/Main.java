@@ -9,6 +9,8 @@ public class Main{
              Order d3=new ScheduleDelivery("Raja","987897");
 
                a.partner(d1);
+               a.partner(d2);
+               a.partner(d3);
 
     }
 }

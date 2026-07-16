@@ -8,6 +8,6 @@ public class ScheduleDelivery extends  Order{
     @Override
     void placeOrder() {
         super.placeOrder();
-        System.out.println(" Your Order is should places in 10 Minuts  "+getProductId());
+        System.out.println(" Your Order should be placed in 10 minutes  "+getProductId());
     }
 }

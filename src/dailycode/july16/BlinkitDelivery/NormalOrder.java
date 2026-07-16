@@ -9,6 +9,6 @@ public class NormalOrder  extends Order{
     @Override
     void placeOrder() {
         super.placeOrder();
-        System.out.println("Your Order is deliverd 20 to 40 minuts : "+getProductId());
+        System.out.println("Your Order is delivered in 20 to 40 minutes : "+getProductId());
     }
 }
