@@ -1,6 +1,6 @@
-package dailycode.july16;
+package dailycode.july16.Classcode;
 
-public class pushNotification extends  Notification {
+public class pushNotification extends Notification {
 
     @Override
     void sendNotification() {

@@ -1,6 +1,6 @@
-package dailycode.july16;
+package dailycode.july16.Classcode;
 
-public class whatsappNotification extends Notification{
+public class whatsappNotification extends Notification {
 
     @Override
     void sendNotification() {

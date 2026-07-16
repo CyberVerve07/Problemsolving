@@ -1,4 +1,4 @@
-package dailycode.july16;
+package dailycode.july16.Classcode;
 
 public class Process {
 

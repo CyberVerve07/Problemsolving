@@ -1,4 +1,4 @@
-package dailycode.july16;
+package dailycode.july16.Classcode;
 
 public class Main {
     public static void main(String[] args) {
