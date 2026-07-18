@@ -99,8 +99,8 @@ public abstract class User {
         System.out.println("User Details are :::");
         System.out.println("User name is "+getName());
         System.out.println("User id is "+getUserId());
-        System.out.println("User age is "+getName());
-        System.out.println("User city is :"+getAge());
+        System.out.println("User age is "+getAge());
+        System.out.println("User city is :"+getCity());
         System.out.println("User profession :"+getProfession());
         System.out.println("User religion is :"+getReligion());
         System.out.println("========================================");
@@ -111,7 +111,7 @@ public abstract class User {
        //Create an Abstract method   for  Every User can Search Differently
     abstract void searchPartner();
 
-    abstract void showPreference();
+
 
 
 

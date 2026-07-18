@@ -15,8 +15,5 @@ public class FemaleUser extends User{
 
     }
 
-    @Override
-    void showPreference() {
-
-    }
+    
 }
