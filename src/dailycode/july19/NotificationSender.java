@@ -1,10 +1,11 @@
 package dailycode.july19;
 
-// =============================================
-// NotificationSender Interface - OOP: Abstraction
-// Defines contract for all notification types
-// =============================================
+// Interface - Abstraction
+// Notification bhejne ka kaam yahan define hoga
+
 public interface NotificationSender {
-    void sendBookingConfirmation(Booking booking);
-    void sendCancellationNotice(Booking booking);
+
+    void sendConfirmation(Booking booking);
+
+    void sendCancellation(Booking booking);
 }
