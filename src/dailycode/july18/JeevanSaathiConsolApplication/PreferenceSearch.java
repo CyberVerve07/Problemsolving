@@ -18,18 +18,22 @@ public class PreferenceSearch {
         }
 
         public int getMinAge() {
+
             return minAge;
         }
 
         public int getMaxAge() {
+
             return maxAge;
         }
 
-        public String getCity() {
+        public String getCity()
+        {
             return city;
         }
 
         public String getProfession() {
+
             return profession;
         }
     }
