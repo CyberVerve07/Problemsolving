@@ -41,7 +41,8 @@ public class Booking {
     }
 
     // Getters
-    public int getBookingId()   { return bookingId; }
+    public int getBookingId()   {
+        return bookingId; }
     public String getStatus()   { return status; }
     public Passenger getPassenger() { return passenger; }
 }
