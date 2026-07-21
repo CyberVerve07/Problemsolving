@@ -35,12 +35,7 @@ public class IPLMatch extends Match implements LiveScore, PlayerStats, ScoreCard
     }
 
     @Override
-    public void updateScore(int newRuns, int newWickets, int newOvers) {
-
-    }
-
-    @Override
-    void startMatch() {
+    public void startMatch() {
 
         System.out.println("==============================");
         System.out.println("Match Started");

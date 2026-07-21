@@ -79,13 +79,16 @@ public  abstract  class Match {
     }
       //Declare the Methods for Performing some Tasks:
 
-     final void  displayMatchInfo() {
+    public final void displayMatchInfo() {
+        System.out.println("===== MATCH INFO =====");
+        System.out.println("Match ID  : " + getMatchId());
+        System.out.println("Teams     : " + getTeam1() + " vs " + getTeam2());
+        System.out.println("Stadium   : " + getStadium());
+        System.out.println("Overs     : " + getOvers());
+        System.out.println("=====================");
     }
 
-    public abstract void updateScore(int newRuns, int newWickets, int newOvers);
-
-    abstract  void startMatch();
-
+    public abstract void startMatch();
 
     public abstract void updateScore(int newRuns, int newWickets, double newOvers);
 }

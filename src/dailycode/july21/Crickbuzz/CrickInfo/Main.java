@@ -9,7 +9,8 @@ public class Main {
            match.displayMatchInfo();
            match.startMatch();
            match.updateScore(20,2,2);
-           
+
+
 
 
 
