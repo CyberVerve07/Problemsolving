@@ -8,7 +8,7 @@ import java.util.Scanner;
 
         Scanner input = new Scanner(System.in);
 
-        int arr[] = new int[5];
+        int[] arr = new int[5];
 
         System.out.println("Enter 5 Integer Numbers:");
 
@@ -22,9 +22,9 @@ import java.util.Scanner;
         System.out.println("\nArray Elements:");
 
         // Print
-        for (int i = 0; i < arr.length; i++) {
+        for (int j : arr) {
 
-            System.out.println(arr[i]);
+            System.out.println(j);
 
         }
 

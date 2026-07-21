@@ -5,7 +5,7 @@ public class Needs  extends  BudgetCategory{
 
     @Override
     void display() {
-        System.out.println("");
+        System.out.println();
 
     }
 
