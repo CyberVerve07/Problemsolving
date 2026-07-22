@@ -1,6 +1,6 @@
 package dailycode.july21.Crickbuzz.CrickInfo;
 
-public interface LiveScore {
+public interface LiveScore  {
 
     public void showLiveScore();
 
