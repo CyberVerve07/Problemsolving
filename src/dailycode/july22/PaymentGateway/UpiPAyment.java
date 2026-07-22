@@ -20,14 +20,15 @@ public class UpiPAyment extends PaymentGateway implements  Payment{
 
     @Override
     void pay() {
-
-        System.out.println("Payment is done by Using G.Pay ");
-        System.out.println("Amount Paid: " + getBalance());
-
-
-
-
-
-
+        System.out.println("---------------------------------------");
+        System.out.println("Payment Method : G-Pay (UPI)");
+        System.out.println("Account Holder : " + getAccountHolderName());
+        System.out.println("Current Balance: ₹" + getBalance());
+        System.out.println("---------------------------------------");
+        System.out.println("Enter the amount to pay via G-Pay:");
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        double amount = sc.nextDouble();
+        // ✅ Feature: balance auto-updates after GPay payment via processPayment
+        processPayment(amount);
     }
 }
