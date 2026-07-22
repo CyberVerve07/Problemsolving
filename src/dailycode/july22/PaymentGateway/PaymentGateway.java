@@ -10,13 +10,17 @@ public   abstract class PaymentGateway{
     private double  balance;
 
     public PaymentGateway() {
-        this.balance = balance;
+        this.balance = 0.0;
     }
 
     public PaymentGateway(String accountHolderName, String accountNumber) {
-
         this.accountHolderName = accountHolderName;
         this.accountNumber = accountNumber;
+        this.balance = 0.0;
+    }
+
+    public PaymentGateway(String accountHolderName, String accountNumber, double balance) {
+
     }
 //UPIPayment
 
@@ -25,14 +29,10 @@ public   abstract class PaymentGateway{
     }
 
     public void setBalance(double balance) {
-         if (balance<0){
-             System.out.println("Negative balance is not deposited"); {
-
-
-             }
-         }
-
-
+        if (balance < 0) {
+            System.out.println("Negative balance is not allowed");
+            return;
+        }
         this.balance = balance;
     }
 
@@ -57,26 +57,31 @@ public   abstract class PaymentGateway{
       //Methods for Deposit money and Withdraw money
 
       void  deposit(){
+          System.out.println("Enter the Amount ");
           Scanner sc=new Scanner(System.in);
            double amount= sc.nextDouble();
            balance=amount+balance;
-          System.out.println();
-          System.out.println("Your Account Balance after Deposite the money is "+balance);
+          System.out.println("Your Account Balance after Deposit the money is "+balance);
           System.out.println("=======================================");
 
       }
-        void  withdraw(){
+        double  withdraw(){
+            System.out.println("Enter the  Amount");
          Scanner sc=new Scanner(System.in);
          double widAmount=sc.nextDouble();
-          if (widAmount<=balance){
+          if (widAmount <= balance) {
               System.out.println("You can withdrawal amount ");
-              System.out.println("XXXXXXX8402 Amount is Credit from you bank Account you Available Balance is :");
-              balance=widAmount-balance;
+              System.out.println("XXXXXXX8402 Amount is Debited from your bank Account. Available Balance is :");
+              balance = balance - widAmount;
               System.out.println(balance);
+          } else {
+              System.out.println("Insufficient balance! Withdrawal not allowed.");
           }
 
 
+            return widAmount;
         }
 
-    abstract void pay();
+     abstract void pay();
+
 }

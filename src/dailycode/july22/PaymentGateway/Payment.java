@@ -2,7 +2,7 @@ package dailycode.july22.PaymentGateway;
 
 public interface Payment {
 
-       default void   Refund(){
+       default void   refund(){
 
       }
 }

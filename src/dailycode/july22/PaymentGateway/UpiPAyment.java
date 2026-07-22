@@ -5,14 +5,16 @@ public class UpiPAyment extends PaymentGateway implements  Payment{
 
     public UpiPAyment(double balance) {
         super();
+        setBalance(balance);
     }
 
     public UpiPAyment(String accountHolderName, String accountNumber) {
         super(accountHolderName, accountNumber);
     }
 
-    public UpiPAyment(int i, String aditya, String number) {
-
+    public UpiPAyment(double balance, String accountHolderName, String accountNumber) {
+        super(accountHolderName, accountNumber);
+        setBalance(balance);
     }
 
 
@@ -20,8 +22,7 @@ public class UpiPAyment extends PaymentGateway implements  Payment{
     void pay() {
 
         System.out.println("Payment is done by Using G.Pay ");
-         double payment;
-        System.out.println("");
+        System.out.println("Amount Paid: " + getBalance());
 
 
 
