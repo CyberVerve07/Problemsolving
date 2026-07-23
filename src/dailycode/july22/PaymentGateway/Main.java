@@ -3,22 +3,32 @@ package dailycode.july22.PaymentGateway;
 public class Main {
     public static void main(String[] args) {
 
-        PaymentGateway done = new UpiPAyment(900.0, "Aditya", "73084403083");
-          NetBanking done1=new NetBanking(3000,"Prashant","93039393029");
-          PaymentGateway done3=new CreditCard("Prachi","3838338309",9208);
-     //     done1.deposit();
-        //  done1.withdraw();
-         // done1.refund();
+        // Create Process object — the orchestrator
+        Process process = new Process();
 
-           done3.pay();
-           done3.withdraw();
-           done3.deposit();
-          
+        System.out.println("========================================");
+        System.out.println("        PAYMENT GATEWAY SYSTEM          ");
+        System.out.println("========================================");
 
+        // ✅ GPay (UPI) Payment — balance auto-updates after payment
+        System.out.println("\n--- G-Pay Payment ---");
+        PaymentGateway gpay = new UpiPAyment(900.0, "Aditya", "73084403083");
+        process.done(gpay);   // calls pay() → processPayment() → balance updates
 
+        // ✅ Credit Card Payment — balance auto-updates after payment
+        System.out.println("\n--- Credit Card Payment ---");
+        PaymentGateway creditCard = new CreditCard("Prachi", "3838338309", 9208);
+        process.done(creditCard);  // calls pay() → processPayment() → balance updates
 
+        // ✅ Debit Card Payment — balance auto-updates after payment
+        System.out.println("\n--- Debit Card Payment ---");
+        PaymentGateway debitCard = new DebitCard(5000.0, "Prashant", "93039393029");
+        process.done(debitCard);   // calls pay() → processPayment() → balance updates
 
-
+        // NetBanking with deposit first then pay
+        System.out.println("\n--- NetBanking Payment (Deposit first) ---");
+        NetBanking netBanking = new NetBanking(3000, "Raj", "93039393029");
+        process.depositAndPay(netBanking);
 
     }
 }
