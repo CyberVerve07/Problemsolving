@@ -10,17 +10,17 @@ public class Main {
         System.out.println("        PAYMENT GATEWAY SYSTEM          ");
         System.out.println("========================================");
 
-        // ✅ GPay (UPI) Payment — balance auto-updates after payment
+        //  GPay (UPI) Payment — balance auto-updates after payment
         System.out.println("\n--- G-Pay Payment ---");
         PaymentGateway gpay = new UpiPAyment(900.0, "Aditya", "73084403083");
         process.done(gpay);   // calls pay() → processPayment() → balance updates
 
-        // ✅ Credit Card Payment — balance auto-updates after payment
+        //  Credit Card Payment — balance auto-updates after payment
         System.out.println("\n--- Credit Card Payment ---");
         PaymentGateway creditCard = new CreditCard("Prachi", "3838338309", 9208);
         process.done(creditCard);  // calls pay() → processPayment() → balance updates
 
-        // ✅ Debit Card Payment — balance auto-updates after payment
+        //  Debit Card Payment — balance auto-updates after payment
         System.out.println("\n--- Debit Card Payment ---");
         PaymentGateway debitCard = new DebitCard(5000.0, "Prashant", "93039393029");
         process.done(debitCard);   // calls pay() → processPayment() → balance updates

@@ -25,7 +25,7 @@ public class DebitCard extends PaymentGateway implements Payment {
         System.out.println("Enter the amount to pay via Debit Card:");
         java.util.Scanner sc = new java.util.Scanner(System.in);
         double amount = sc.nextDouble();
-        // ✅ Feature: balance auto-updates after Debit Card payment via processPayment
+        //  Feature: balance auto-updates after Debit Card payment via processPayment
         processPayment(amount);
     }
 

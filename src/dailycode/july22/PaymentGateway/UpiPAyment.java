@@ -28,7 +28,7 @@ public class UpiPAyment extends PaymentGateway implements  Payment{
         System.out.println("Enter the amount to pay via G-Pay:");
         java.util.Scanner sc = new java.util.Scanner(System.in);
         double amount = sc.nextDouble();
-        // ✅ Feature: balance auto-updates after GPay payment via processPayment
+        //  Feature: balance auto-updates after GPay payment via processPayment
         processPayment(amount);
     }
 }

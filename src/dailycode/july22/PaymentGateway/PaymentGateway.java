@@ -79,7 +79,7 @@ public abstract class PaymentGateway {
         return widAmount;
     }
 
-    // ✅ New Feature: processPayment deducts paid amount from balance after payment
+    //  New Feature: processPayment deducts paid amount from balance after payment
     public void processPayment(double amount) {
         if (amount <= 0) {
             System.out.println("Invalid payment amount.");
