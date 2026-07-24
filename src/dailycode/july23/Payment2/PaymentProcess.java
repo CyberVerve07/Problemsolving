@@ -1,4 +1,4 @@
-package dailycode.july23;
+package dailycode.july23.Payment2;
 
 public  abstract  class PaymentProcess  {
 
@@ -8,7 +8,7 @@ public  abstract  class PaymentProcess  {
      }
 
         //Abstract Method:
-    abstract  void  done();
+    protected abstract  void  done();
 
 //Interfaces in java
 

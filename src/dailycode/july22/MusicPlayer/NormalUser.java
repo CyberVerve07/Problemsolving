@@ -29,7 +29,9 @@ public class NormalUser implements Spotify {
     }
 
     @Override
-    public void aiSearch() {
+
+     public void aiSearch() {
+
         Spotify.super.aiSearch();
     }
 }
