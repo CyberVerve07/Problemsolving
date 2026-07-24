@@ -1,6 +1,6 @@
 package dailycode.july23;
 
-public  abstract  class PaymentProcess {
+public  abstract  class PaymentProcess  {
 
     //Concrete Method :
      void  details(){
