@@ -1,4 +1,4 @@
-package transport;
+package oops.transport;
 
 public class Scooty extends  Vehicle {
     public String color;

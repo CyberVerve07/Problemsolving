@@ -1,4 +1,4 @@
-package transport;
+package oops.transport;
 
 public class Vehicle {
     public String name;

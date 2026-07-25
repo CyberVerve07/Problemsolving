@@ -1,6 +1,4 @@
-package transport;
-
-import java.util.StringTokenizer;
+package oops.transport;
 
 public class Car  extends  Vehicle{
     private   int numberOfDoors;

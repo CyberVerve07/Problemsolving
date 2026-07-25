@@ -32,7 +32,7 @@ The codebase is organized into clean, modular packages directly under the `src` 
     *   `oops.encapsulation` (getters, setters, and data protection in `Student`)
     *   `oops.abstraction`, `oops.polymorphism`, `oops.bankaccount`, `oops.phonepay`
 *   **`student/`**: Exercises revolving around student data structures.
-*   **`transport/`**: Real-world object modeling for transport classes.
+*   **`oops.transport/`**: Real-world object modeling for oops.transport classes.
 
 ---
 
