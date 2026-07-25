@@ -27,6 +27,12 @@ public class CurrentAccount extends AccountManagement{
 
     @Override
     String accountType() {
-        return "Current Account ";
+        return "Current Account";
+    }
+
+    @Override
+    double CalcIntrest() {
+        // Current accounts typically earn no interest
+        return 0.0;
     }
 }

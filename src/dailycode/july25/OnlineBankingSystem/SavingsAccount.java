@@ -38,9 +38,9 @@ public class SavingsAccount extends AccountManagement {
     }
 
     @Override
-    double CalcIntrest(double intrest) {
-      intrest=  getBalance()*7.5/100;
-        return 0;
+    double CalcIntrest() {
+        double interest = getBalance() * 7.5 / 100;
+        return interest;
     }
 
 }
