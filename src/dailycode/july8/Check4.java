@@ -8,7 +8,7 @@ public class Check4{
         //ck.setMarks(89);
 
 
-        System.out.println("Name of the student is :"+ck.getName());
+        System.out.println("Name of the oops.student is :"+ck.getName());
         System.out.println("Student age is :"+ck.getAge());
         System.out.println("Student marks is :"+ck.getMarks());
     }

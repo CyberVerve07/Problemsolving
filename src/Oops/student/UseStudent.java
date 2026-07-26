@@ -1,25 +1,40 @@
-package student;
+package oops.student;
 
-public class UseStudent extends  Dav{
+/**
+ * UseStudent — Creates a Dav (student) object and demonstrates field access + method calls.
+ *
+ * INTERVIEW: What is 'extends' here?
+ * → UseStudent extends Dav — it INHERITS all non-private fields and methods.
+ * → UseStudent IS-A Dav (student).
+ * → In this context, 'extends' is used but the inheritance isn't actively utilized.
+ *
+ * @author Aditya
+ * @version 2.0
+ * @see Dav
+ */
+public class UseStudent extends Dav {
+
     public static void main(String[] args) {
-        // Dav class ka object create kiya
+        // Create Dav object using default constructor
         Dav student1 = new Dav();
 
-        // Attributes set karo
+        // Set attributes directly (public fields)
         student1.name = "Rahul";
         student1.age = 20;
         student1.rollNo = 101;
 
-        // Print karo
+        // Print student details
         System.out.println("Name: " + student1.name);
         System.out.println("Age: " + student1.age);
         System.out.println("Roll No: " + student1.rollNo);
 
-        // Methods call karo
+        // Call methods
         student1.study();
         student1.sleep();
         student1.bunk();
-        int i = student1.hashCode();
-        System.out.println(i);
+
+        // hashCode() — inherited from Object class (root of all Java classes)
+        int hashCode = student1.hashCode();
+        System.out.println("HashCode: " + hashCode);
     }
 }

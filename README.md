@@ -31,7 +31,7 @@ The codebase is organized into clean, modular packages directly under the `src` 
     *   `oops.inheritance` (class hierarchies like `Animal`, `Dog`, `Vehicle`, `Car`, `Person`, and `Employee`)
     *   `oops.encapsulation` (getters, setters, and data protection in `Student`)
     *   `oops.abstraction`, `oops.polymorphism`, `oops.bankaccount`, `oops.phonepay`
-*   **`student/`**: Exercises revolving around student data structures.
+*   **`oops.student/`**: Exercises revolving around oops.student data structures.
 *   **`oops.transport/`**: Real-world object modeling for oops.transport classes.
 
 ---

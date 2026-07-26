@@ -6,6 +6,7 @@ public class Driver{
           
            Employee e2=(Employee) e1.clone();   //Clone the object:: Marker interface
          System.out.println(e2.name +" "+e2.location);        
+
          
      }
 

@@ -9,7 +9,7 @@ package dailycode.july02;
      }
      void display(){
          System.out.println("Code14 Details are "+this.name);
-         System.out.println("Age of the student is "+this.age);
+         System.out.println("Age of the oops.student is "+this.age);
      }
 
 
