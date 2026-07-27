@@ -1,6 +1,10 @@
 package dailycode.july25.OnlineBankingSystem.interfaces;
 
 /**
+<<<<<<< HEAD
+=======
+ * INTERVIEW DEFINITION — Functional Interface:
+>>>>>>> fe85f421d2cb682cb4100dcce38957fd3f187bcd
  * -----------------------------------------------
  * Q: What is a Functional Interface?
  * A: A Functional Interface is an interface that contains EXACTLY ONE abstract method.
