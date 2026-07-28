@@ -1,0 +1,45 @@
+Business Problem
+
+QuickBite wants to launch an online food delivery platform where customers can order food from nearby restaurants.
+The first version is a console-based application built in Core Java.
+The focus is on clean OOP design, not UI.
+
+   👥 Actors
+
+   There are three types of users.
+
+   1. Customer
+
+   A customer can browse restaurants, order food, pay, and track orders.
+
+   2. Restaurant Owner
+
+   A restaurant owner manages their menu and receives customer orders.
+
+   3. Admin
+
+   Admin manages the platform, restaurants, and user
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+      Functional Requirements             ::::
+      Module 1 - User Authentication       ::::
+      Customer
+
+      Customer should be able to          ::::::
+
+      Register                             :::
+      Login
+      Logout
+      View Profile
+      Update Profile
+
+      Customer Information
+
+      Customer ID
+      Name
+      Phone Number                        :::::
+      Email
+      Address
+      Password                        ::::::
+      Wallet Balance                  ::::::
+
+     ::::::::::::::::::::::::::::::::::::::::::::;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::

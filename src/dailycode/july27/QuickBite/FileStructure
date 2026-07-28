@@ -1,0 +1,55 @@
+QuickBite/
+
+│
+
+├── model/
+│      User
+│      Customer
+│      Restaurant
+│      FoodItem
+│      Cart
+│      Order
+│
+├── service/
+│      UserService
+│      RestaurantService
+│      OrderService
+│      CartService
+│
+├── payment/
+│      PaymentMethod
+│      UpiPayment
+│      CardPayment
+│      CashOnDelivery
+│
+├── delivery/
+│      Delivery
+│      ExpressDelivery
+│      NormalDelivery
+│
+├── discount/
+│      Discount
+│
+├── notification/
+│      Notification
+│
+├── enums/
+│      OrderStatus
+│
+└── Main.java
+
+
+   After building this project, you should be able to answer questions like:
+
+   Why did you use an interface for PaymentMethod instead of an abstract class?
+   Why is Delivery an abstract class?
+   Where did you use runtime polymorphism?
+   Which classes have an IS-A relationship?
+   Which classes have a HAS-A relationship?
+   How would you add a new payment method without changing existing code?
+   Which SOLID principles does your design follow?
+   If tomorrow the company adds Wallet Payment, which classes need to change?
+   How would you extend this console app into a Spring Boot REST API?
+
+   This is much closer to how features are discussed in a real company: you start with business requirements, identify actors and modules, then design classes and decide where interfaces, abstract classes, and polymorphism fit naturally. Once you finish the Core Java version,
+   this same design can be reused almost unchanged when you learn Spring Boot.

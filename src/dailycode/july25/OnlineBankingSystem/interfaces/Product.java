@@ -103,7 +103,7 @@ public interface Product {
      * → Cannot be accessed from outside the interface or from implementing classes.
      * → Used as HELPER methods for default/static methods (avoid code duplication).
      */
-    private void helperMethod() {
+    static void helperMethod() {
         System.out.println("Private helper method — only accessible within this interface.");
     }
 }

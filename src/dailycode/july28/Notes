@@ -1,0 +1,399 @@
+:::::::::::::::::;
+Today targete learn the Exception Handling ::
+ and do 20+ classes of Ecception Practice ::
+ So lets Begien ::
+
+
+   What is Exception Handling in Java:
+
+   SOL->  An exception is an event that occurs during the execution of a program which disrupts the normal flow of the program.
+    Java represents every exception as an object. When an exceptional situation occurs
+   , the JVM creates an exception object and transfers control to the earest matching exception handler.
+
+   Imagine You're Building Amazon
+
+   Suppose customer clicks
+
+   Buy Now
+
+   The backend performs
+
+   1. Check Login
+   2. Check Product Exists
+   3. Check Stock
+   4. Deduct Money
+   5. Create Order
+   6. Send Email
+
+   Everything is fine...
+
+   Suddenly
+
+   Database Connection Lost
+
+   Without exception handling
+
+   Application Crashes
+
+   Customer
+
+   Payment deducted
+   No order created
+
+   Disaster.
+
+   Instead Java says
+
+   Something unexpected happened.
+
+   Don't crash.
+
+   Handle it.
+
+   That handling mechanism is called
+
+   Exception Handling
+   Real Definition
+
+   An exception is
+
+   An object that represents an abnormal condition occurring during program execution.
+
+   Notice
+
+   Exception is an object.
+
+   Not a keyword.
+
+   Not an error message.
+
+   Not a function.
+
+   It's an object.
+
+   Interview Follow-up
+
+   Who creates the exception object?
+
+   Answer:
+
+   JVM
+
+   Example
+
+   int a = 10;
+   int b = 0;
+
+   System.out.println(a / b);
+
+   When division starts
+
+   JVM notices
+
+   Cannot divide by zero
+
+   JVM internally executes something similar to
+
+   throw new ArithmeticException("/ by zero");
+
+   You never wrote it.
+
+   JVM did.
+
+   What Happens Internally?
+
+   Imagine
+
+   System.out.println(10 / 0);
+
+   Internally
+
+   Program Starts
+
+   ↓
+
+   10/0
+
+   ↓
+
+   JVM creates ArithmeticException object
+
+   ↓
+
+   Searches Handler
+
+   ↓
+
+   Found?
+
+   YES → Execute catch block
+
+   NO → Program terminates
+
+   This is exactly how JVM works.
+
+   Interview Question
+   Why do we need Exception Handling?
+
+   Answer
+
+   Without exception handling
+
+   Program terminates immediately
+   Remaining code never executes
+   Bad user experience
+   Difficult debugging
+   Resources may not close properly
+   Transactions may remain incomplete
+
+   Exception handling allows the program to recover or fail gracefully.
+
+   Difference Between Error and Exception
+
+   This is asked a lot.
+
+   Exception	Error
+   Can be handled	Usually cannot
+   Application problem	JVM/System problem
+   Programmer can recover	Generally unrecoverable
+   Example: IOException	Example: OutOfMemoryError
+
+   Example
+
+   File not found
+
+   ↓
+
+   IOException
+
+   ↓
+
+   Handle
+
+   Example
+
+   System RAM exhausted
+
+   ↓
+
+   OutOfMemoryError
+
+   ↓
+
+   Mostly cannot recover
+   Exception Hierarchy (Very Important)
+                   Object
+                      │
+                Throwable
+                /        \
+            Error      Exception
+                         │
+           -------------------------
+           │                       │
+   Checked Exception      RuntimeException
+                                   │
+                       Unchecked Exceptions
+
+   Memorize this tree.
+
+   Interviewers love it.
+
+   Interview Question
+   Why is Throwable the parent?
+
+   Answer
+
+   Because Java wanted one common superclass for everything that can be thrown using throw or declared with throws.
+
+   Everything throwable extends
+
+   Throwable
+   Types of Exceptions
+
+   There are only two categories you need to know.
+
+   1. Checked Exception
+
+   Compiler checks them.
+
+   Example
+
+   FileReader file = new FileReader("abc.txt");
+
+   Compiler says
+
+   Handle it first.
+
+   Otherwise
+
+   Compilation Error
+
+   Examples
+
+   IOException
+
+   SQLException
+
+   ClassNotFoundException
+
+   InterruptedException
+   2. Unchecked Exception
+
+   Compiler doesn't force handling.
+
+   Program compiles.
+
+   Fails during runtime.
+
+   Example
+
+   int a = 10;
+
+   System.out.println(a / 0);
+
+   Compile
+
+   Success
+
+   Run
+
+   ArithmeticException
+
+   Examples
+
+   ArithmeticException
+
+   NullPointerException
+
+   ArrayIndexOutOfBoundsException
+
+   NumberFormatException
+   Interview Question
+
+   Why are Runtime Exceptions unchecked?
+
+   Senior Answer
+
+   Because they usually indicate programming mistakes rather than external failures.
+    The compiler cannot reliably prevent them, so Java leaves it to the programmer to write correct code instead of forcing exception handling.
+
+   Example
+
+   Checked
+
+   FileReader file =
+   new FileReader("abc.txt");
+
+   Compiler
+
+   Handle IOException
+
+   Unchecked
+
+   String s = null;
+
+   System.out.println(s.length());
+
+   Compiler
+
+   OK
+
+   Runtime
+
+   NullPointerException
+   Exception Handling Keywords
+
+   You should know these five.
+
+   try
+
+   catch
+
+   finally
+
+   throw
+
+   throws
+
+   Every Java interview asks about them.
+
+   We'll cover each one deeply.
+
+   Interview Trick Question
+
+   Does every exception terminate the program?
+
+   Answer
+
+   No.
+
+   If the exception is handled using a matching catch block,
+    execution can continue after the try-catch statement. If it is not handled,
+     the JVM terminates the current thread and prints the stack trace.
+
+   Interview Trick Question
+
+   Who handles exceptions?
+
+   Answer
+
+   First,
+
+   Current Method
+
+   If not
+
+   ↓
+
+   Caller Method
+
+   If not
+
+   ↓
+
+   Caller of Caller
+
+   ↓
+
+   Eventually JVM
+
+   This process is called stack unwinding.
+
+   Most Asked Runtime Exceptions
+
+   Know these by heart.
+
+   Exception	Reason
+   NullPointerException	Using a null reference
+   ArithmeticException	Divide by zero
+   ArrayIndexOutOfBoundsException	Invalid array index
+   NumberFormatException	Invalid numeric conversion
+   ClassCastException	Invalid type casting
+   IllegalArgumentException	Invalid method argument
+   Senior Interview Answer (2 Minutes)
+
+   Exception handling is Java's mechanism for dealing with abnormal situations during program
+
+execution without abruptly terminating the application.
+   An exception is represented as an object, typically created by the JVM or explicitly by the programmer.
+    exceptions derive from Throwable, which also has Error as another branch.
+    Exceptions are classified into checked exceptions, which must be handled or declared because they usually represent recoverable conditions, and unchecked exceptions, which extend RuntimeException and typically indicate programming mistakes. Java provides the try, catch, finally, throw, and throws constructs to detect, propagate, and handle exceptions while maintaining normal application flow and ensuring proper resource cleanup.
+
+   Interview Follow-up Questions
+
+   Answer these without looking them up:
+
+   What is an exception?
+   Is an exception an object or a keyword?
+   Who creates an exception object?
+   What is Throwable?
+   Difference between Error and Exception?
+   Difference between checked and unchecked exceptions?
+   Why are runtime exceptions unchecked?
+   Name five common runtime exceptions.
+   What happens if no catch block handles an exception?
+   What is stack unwinding?
+
+   Once you answer these confidently, we'll move to the next topic:
+
+   try, catch, and finally—including execution flow, multiple catch blocks, nested try-catch, finally edge cases, return statements, and tricky interview questions.
