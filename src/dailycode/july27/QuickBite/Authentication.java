@@ -2,121 +2,115 @@ package dailycode.july27.QuickBite;
 
 public class Authentication {
 
-    private String CustomerID;
+    private String customerId;
+    private String name;
+    private String phoneNumber;
+    private String email;
+    private String address;
+    private String password;
+    private double walletBalance;
 
-    public String getCustomerID() {
-        return CustomerID;
+    public Authentication(String customerId, String name, String phoneNumber, String email, String address, String password, double walletBalance) {
+        this.customerId = customerId;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.address = address;
+        this.password = password;
+        this.walletBalance = walletBalance;
     }
 
-    public void setCustomerID(String customerID) {
-        CustomerID = customerID;
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        if (phoneNumber.isEmpty()) {
-            System.out.println("Invalid Mobile number:: ");
-
+        if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
+            System.out.println("Invalid Mobile number!");
         } else {
-            PhoneNumber=phoneNumber;
+            this.phoneNumber = phoneNumber;
         }
     }
+
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 
-    public double getWalleBalance() {
-        return WalleBalance;
+    public double getWalletBalance() {
+        return walletBalance;
     }
 
-    public void setWalleBalance(double walleBalance) {
-        if (walleBalance>=0) {
-            WalleBalance = walleBalance;
-        }
-        else {
-            System.out.println(" Wallet balance is Low:");
-        }
-    }
-
-    public Authentication(String customerID, String name, String phoneNumber, String poneNumber, String email, String address, String password, double walleBalance) {
-        CustomerID = customerID;
-        Name = name;
-        PhoneNumber = poneNumber;
-        Email = email;
-        Address = address;
-        Password = password;
-        WalleBalance = walleBalance;
-    }
-
-    private String Name;
-    private String PhoneNumber;
-    private String Email;
-    private String Address;
-    private String Password;
-    private double WalleBalance;
-
-
-    //Register
-    //Login
-    //Logout
-    //View Profile
-    //Update Profile
-
-
-    void login(String tocken) {
-        System.out.println("Enter the default token  key ::  :: ");
-        if (tocken.equals(getPassword())) {
-            System.out.println("Login is Success Full ::: ");
+    public void setWalletBalance(double walletBalance) {
+        if (walletBalance >= 0) {
+            this.walletBalance = walletBalance;
         } else {
-            System.out.println("Password are not match :: ");
-            System.out.println("Please Recheck your Password:: ");
+            System.out.println("Wallet balance cannot be negative!");
         }
     }
 
-       void  logout(){
-           System.out.println("Logout is Successfully thanks for using :: ");
-       }
-         void ViewProfile(){
-             System.out.println("User name is "+getName());
-             System.out.println("Phone Number is "+getPhoneNumber());
-             System.out.println("Email adderess is :"+getEmail());
-             System.out.println("Addres is :"+getAddress());
+    public void login(String token) {
+        if (token != null && token.equals(getPassword())) {
+            System.out.println("Login successful!");
+        } else {
+            System.out.println("Password does not match.");
+            System.out.println("Please recheck your password.");
+        }
+    }
 
-         }
-          void  updateProfile (){
+    public void logout() {
+        System.out.println("Logged out successfully. Thanks for using QuickBite!");
+    }
 
-          }
+    public void viewProfile() {
+        System.out.println("User ID: " + getCustomerId());
+        System.out.println("User Name: " + getName());
+        System.out.println("Phone Number: " + getPhoneNumber());
+        System.out.println("Email Address: " + getEmail());
+        System.out.println("Address: " + getAddress());
+        System.out.println("Wallet Balance: " + getWalletBalance());
+    }
 
-
-}
+    public void updateProfile(String name, String phoneNumber, String email, String address) {
+        setName(name);
+        setPhoneNumber(phoneNumber);
+        setEmail(email);
+        setAddress(address);
+        System.out.println("Profile updated successfully!");
+    }
+}
