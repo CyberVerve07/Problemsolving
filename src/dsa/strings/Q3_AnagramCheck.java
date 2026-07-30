@@ -56,7 +56,7 @@ import java.util.HashMap;
  */
 public class Q3_AnagramCheck {
 
-    // ✅ OPTIMAL: Frequency Array - O(n) Time, O(1) Space
+    //  OPTIMAL: Frequency Array - O(n) Time, O(1) Space
     public static boolean isAnagram(String s, String t) {
         // Edge case: different lengths → cannot be anagrams
         if (s.length() != t.length()) {
@@ -101,7 +101,7 @@ public class Q3_AnagramCheck {
         return true;
     }
 
-    // ❌ SORTING Approach - O(n log n)
+    //  SORTING Approach - O(n log n)
     public static boolean isAnagramSort(String s, String t) {
         if (s.length() != t.length()) return false;
 
@@ -114,7 +114,7 @@ public class Q3_AnagramCheck {
         return java.util.Arrays.equals(sc, tc);
     }
 
-    // ✅ BONUS: Group Anagrams Together (Very common follow-up!)
+    //  BONUS: Group Anagrams Together (Very common follow-up!)
     // Input:  ["eat","tea","tan","ate","nat","bat"]
     // Output: [["eat","tea","ate"],["tan","nat"],["bat"]]
     public static void groupAnagramsDemo() {

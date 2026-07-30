@@ -52,7 +52,7 @@ import java.util.HashMap;
  */
 public class Q1_TwoSum {
 
-    // ✅ OPTIMAL SOLUTION - O(n) Time
+    //  OPTIMAL SOLUTION - O(n) Time
     public static int[] twoSum(int[] nums, int target) {
         // HashMap to store: number → its index
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -72,7 +72,7 @@ public class Q1_TwoSum {
         return new int[]{}; // No solution found
     }
 
-    // ❌ BRUTE FORCE - O(n²) Time
+    //  BRUTE FORCE - O(n²) Time
     public static int[] twoSumBrute(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {

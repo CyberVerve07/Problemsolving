@@ -5,9 +5,9 @@ import java.util.HashMap;
 /**
  * ============================================================
  *  Q2 - FIND FIRST NON-REPEATING CHARACTER
- *  🏢 Asked In: Amazon, Flipkart, Microsoft, TCS, Infosys, Zoho
- *  ⭐ Difficulty: Easy-Medium
- *  📌 Topic: String + HashMap / Frequency Array
+ *   Asked In: Amazon, Flipkart, Microsoft, TCS, Infosys, Zoho
+ *   Difficulty: Easy-Medium
+ *   Topic: String + HashMap / Frequency Array
  * ============================================================
  *
  *  PROBLEM:
@@ -41,7 +41,7 @@ import java.util.HashMap;
  *    str = "leetcode"
  *    Pass 1: {l:1, e:3, t:1, c:1, o:1, d:1}
  *    Pass 2:
- *      index 0: 'l' → freq=1 → FOUND! Return 'l' ✅
+ *      index 0: 'l' → freq=1 → FOUND! Return 'l'
  *
  *  Another example:
  *    str = "loveleetcode"
@@ -49,7 +49,7 @@ import java.util.HashMap;
  *    Pass 2:
  *      index 0: 'l' → freq=2 → skip
  *      index 1: 'o' → freq=2 → skip
- *      index 2: 'v' → freq=1 → FOUND! Return 'v' ✅
+ *      index 2: 'v' → freq=1 → FOUND! Return 'v'
  *
  * ============================================================
  *  APPROACH 3 - FREQUENCY ARRAY (Faster for lowercase letters)
@@ -62,7 +62,7 @@ import java.util.HashMap;
  */
 public class Q2_FirstNonRepeatingChar {
 
-    // ✅ APPROACH 2: HashMap - O(n) Time
+    //  APPROACH 2: HashMap - O(n) Time
     public static char firstUniqueCharHashMap(String str) {
         HashMap<Character, Integer> freq = new HashMap<>();
 
@@ -81,7 +81,7 @@ public class Q2_FirstNonRepeatingChar {
         return '\0'; // No unique character found
     }
 
-    // ✅ APPROACH 3: Frequency Array - O(n) Time, O(1) Space (faster!)
+    //  APPROACH 3: Frequency Array - O(n) Time, O(1) Space (faster!)
     public static int firstUniqueCharIndex(String str) {
         int[] freq = new int[26]; // For 26 lowercase English letters
 
@@ -100,7 +100,7 @@ public class Q2_FirstNonRepeatingChar {
         return -1; // Not found
     }
 
-    // ❌ BRUTE FORCE - O(n²) Time
+    //  BRUTE FORCE - O(n²) Time
     public static char firstUniqueCharBrute(String str) {
         for (int i = 0; i < str.length(); i++) {
             boolean isUnique = true;
