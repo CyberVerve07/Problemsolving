@@ -1,4 +1,4 @@
-package oops.Netflix;
+package oops.netflix;
 
 /**
  * Movie — Represents a Netflix movie with details.

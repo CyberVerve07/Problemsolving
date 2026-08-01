@@ -1,4 +1,4 @@
-package dailycode.problems.User;
+package dailycode.problems.user;
 
 public class Main {
     public static void main(String[] args) {

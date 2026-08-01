@@ -1,4 +1,4 @@
-package oops.Multiple;
+package oops.multiple;
 
 /**
  * MusicPlayer — Interface for music playback functionality.

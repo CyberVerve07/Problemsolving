@@ -1,4 +1,4 @@
-package oops.Netflix;
+package oops.netflix;
 
 /**
  * UpgradePlan — Handles subscription plan upgrades.

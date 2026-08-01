@@ -1,4 +1,4 @@
-package oops.InterPhases;
+package oops.interphases;
 
 /**
  * INTERVIEW DEFINITION — Interface:

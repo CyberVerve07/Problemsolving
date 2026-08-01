@@ -1,4 +1,4 @@
-package oops.Netflix;
+package oops.netflix;
 
 /**
  * PremiumSubscription — Represents the Premium tier Netflix plan (4K HDR, all screens).

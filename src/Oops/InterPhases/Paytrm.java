@@ -1,4 +1,4 @@
-package oops.InterPhases;
+package oops.interphases;
 
 /**
  * Paytm — Implements the Payment interface for Paytm wallet payments.

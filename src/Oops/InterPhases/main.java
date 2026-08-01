@@ -1,4 +1,4 @@
-package oops.InterPhases;
+package oops.interphases;
 
 /**
  * Main — Demonstrates Interface Polymorphism (Upcasting with Interfaces).
@@ -16,13 +16,13 @@ package oops.InterPhases;
  *    2. Payment g = new GoogelPay(); → g.pay() calls GoogelPay's version
  *    → Same method call (pay()), DIFFERENT behavior — this is POLYMORPHISM!
  *
- * NAMING NOTE: Class name is 'main' (lowercase) — violates Java conventions.
- * Java class names should be PascalCase (e.g., 'Main'). Kept as-is to avoid file rename issues.
+ * JAVA TYPE: class (driver class)
+ * OOP PILLAR: Polymorphism (Runtime via Interfaces)
  *
  * @author Aditya
  * @version 2.0
  */
-public class main {
+public class Main {
 
     public static void main(String[] args) {
         // Interface reference holding implementation objects — UPCASTING

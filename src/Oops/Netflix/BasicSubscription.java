@@ -1,4 +1,4 @@
-package oops.Netflix;
+package oops.netflix;
 
 /**
  * BasicSubscription — Represents the Basic tier Netflix plan.

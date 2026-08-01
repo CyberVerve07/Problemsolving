@@ -46,8 +46,8 @@ import java.util.HashMap;
  *    nums = [2, 7, 11, 15], target = 9
  *    ---
  *    i=0: num=2, complement=9-2=7 → map is empty → store {2:0}
- *    i=1: num=7, complement=9-7=2 → 2 found in map at index 0 → return [0, 1] ✅
- *
+ *    i=1: num=7, complement=9-7=2 → 2 found in map at index 0 → return [0, 1]
+
  * ============================================================
  */
 public class Q1_TwoSum {

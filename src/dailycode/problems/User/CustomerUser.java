@@ -1,4 +1,4 @@
-package dailycode.problems.User;
+package dailycode.problems.user;
 
 public class CustomerUser extends  AdminUser {
 

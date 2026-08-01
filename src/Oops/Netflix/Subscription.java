@@ -1,4 +1,4 @@
-package oops.Netflix;
+package oops.netflix;
 
 /**
  * Subscription — Parent class for all Netflix subscription types.

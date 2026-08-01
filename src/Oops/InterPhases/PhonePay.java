@@ -1,4 +1,4 @@
-package oops.InterPhases;
+package oops.interphases;
 
 /**
  * PhonePe — Implements the Payment interface for PhonePe UPI payments.

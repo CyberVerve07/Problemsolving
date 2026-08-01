@@ -1,4 +1,4 @@
-package oops.InterPhases;
+package oops.interphases;
 
 /**
  * GooglePay — Implements the Payment interface for Google Pay payments.

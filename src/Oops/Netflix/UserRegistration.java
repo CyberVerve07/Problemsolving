@@ -1,4 +1,4 @@
-package oops.Netflix;
+package oops.netflix;
 
 /**
  * UserRegistration — Handles user registration and login for Netflix.

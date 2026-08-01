@@ -1,4 +1,4 @@
-package oops.BankAccount;
+package oops.bankaccount;
 
 /**
  * Details — Bank Account management class demonstrating Encapsulation.

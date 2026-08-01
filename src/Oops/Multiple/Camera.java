@@ -1,4 +1,4 @@
-package oops.Multiple;
+package oops.multiple;
 
 /**
  * Camera — Interface for camera functionality.
