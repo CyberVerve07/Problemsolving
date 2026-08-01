@@ -11,6 +11,7 @@ public class Main2 {
         System.out.println(paytem.acountNo);
         System.out.println(paytem.balance);
            //Clonable Object ::
+
         Object payment2=paytem.clone();
         System.out.println("-----------------------------------");
         System.out.println(((Paytem)payment2).upiId);
@@ -21,8 +22,7 @@ public class Main2 {
         //Different addresses
         System.out.println(paytem);
         System.out.println(payment2);
-
-
+        
           //Shallow copy and deep copy in java mens
           //Shallow copy means copying the object but not the objects that are referenced by it.
           //Deep copy means copying the object and the objects that are referenced by it.
