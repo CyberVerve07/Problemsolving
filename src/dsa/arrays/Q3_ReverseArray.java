@@ -3,9 +3,9 @@ package dsa.arrays;
 /**
  * ============================================================
  *  Q3 - REVERSE AN ARRAY
- *  🏢 Asked In: TCS, Infosys, Wipro, Capgemini, Cognizant, HCL
- *  ⭐ Difficulty: Easy
- *  📌 Topic: Two Pointer Technique
+ *  ðŸ¢ Asked In: TCS, Infosys, Wipro, Capgemini, Cognizant, HCL
+ *  â­ Difficulty: Easy
+ *  ðŸ“Œ Topic: Two Pointer Technique
  * ============================================================
  *
  *  PROBLEM:
@@ -22,7 +22,7 @@ package dsa.arrays;
  *  Logic:
  *    - Create a new array
  *    - Fill it from end to start of original array
- *  ❌ Uses extra space O(n) → interviewer will ask for in-place solution
+ *  âŒ Uses extra space O(n) â†’ interviewer will ask for in-place solution
  *
  * ============================================================
  *  APPROACH 2 - TWO POINTER (In-place) - O(n) Time, O(1) Space
@@ -30,30 +30,30 @@ package dsa.arrays;
  *  Logic:
  *    - Use two pointers: left = 0, right = arr.length - 1
  *    - Swap arr[left] and arr[right]
- *    - Move left → (left++) and right ← (right--)
+ *    - Move left â†’ (left++) and right â† (right--)
  *    - Continue until left >= right
  *
  *  DRY RUN:
  *    arr = [1, 2, 3, 4, 5]
  *    ---
- *    Step 1: left=0, right=4 → swap(1,5) → [5, 2, 3, 4, 1]
- *    Step 2: left=1, right=3 → swap(2,4) → [5, 4, 3, 2, 1]
- *    Step 3: left=2, right=2 → left >= right → STOP
- *    Result: [5, 4, 3, 2, 1] ✅
+ *    Step 1: left=0, right=4 â†’ swap(1,5) â†’ [5, 2, 3, 4, 1]
+ *    Step 2: left=1, right=3 â†’ swap(2,4) â†’ [5, 4, 3, 2, 1]
+ *    Step 3: left=2, right=2 â†’ left >= right â†’ STOP
+ *    Result: [5, 4, 3, 2, 1] âœ…
  *
  * ============================================================
  *
- *  🔥 THIS "TWO POINTER" TECHNIQUE IS THE BASE OF MANY PROBLEMS:
- *     → Palindrome check
- *     → Container with most water
- *     → 3Sum, 4Sum problems
+ *  ðŸ”¥ THIS "TWO POINTER" TECHNIQUE IS THE BASE OF MANY PROBLEMS:
+ *     â†’ Palindrome check
+ *     â†’ Container with most water
+ *     â†’ 3Sum, 4Sum problems
  *  LEARN THIS PATTERN WELL!
  *
  * ============================================================
  */
 public class Q3_ReverseArray {
 
-    // ✅ OPTIMAL SOLUTION - Two Pointer - O(n) Time, O(1) Space
+    // âœ… OPTIMAL SOLUTION - Two Pointer - O(n) Time, O(1) Space
     public static void reverseArray(int[] arr) {
         int left = 0;
         int right = arr.length - 1;
@@ -70,7 +70,7 @@ public class Q3_ReverseArray {
         }
     }
 
-    // ❌ BRUTE FORCE using extra array - O(n) Space
+    // âŒ BRUTE FORCE using extra array - O(n) Space
     public static int[] reverseArrayBrute(int[] arr) {
         int[] result = new int[arr.length];
         for (int i = arr.length - 1; i >= 0; i--) {
@@ -122,7 +122,7 @@ public class Q3_ReverseArray {
          * 2. Swap using temp variable (or XOR swap if asked)
          * 3. In-place means O(1) extra space
          * 4. Time: O(n), Space: O(1)
-         * 5. FOLLOW-UP: "Reverse without temp variable?" → Use XOR:
+         * 5. FOLLOW-UP: "Reverse without temp variable?" â†’ Use XOR:
          *    arr[l] = arr[l] ^ arr[r];
          *    arr[r] = arr[l] ^ arr[r];
          *    arr[l] = arr[l] ^ arr[r];

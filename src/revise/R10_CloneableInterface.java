@@ -17,9 +17,9 @@ package revise;
  *  WHY WE USE Cloneable IN JAVA:
  *  1. Create an EXACT COPY of an object quickly.
  *  2. Avoid creating a new object from scratch (performance).
- *  3. PROTOTYPE DESIGN PATTERN — clone base object, modify copy.
- *  4. Defensive copying — pass a copy, not the original object.
- *  5. Undo/Redo features — save state snapshots.
+ *  3. PROTOTYPE DESIGN PATTERN â€” clone base object, modify copy.
+ *  4. Defensive copying â€” pass a copy, not the original object.
+ *  5. Undo/Redo features â€” save state snapshots.
  *
  *  SHALLOW COPY vs DEEP COPY (Most Important Interview Point!):
  *
@@ -34,8 +34,8 @@ package revise;
  *  - Must manually clone each nested object.
  *
  *  KEY POINTS:
- *  - Cloneable is empty — it's a MARKER INTERFACE.
- *  - Object.clone() is protected — must override and make public.
+ *  - Cloneable is empty â€” it's a MARKER INTERFACE.
+ *  - Object.clone() is protected â€” must override and make public.
  *  - Default clone() gives SHALLOW copy.
  *  - For deep copy: override clone() and clone nested objects too.
  *  - @deprecated style: Many experts say avoid Cloneable,
@@ -43,8 +43,8 @@ package revise;
  *  - Arrays have a built-in clone() that works well.
  *
  *  Cloneable vs Serializable (Marker Interface Comparison):
- *  Cloneable   → in-memory copy of object (clone())
- *  Serializable→ convert object to bytes (persistence/network)
+ *  Cloneable   â†’ in-memory copy of object (clone())
+ *  Serializableâ†’ convert object to bytes (persistence/network)
  * ============================================================
  */
 
@@ -63,7 +63,7 @@ class Address implements Cloneable {
     @Override
     public Address clone() {
         try {
-            return (Address) super.clone(); // Shallow — but Address has only primitives/Strings
+            return (Address) super.clone(); // Shallow â€” but Address has only primitives/Strings
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);
         }
@@ -77,10 +77,10 @@ class Address implements Cloneable {
 
 // ===================== SHALLOW COPY DEMO =====================
 class StudentShallow implements Cloneable {
-    String name;     // String (immutable — effectively safe in shallow copy)
-    int age;         // primitive — always copied by value
-    int[] scores;    // array — shared reference in shallow copy (DANGER!)
-    Address address; // object — shared reference in shallow copy (DANGER!)
+    String name;     // String (immutable â€” effectively safe in shallow copy)
+    int age;         // primitive â€” always copied by value
+    int[] scores;    // array â€” shared reference in shallow copy (DANGER!)
+    Address address; // object â€” shared reference in shallow copy (DANGER!)
 
     StudentShallow(String name, int age, int[] scores, Address address) {
         this.name = name;
@@ -92,9 +92,9 @@ class StudentShallow implements Cloneable {
     @Override
     public StudentShallow clone() {
         try {
-            // super.clone() → SHALLOW copy — does field-by-field copy
-            // primitives: copied by value ✓
-            // objects/arrays: copied by reference ✗ (shared!)
+            // super.clone() â†’ SHALLOW copy â€” does field-by-field copy
+            // primitives: copied by value âœ“
+            // objects/arrays: copied by reference âœ— (shared!)
             return (StudentShallow) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);
@@ -144,7 +144,7 @@ class StudentDeep implements Cloneable {
     }
 }
 
-// ===================== NOT CLONEABLE — What happens? =====================
+// ===================== NOT CLONEABLE â€” What happens? =====================
 class NotCloneableClass {
     int data = 42;
     // Does NOT implement Cloneable
@@ -201,14 +201,14 @@ public class R10_CloneableInterface {
         System.out.println("  s1: " + s1);
         System.out.println("  s2: " + s2);
 
-        // Modify the clone's array — AFFECTS ORIGINAL (shared reference!)
+        // Modify the clone's array â€” AFFECTS ORIGINAL (shared reference!)
         s2.scores[0] = 999;
         s2.address.city = "Delhi"; // modifying shared address!
 
         System.out.println("\nAfter modifying s2's scores[0] and address:");
         System.out.println("  s1: " + s1); // s1's score & address also changed!
         System.out.println("  s2: " + s2);
-        System.out.println("  [PROBLEM] s1 was affected — shallow copy shares references!");
+        System.out.println("  [PROBLEM] s1 was affected â€” shallow copy shares references!");
 
         System.out.println();
 
@@ -224,45 +224,45 @@ public class R10_CloneableInterface {
         System.out.println("  d1: " + d1);
         System.out.println("  d2: " + d2);
 
-        // Modify clone's array — does NOT affect original
+        // Modify clone's array â€” does NOT affect original
         d2.scores[0] = 999;
         d2.address.city = "Hyderabad";
 
         System.out.println("\nAfter modifying d2's scores[0] and address:");
         System.out.println("  d1: " + d1); // d1 unchanged!
         System.out.println("  d2: " + d2);
-        System.out.println("  [SUCCESS] d1 is NOT affected — deep copy is independent!");
+        System.out.println("  [SUCCESS] d1 is NOT affected â€” deep copy is independent!");
 
         System.out.println();
 
-        // ---- 3. Same object? — Reference Check ----
+        // ---- 3. Same object? â€” Reference Check ----
         System.out.println("--- 3. Clone Identity Checks ---");
-        System.out.println("d1 == d2: " + (d1 == d2));                   // false — different objects
+        System.out.println("d1 == d2: " + (d1 == d2));                   // false â€” different objects
         System.out.println("d1.equals(d2): " + d1.equals(d2));           // false (default equals uses ==)
         System.out.println("d1.getClass() == d2.getClass(): " + (d1.getClass() == d2.getClass())); // true
 
         System.out.println();
 
-        // ---- 4. NOT Cloneable → CloneNotSupportedException ----
+        // ---- 4. NOT Cloneable â†’ CloneNotSupportedException ----
         System.out.println("--- 4. Without Cloneable = CloneNotSupportedException ---");
         // NotCloneableClass doesn't implement Cloneable
-        // Can't call clone() — compiler/runtime blocks it
-        System.out.println("Class without Cloneable cannot use clone() — JVM throws CloneNotSupportedException");
+        // Can't call clone() â€” compiler/runtime blocks it
+        System.out.println("Class without Cloneable cannot use clone() â€” JVM throws CloneNotSupportedException");
         System.out.println("(Calling super.clone() without Cloneable marker = exception)");
 
         System.out.println();
 
-        // ---- 5. PROTOTYPE PATTERN — clone instead of construct ----
+        // ---- 5. PROTOTYPE PATTERN â€” clone instead of construct ----
         System.out.println("--- 5. Prototype Pattern (Real World Use) ---");
 
-        // Base config — created once
+        // Base config â€” created once
         ConfigTemplate baseConfig = new ConfigTemplate(
             "prod-server.com", 443,
             new String[]{"192.168.1.1", "10.0.0.5"},
             true
         );
 
-        // Clone it for different environments — much faster than new construction
+        // Clone it for different environments â€” much faster than new construction
         ConfigTemplate devConfig = baseConfig.clone();
         devConfig.host = "dev-server.local";
         devConfig.port = 8080;
@@ -286,10 +286,10 @@ public class R10_CloneableInterface {
 
         // ---- 7. Summary ----
         System.out.println("--- SUMMARY ---");
-        System.out.println("Cloneable     → Marker interface (empty) — tags class for clone() support");
-        System.out.println("Shallow Copy  → primitives copied, objects SHARED (default clone)");
-        System.out.println("Deep Copy     → everything independent (manual clone of nested objects)");
-        System.out.println("Alternative   → Copy Constructor: new Student(otherStudent) — preferred today");
+        System.out.println("Cloneable     â†’ Marker interface (empty) â€” tags class for clone() support");
+        System.out.println("Shallow Copy  â†’ primitives copied, objects SHARED (default clone)");
+        System.out.println("Deep Copy     â†’ everything independent (manual clone of nested objects)");
+        System.out.println("Alternative   â†’ Copy Constructor: new Student(otherStudent) â€” preferred today");
 
         System.out.println("\n=================================================");
     }

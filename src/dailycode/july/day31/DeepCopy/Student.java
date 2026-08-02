@@ -1,4 +1,4 @@
-package dailycode.july.day31.DeepCopy;
+package dailycode.july.day31.deepcopy;
 
 class Student implements Cloneable{
 

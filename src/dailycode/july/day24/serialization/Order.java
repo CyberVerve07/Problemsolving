@@ -8,53 +8,53 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * Order — Industry-level E-Commerce Order demonstrating Serialization.
+ * Order â€” Industry-level E-Commerce Order demonstrating Serialization.
  *
- * ╔══════════════════════════════════════════════════════════════════════╗
- * ║                  SERIALIZATION — INTERVIEW GUIDE                   ║
- * ╠══════════════════════════════════════════════════════════════════════╣
- * ║                                                                    ║
- * ║  Q: What is Serialization?                                         ║
- * ║  A: Converting an OBJECT into a BYTE STREAM so it can be:          ║
- * ║     → Saved to a FILE (persistence)                                ║
- * ║     → Sent over a NETWORK (RMI, sockets, microservices)            ║
- * ║     → Stored in a CACHE (Redis, Memcached)                         ║
- * ║     → Put in a SESSION (HttpSession in web apps)                   ║
- * ║                                                                    ║
- * ║  Q: What is Deserialization?                                       ║
- * ║  A: The REVERSE — converting a byte stream BACK into an object.    ║
- * ║                                                                    ║
- * ║  Q: What is the Serializable interface?                            ║
- * ║  A: A MARKER interface (no methods) in java.io package.            ║
- * ║     → It "marks" the class as eligible for serialization.          ║
- * ║     → JVM checks: if object instanceof Serializable → allow.      ║
- * ║     → Without it → NotSerializableException at runtime.            ║
- * ║                                                                    ║
- * ║  Q: What is 'transient' keyword?                                   ║
- * ║  A: Fields marked 'transient' are SKIPPED during serialization.    ║
- * ║     → Used for: passwords, calculated fields, non-serializable     ║
- * ║       objects, sensitive data.                                     ║
- * ║     → After deserialization, transient fields get DEFAULT values:   ║
- * ║       null (objects), 0 (int), false (boolean).                    ║
- * ║                                                                    ║
- * ║  Q: What is 'static' field behavior in Serialization?              ║
- * ║  A: Static fields are NOT serialized because they belong to the    ║
- * ║     CLASS, not the OBJECT. Serialization only saves object state.  ║
- * ║                                                                    ║
- * ║  Q: What are writeObject() and readObject()?                       ║
- * ║  A: Custom hooks for controlling serialization/deserialization.     ║
- * ║     → Must be 'private' with exact method signatures.              ║
- * ║     → JVM uses REFLECTION to find and call them.                   ║
- * ║     → Use case: encrypt sensitive data, validate, add custom logic.║
- * ║                                                                    ║
- * ║  INDUSTRY USE CASES:                                               ║
- * ║  1. Saving order data to file for audit/backup                     ║
- * ║  2. Sending order objects over network (microservices)              ║
- * ║  3. Storing orders in distributed cache (Redis)                    ║
- * ║  4. HTTP Session persistence (e.g., shopping cart)                 ║
- * ║  5. Deep copying objects (serialize → deserialize)                 ║
- * ║                                                                    ║
- * ╚══════════════════════════════════════════════════════════════════════╝
+ * â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
+ * â•‘                  SERIALIZATION â€” INTERVIEW GUIDE                   â•‘
+ * â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
+ * â•‘                                                                    â•‘
+ * â•‘  Q: What is Serialization?                                         â•‘
+ * â•‘  A: Converting an OBJECT into a BYTE STREAM so it can be:          â•‘
+ * â•‘     â†’ Saved to a FILE (persistence)                                â•‘
+ * â•‘     â†’ Sent over a NETWORK (RMI, sockets, microservices)            â•‘
+ * â•‘     â†’ Stored in a CACHE (Redis, Memcached)                         â•‘
+ * â•‘     â†’ Put in a SESSION (HttpSession in web apps)                   â•‘
+ * â•‘                                                                    â•‘
+ * â•‘  Q: What is Deserialization?                                       â•‘
+ * â•‘  A: The REVERSE â€” converting a byte stream BACK into an object.    â•‘
+ * â•‘                                                                    â•‘
+ * â•‘  Q: What is the Serializable interface?                            â•‘
+ * â•‘  A: A MARKER interface (no methods) in java.io package.            â•‘
+ * â•‘     â†’ It "marks" the class as eligible for serialization.          â•‘
+ * â•‘     â†’ JVM checks: if object instanceof Serializable â†’ allow.      â•‘
+ * â•‘     â†’ Without it â†’ NotSerializableException at runtime.            â•‘
+ * â•‘                                                                    â•‘
+ * â•‘  Q: What is 'transient' keyword?                                   â•‘
+ * â•‘  A: Fields marked 'transient' are SKIPPED during serialization.    â•‘
+ * â•‘     â†’ Used for: passwords, calculated fields, non-serializable     â•‘
+ * â•‘       objects, sensitive data.                                     â•‘
+ * â•‘     â†’ After deserialization, transient fields get DEFAULT values:   â•‘
+ * â•‘       null (objects), 0 (int), false (boolean).                    â•‘
+ * â•‘                                                                    â•‘
+ * â•‘  Q: What is 'static' field behavior in Serialization?              â•‘
+ * â•‘  A: Static fields are NOT serialized because they belong to the    â•‘
+ * â•‘     CLASS, not the OBJECT. Serialization only saves object state.  â•‘
+ * â•‘                                                                    â•‘
+ * â•‘  Q: What are writeObject() and readObject()?                       â•‘
+ * â•‘  A: Custom hooks for controlling serialization/deserialization.     â•‘
+ * â•‘     â†’ Must be 'private' with exact method signatures.              â•‘
+ * â•‘     â†’ JVM uses REFLECTION to find and call them.                   â•‘
+ * â•‘     â†’ Use case: encrypt sensitive data, validate, add custom logic.â•‘
+ * â•‘                                                                    â•‘
+ * â•‘  INDUSTRY USE CASES:                                               â•‘
+ * â•‘  1. Saving order data to file for audit/backup                     â•‘
+ * â•‘  2. Sending order objects over network (microservices)              â•‘
+ * â•‘  3. Storing orders in distributed cache (Redis)                    â•‘
+ * â•‘  4. HTTP Session persistence (e.g., shopping cart)                 â•‘
+ * â•‘  5. Deep copying objects (serialize â†’ deserialize)                 â•‘
+ * â•‘                                                                    â•‘
+ * â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  *
  * @author Aditya
  * @version 2.0
@@ -66,11 +66,11 @@ public class Order implements Serializable {
     // ======================== serialVersionUID ========================
     /**
      * INTERVIEW: Why is serialVersionUID important?
-     * → It acts as a VERSION NUMBER for this class.
-     * → During deserialization, JVM checks if the serialVersionUID of the
+     * â†’ It acts as a VERSION NUMBER for this class.
+     * â†’ During deserialization, JVM checks if the serialVersionUID of the
      *   serialized object MATCHES the class loaded in memory.
-     * → If they DON'T match → InvalidClassException.
-     * → If NOT declared, JVM auto-generates one — but it changes whenever
+     * â†’ If they DON'T match â†’ InvalidClassException.
+     * â†’ If NOT declared, JVM auto-generates one â€” but it changes whenever
      *   the class structure changes, breaking backward compatibility.
      *
      * BEST PRACTICE: ALWAYS declare serialVersionUID explicitly.
@@ -84,25 +84,25 @@ public class Order implements Serializable {
     private List<String> items;
     private double totalAmount;
     private Address shippingAddress;   // Nested Serializable object
-    private LocalDateTime orderDate;   // LocalDateTime is Serializable ✔
+    private LocalDateTime orderDate;   // LocalDateTime is Serializable âœ”
 
     /**
-     * TRANSIENT FIELD — will NOT be serialized.
-     * → Credit card info should NEVER be saved to disk or sent over network.
-     * → After deserialization, this will be null.
+     * TRANSIENT FIELD â€” will NOT be serialized.
+     * â†’ Credit card info should NEVER be saved to disk or sent over network.
+     * â†’ After deserialization, this will be null.
      */
     private transient String creditCardNumber;
 
     /**
-     * TRANSIENT FIELD — calculated at runtime, no need to persist.
-     * → Discount can be recalculated, so we skip it.
+     * TRANSIENT FIELD â€” calculated at runtime, no need to persist.
+     * â†’ Discount can be recalculated, so we skip it.
      */
     private transient double discountPercentage;
 
     /**
-     * STATIC FIELD — will NOT be serialized.
-     * → Static belongs to CLASS, not to OBJECT.
-     * → Serialization only saves OBJECT state.
+     * STATIC FIELD â€” will NOT be serialized.
+     * â†’ Static belongs to CLASS, not to OBJECT.
+     * â†’ Serialization only saves OBJECT state.
      */
     private static int totalOrdersCreated = 0;
 
@@ -125,9 +125,9 @@ public class Order implements Serializable {
 
     /**
      * INTERVIEW: What is writeObject()?
-     * → A custom hook called by JVM DURING serialization (via reflection).
-     * → Must be: private void writeObject(ObjectOutputStream oos)
-     * → Use case: Add custom logic BEFORE/AFTER default serialization.
+     * â†’ A custom hook called by JVM DURING serialization (via reflection).
+     * â†’ Must be: private void writeObject(ObjectOutputStream oos)
+     * â†’ Use case: Add custom logic BEFORE/AFTER default serialization.
      *
      * HERE: We call defaultWriteObject() first (serialize all non-transient fields),
      * then write the masked credit card number (last 4 digits only) for audit purposes.
@@ -147,9 +147,9 @@ public class Order implements Serializable {
 
     /**
      * INTERVIEW: What is readObject()?
-     * → A custom hook called by JVM DURING deserialization (via reflection).
-     * → Must be: private void readObject(ObjectInputStream ois)
-     * → Use case: Restore transient fields, validate data, apply business logic.
+     * â†’ A custom hook called by JVM DURING deserialization (via reflection).
+     * â†’ Must be: private void readObject(ObjectInputStream ois)
+     * â†’ Use case: Restore transient fields, validate data, apply business logic.
      *
      * HERE: We restore the masked card and recalculate the discount.
      */
@@ -182,17 +182,17 @@ public class Order implements Serializable {
 
     @Override
     public String toString() {
-        return "\n╔══════════════════════════════════════════╗\n"
-             + "║           ORDER DETAILS                   ║\n"
-             + "╠══════════════════════════════════════════╣\n"
+        return "\nâ•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—\n"
+             + "â•‘           ORDER DETAILS                   â•‘\n"
+             + "â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£\n"
              + "  Order ID       : " + orderId + "\n"
              + "  Customer       : " + customerName + "\n"
              + "  Items          : " + items + "\n"
-             + "  Total Amount   : ₹" + totalAmount + "\n"
+             + "  Total Amount   : â‚¹" + totalAmount + "\n"
              + "  Order Date     : " + orderDate + "\n"
              + "  Shipping To    : " + shippingAddress + "\n"
              + "  Credit Card    : " + (creditCardNumber != null ? creditCardNumber : "N/A (transient)") + "\n"
              + "  Discount       : " + discountPercentage + "%\n"
-             + "╚══════════════════════════════════════════╝";
+             + "â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•";
     }
 }

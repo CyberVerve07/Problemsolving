@@ -1,3 +1,5 @@
+package dailycode.july.day08;
+
 //package dailycode.july.day08;
 //
 //public class Atm {
@@ -56,3 +58,4 @@
 //    }
 //          }
 //
+

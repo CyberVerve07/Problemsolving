@@ -1,4 +1,4 @@
-package dailycode.july.day18.JeevanSaathiConsolApplication;
+package dailycode.july.day18.jeevansaathiconsoleapplication;
 
 public class Premium extends Membership{
     @Override

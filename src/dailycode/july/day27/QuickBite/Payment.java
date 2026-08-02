@@ -9,7 +9,7 @@ public interface Payment {
     default void refund(double amount, Authentication user) {
         if (user != null) {
             user.setWalletBalance(user.getWalletBalance() + amount);
-            System.out.println("[REFUND SUCCESS] Refunded ₹" + amount + " to wallet for " + user.getName());
+            System.out.println("[REFUND SUCCESS] Refunded â‚¹" + amount + " to wallet for " + user.getName());
         }
     }
 }

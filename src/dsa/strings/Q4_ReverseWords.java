@@ -3,9 +3,9 @@ package dsa.strings;
 /**
  * ============================================================
  *  Q4 - REVERSE WORDS IN A STRING
- *  🏢 Asked In: Amazon, Microsoft, Facebook, TCS, Wipro, Goldman Sachs
- *  ⭐ Difficulty: Easy-Medium
- *  📌 Topic: String Manipulation / Split / Two Pointer
+ *  ðŸ¢ Asked In: Amazon, Microsoft, Facebook, TCS, Wipro, Goldman Sachs
+ *  â­ Difficulty: Easy-Medium
+ *  ðŸ“Œ Topic: String Manipulation / Split / Two Pointer
  * ============================================================
  *
  *  PROBLEM A: Reverse the entire String
@@ -35,15 +35,15 @@ package dsa.strings;
  *    After trim: "hello world"
  *    After split by "\\s+": ["hello", "world"]
  *    Traverse from end: "world" + " " + "hello"
- *    Result: "world hello" ✅
+ *    Result: "world hello" âœ…
  *
  * ============================================================
  *  APPROACH 2 - Two Pointer (In-place, no split()) - O(n) Time
  * ============================================================
  *  Logic (the clever approach!):
  *    Step 1: Convert to char array
- *    Step 2: Reverse the ENTIRE string  → "eulb si yks eht"
- *    Step 3: Reverse EACH WORD          → "blue is sky the" ✅
+ *    Step 2: Reverse the ENTIRE string  â†’ "eulb si yks eht"
+ *    Step 3: Reverse EACH WORD          â†’ "blue is sky the" âœ…
  *
  *  WHY THIS WORKS?
  *    After reversing whole string, all words are in right order
@@ -52,19 +52,19 @@ package dsa.strings;
  *
  *  DRY RUN:
  *    Input: "the sky is blue"
- *    Step 2: Reverse all  → "eulb si yks eht"
+ *    Step 2: Reverse all  â†’ "eulb si yks eht"
  *    Step 3: Reverse words individually:
- *            "eulb" → "blue"
- *            "si"   → "is"
- *            "yks"  → "sky"
- *            "eht"  → "the"
- *    Result: "blue is sky the" ✅
+ *            "eulb" â†’ "blue"
+ *            "si"   â†’ "is"
+ *            "yks"  â†’ "sky"
+ *            "eht"  â†’ "the"
+ *    Result: "blue is sky the" âœ…
  *
  * ============================================================
  */
 public class Q4_ReverseWords {
 
-    // ✅ APPROACH 1: Split & Rebuild - Easy to code in interview
+    // âœ… APPROACH 1: Split & Rebuild - Easy to code in interview
     public static String reverseWords(String str) {
         // Trim spaces and split by one or more whitespace
         String[] words = str.trim().split("\\s+");
@@ -80,7 +80,7 @@ public class Q4_ReverseWords {
         return result.toString();
     }
 
-    // ✅ APPROACH 2: Reverse Entire + Reverse Each Word (No extra space)
+    // âœ… APPROACH 2: Reverse Entire + Reverse Each Word (No extra space)
     public static String reverseWordsInPlace(String str) {
         char[] chars = str.trim().toCharArray();
         int n = chars.length;
@@ -91,7 +91,7 @@ public class Q4_ReverseWords {
         // Step 2: Reverse each word individually
         int start = 0;
         for (int i = 0; i <= n; i++) {
-            // When we hit a space or end of string → reverse the word we just passed
+            // When we hit a space or end of string â†’ reverse the word we just passed
             if (i == n || chars[i] == ' ') {
                 reverseSection(chars, start, i - 1);
                 start = i + 1; // Next word starts after the space
@@ -112,13 +112,13 @@ public class Q4_ReverseWords {
         }
     }
 
-    // ✅ BONUS: Reverse only the String characters (not words)
+    // âœ… BONUS: Reverse only the String characters (not words)
     public static String reverseString(String str) {
         return new StringBuilder(str).reverse().toString();
     }
 
-    // ✅ BONUS: Rotate String by K positions
-    // "abcdef", k=2 → "efabcd"
+    // âœ… BONUS: Rotate String by K positions
+    // "abcdef", k=2 â†’ "efabcd"
     public static String rotateString(String str, int k) {
         int n = str.length();
         k = k % n; // Handle k > n
@@ -147,22 +147,22 @@ public class Q4_ReverseWords {
 
         // Reverse String
         System.out.println("\n=== REVERSE STRING CHARACTERS ===");
-        System.out.println("hello → " + reverseString("hello"));
+        System.out.println("hello â†’ " + reverseString("hello"));
 
         // Rotate String
         System.out.println("\n=== ROTATE STRING ===");
-        System.out.println("abcdef, k=2 → " + rotateString("abcdef", 2));
+        System.out.println("abcdef, k=2 â†’ " + rotateString("abcdef", 2));
 
         /*
          * KEY INTERVIEW POINTS TO REMEMBER:
          * -----------------------------------
-         * 1. "\\s+" matches one or more spaces → handles multiple spaces!
+         * 1. "\\s+" matches one or more spaces â†’ handles multiple spaces!
          * 2. ALWAYS call trim() first to handle leading/trailing spaces
          * 3. The "Reverse all, then reverse each word" trick is elegant!
          * 4. Mention BOTH approaches and trade-offs
          * 5. Time: O(n), Space: O(n) for Approach 1
          * 6. Time: O(n), Space: O(1) for Approach 2 (in-place on char array)
-         * 7. StringBuilder is preferred over String concatenation (+) → O(n²) issue
+         * 7. StringBuilder is preferred over String concatenation (+) â†’ O(nÂ²) issue
          */
     }
 }

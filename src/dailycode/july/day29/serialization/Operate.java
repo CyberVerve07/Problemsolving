@@ -1,4 +1,4 @@
-package dailycode.july.day29.Serilization;
+package dailycode.july.day29.serialization;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -11,7 +11,7 @@ public class Operate {
 
 
         //Write the operation
-        ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("src/dailycode/july29/Serilization/hdfc.txt"));
+        ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("src/dailycode/july29/serialization/hdfc.txt"));
         oos.writeObject(hdfc);
         oos.close();
         System.out.println("Object serialized successfully.");

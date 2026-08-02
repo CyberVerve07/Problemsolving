@@ -1,4 +1,4 @@
-package dailycode.july.day31.DeepCopy;
+package dailycode.july.day31.deepcopy;
 
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {

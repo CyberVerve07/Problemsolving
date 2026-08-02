@@ -1,7 +1,7 @@
 package oops.abstraction;
 
 /**
- * INTERVIEW DEFINITION — Abstract Class (Abstraction Pillar):
+ * INTERVIEW DEFINITION â€” Abstract Class (Abstraction Pillar):
  * --------------------------------------------------------------
  * Q: What is Abstraction?
  * A: Abstraction is the process of HIDING implementation details and showing only the
@@ -12,9 +12,9 @@ package oops.abstraction;
  *
  * Q: What is an Abstract Class?
  * A: A class declared with the 'abstract' keyword that:
- *    - CANNOT be instantiated directly (new Animal() → ERROR).
- *    - CAN have abstract methods (no body — child must implement).
- *    - CAN have concrete methods (with body — shared by all children).
+ *    - CANNOT be instantiated directly (new Animal() â†’ ERROR).
+ *    - CAN have abstract methods (no body â€” child must implement).
+ *    - CAN have concrete methods (with body â€” shared by all children).
  *    - CAN have constructors, fields, and static methods.
  *
  * Q: When to use Abstract Class vs Interface?
@@ -38,24 +38,24 @@ package oops.abstraction;
 public abstract class Animal {
 
     /**
-     * Abstract method — has NO body (no implementation).
+     * Abstract method â€” has NO body (no implementation).
      * Every NON-ABSTRACT child class MUST provide implementation for this method.
      *
      * INTERVIEW: Why abstract method?
-     * → We know every animal makes a sound, but we DON'T know WHAT sound.
-     * → Dog barks, Cat meows — the specific sound depends on the animal type.
-     * → So we DECLARE the method here but let children DEFINE the behavior.
+     * â†’ We know every animal makes a sound, but we DON'T know WHAT sound.
+     * â†’ Dog barks, Cat meows â€” the specific sound depends on the animal type.
+     * â†’ So we DECLARE the method here but let children DEFINE the behavior.
      */
     public abstract void makeSound();
 
     /**
-     * Concrete method — has a body (implementation).
-     * This method is SHARED by all child classes — no need to override.
+     * Concrete method â€” has a body (implementation).
+     * This method is SHARED by all child classes â€” no need to override.
      *
      * INTERVIEW: Can abstract class have concrete methods?
-     * → YES! Abstract class can have BOTH abstract and concrete methods.
-     * → Concrete methods provide COMMON behavior shared by all children.
-     * → This avoids CODE DUPLICATION (DRY principle — Don't Repeat Yourself).
+     * â†’ YES! Abstract class can have BOTH abstract and concrete methods.
+     * â†’ Concrete methods provide COMMON behavior shared by all children.
+     * â†’ This avoids CODE DUPLICATION (DRY principle â€” Don't Repeat Yourself).
      */
     public void sleep() {
         System.out.println("Sleeping... Zzz");

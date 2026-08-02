@@ -3,22 +3,22 @@ package dailycode.july.day24.serialization;
 import java.io.Serializable;
 
 /**
- * Address — A Serializable value object representing a shipping address.
+ * Address â€” A Serializable value object representing a shipping address.
  *
  * INTERVIEW: Why must Address also implement Serializable?
- * → When we serialize an Order object, Java serializes the ENTIRE object graph.
- * → If Order has a reference to Address, and Address is NOT Serializable,
+ * â†’ When we serialize an Order object, Java serializes the ENTIRE object graph.
+ * â†’ If Order has a reference to Address, and Address is NOT Serializable,
  *   Java throws java.io.NotSerializableException at RUNTIME.
- * → RULE: Every object referenced by a Serializable class must ALSO be Serializable,
+ * â†’ RULE: Every object referenced by a Serializable class must ALSO be Serializable,
  *   OR the field must be marked 'transient' to skip it.
  *
  * INTERVIEW: What is serialVersionUID?
- * → It is a UNIQUE identifier for each Serializable class.
- * → Used during DESERIALIZATION to verify that the sender and receiver of a
+ * â†’ It is a UNIQUE identifier for each Serializable class.
+ * â†’ Used during DESERIALIZATION to verify that the sender and receiver of a
  *   serialized object have loaded classes that are compatible.
- * → If not declared, JVM generates one based on class structure — but this can
+ * â†’ If not declared, JVM generates one based on class structure â€” but this can
  *   BREAK if the class changes (e.g., add a field), causing InvalidClassException.
- * → BEST PRACTICE: Always declare serialVersionUID explicitly.
+ * â†’ BEST PRACTICE: Always declare serialVersionUID explicitly.
  *
  * JAVA TYPE: Serializable POJO
  * MARKER INTERFACE: java.io.Serializable
@@ -29,7 +29,7 @@ import java.io.Serializable;
 public class Address implements Serializable {
 
     /**
-     * Explicit serialVersionUID — ensures backward compatibility.
+     * Explicit serialVersionUID â€” ensures backward compatibility.
      * If you change this class (add/remove fields), you control whether
      * old serialized files are still compatible.
      */

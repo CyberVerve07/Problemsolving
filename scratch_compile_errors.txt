@@ -1,0 +1,14 @@
+﻿javac.exe : C:\Users\lenovo\Problemsolving\src\revise\R8_BackwardCompatibility.java:204: warning: [removal] 
+calculate(int,int) in OldAPI has been deprecated and marked for removal
+At C:\Users\lenovo\.gemini\antigravity-ide\brain\c56b2a5f-3575-4fc1-820c-a8223bfb53f0\scratch\run_compiler.ps1:10 
+char:1
++ & javac -d $binPath -sourcepath $srcPath "@$sourcesFile" 2>&1 | Out-F ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\lenovo...ked for removal:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+        int old = api.calculate(5, 3);     // Works but shows deprecation warning
+                     ^
+Note: C:\Users\lenovo\Problemsolving\src\revise\R3_AutoBoxing.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 warning

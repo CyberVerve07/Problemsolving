@@ -20,7 +20,7 @@ public class DebitCard extends PaymentGateway implements Payment {
         System.out.println("---------------------------------------");
         System.out.println("Payment Method : Debit Card");
         System.out.println("Account Holder : " + getAccountHolderName());
-        System.out.println("Current Balance: ₹" + getBalance());
+        System.out.println("Current Balance: â‚¹" + getBalance());
         System.out.println("---------------------------------------");
         System.out.println("Enter the amount to pay via Debit Card:");
         java.util.Scanner sc = new java.util.Scanner(System.in);

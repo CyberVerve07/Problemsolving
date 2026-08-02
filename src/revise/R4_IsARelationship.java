@@ -8,16 +8,16 @@ package revise;
  *  DEFINITION (Interview Answer):
  *  IS-A relationship represents INHERITANCE in Java.
  *  When a class extends another class (or implements an interface),
- *  it establishes an IS-A relationship — meaning the child class
+ *  it establishes an IS-A relationship â€” meaning the child class
  *  IS-A type of the parent class.
  *  Implemented using: extends (class) and implements (interface).
  *
  *  WHY WE USE IT IN JAVA:
- *  1. CODE REUSE — child inherits all non-private members of parent.
- *  2. POLYMORPHISM — child objects can be used wherever parent is expected.
- *  3. EXTENSIBILITY — extend existing classes without modifying them.
- *  4. STANDARD HIERARCHY — Java API uses it everywhere (Exception, Thread, etc.)
- *  5. SUBSTITUTION PRINCIPLE (Liskov) — child can replace parent safely.
+ *  1. CODE REUSE â€” child inherits all non-private members of parent.
+ *  2. POLYMORPHISM â€” child objects can be used wherever parent is expected.
+ *  3. EXTENSIBILITY â€” extend existing classes without modifying them.
+ *  4. STANDARD HIERARCHY â€” Java API uses it everywhere (Exception, Thread, etc.)
+ *  5. SUBSTITUTION PRINCIPLE (Liskov) â€” child can replace parent safely.
  *
  *  KEY POINTS:
  *  - "extends" keyword establishes IS-A with a class (single inheritance).
@@ -49,7 +49,7 @@ abstract class Vehicle {
     abstract void fuelType(); // child must implement this
 }
 
-// Interface — another form of IS-A
+// Interface â€” another form of IS-A
 interface Electric {
     void charge();
     default void showChargingStatus() {

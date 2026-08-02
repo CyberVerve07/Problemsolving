@@ -19,7 +19,7 @@ public abstract class PaymentGateway {
         this.balance = 0.0;
     }
 
-    // Bug Fix: 3-arg constructor was empty before — now properly sets all fields
+    // Bug Fix: 3-arg constructor was empty before â€” now properly sets all fields
     public PaymentGateway(String accountHolderName, String accountNumber, double balance) {
         this.accountHolderName = accountHolderName;
         this.accountNumber = accountNumber;
@@ -60,7 +60,7 @@ public abstract class PaymentGateway {
         Scanner sc = new Scanner(System.in);
         double amount = sc.nextDouble();
         balance = amount + balance;
-        System.out.println("Your Account Balance after Deposit: ₹" + balance);
+        System.out.println("Your Account Balance after Deposit: â‚¹" + balance);
         System.out.println("=======================================");
     }
 
@@ -72,7 +72,7 @@ public abstract class PaymentGateway {
             System.out.println("Withdrawal Successful!");
             System.out.println("Amount Debited from Account. Available Balance is:");
             balance = balance - widAmount;
-            System.out.println("₹" + balance);
+            System.out.println("â‚¹" + balance);
         } else {
             System.out.println("Insufficient balance! Withdrawal not allowed.");
         }
@@ -86,12 +86,12 @@ public abstract class PaymentGateway {
             return;
         }
         if (amount > balance) {
-            System.out.println("Insufficient balance! Payment of ₹" + amount + " failed.");
+            System.out.println("Insufficient balance! Payment of â‚¹" + amount + " failed.");
             return;
         }
         balance = balance - amount;
         System.out.println(" Payment of " + amount + " processed successfully.");
-        System.out.println("Updated Balance: ₹" + balance);
+        System.out.println("Updated Balance: â‚¹" + balance);
         System.out.println("=======================================");
     }
 

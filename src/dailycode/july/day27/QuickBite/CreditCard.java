@@ -11,14 +11,14 @@ public class CreditCard implements Payment {
 
     @Override
     public boolean processPayment(double amount, Authentication user, String foodItem) {
-        System.out.println("\n[PAYMENT INITIATED] Credit Card Payment for " + foodItem + " | Amount: ₹" + amount);
+        System.out.println("\n[PAYMENT INITIATED] Credit Card Payment for " + foodItem + " | Amount: â‚¹" + amount);
         System.out.println("Authorizing Card & OTP verification...");
-        System.out.println("[PAYMENT SUCCESSFUL] ₹" + amount + " charged to Credit Card.");
-        System.out.println("Order Confirmed! Your item '" + foodItem + "' is on its way. 🍕");
+        System.out.println("[PAYMENT SUCCESSFUL] â‚¹" + amount + " charged to Credit Card.");
+        System.out.println("Order Confirmed! Your item '" + foodItem + "' is on its way. ðŸ•");
 
         if (user != null) {
             notificationService.sendSMSNotification(user.getPhoneNumber(),
-                    "Credit Card Payment of ₹" + amount + " successful for " + foodItem + ".");
+                    "Credit Card Payment of â‚¹" + amount + " successful for " + foodItem + ".");
         }
         return true;
     }

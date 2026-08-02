@@ -1,13 +1,13 @@
 package dailycode.july.day25.onlinebankingsystem;
 
 /**
- * NetBanking — Implements PaymentService for internet banking payments.
+ * NetBanking â€” Implements PaymentService for internet banking payments.
  *
  * INTERVIEW: What is Loose Coupling?
- * → PaymentService interface makes the system LOOSELY COUPLED.
- * → Main.java doesn't need to know about NetBanking specifically — it only knows PaymentService.
- * → We can ADD new payment methods (e.g., CryptoPay) WITHOUT modifying existing code.
- * → This follows the OPEN-CLOSED PRINCIPLE (open for extension, closed for modification).
+ * â†’ PaymentService interface makes the system LOOSELY COUPLED.
+ * â†’ Main.java doesn't need to know about NetBanking specifically â€” it only knows PaymentService.
+ * â†’ We can ADD new payment methods (e.g., CryptoPay) WITHOUT modifying existing code.
+ * â†’ This follows the OPEN-CLOSED PRINCIPLE (open for extension, closed for modification).
  *
  * JAVA TYPE: class implementing interface
  * OOP PILLAR: Abstraction + Polymorphism

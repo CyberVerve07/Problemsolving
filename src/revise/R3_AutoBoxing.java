@@ -10,7 +10,7 @@ package revise;
  *  boolean, etc.) into its corresponding Wrapper class object
  *  (Integer, Double, Boolean, etc.) by the Java compiler.
  *
- *  UNBOXING: The reverse process — automatic conversion of a Wrapper
+ *  UNBOXING: The reverse process â€” automatic conversion of a Wrapper
  *  class object back into its corresponding primitive type.
  *  Both are done AUTOMATICALLY by the Java compiler (since Java 5).
  *
@@ -23,22 +23,22 @@ package revise;
  *  5. Enables null assignment (primitives can't be null, wrappers can).
  *
  *  KEY POINTS:
- *  - Autoboxing: primitive → Wrapper  (int → Integer)
- *  - Unboxing:   Wrapper  → primitive (Integer → int)
- *  - Done automatically by compiler — generates valueOf() internally.
+ *  - Autoboxing: primitive â†’ Wrapper  (int â†’ Integer)
+ *  - Unboxing:   Wrapper  â†’ primitive (Integer â†’ int)
+ *  - Done automatically by compiler â€” generates valueOf() internally.
  *  - Can cause NullPointerException if wrapper object is null during unboxing.
  *  - Performance concern: avoid in tight loops (creates objects on heap).
  *  - Integer cache: Java caches Integer objects from -128 to 127.
  *
  *  PRIMITIVE vs WRAPPER:
- *  int     → Integer
- *  double  → Double
- *  boolean → Boolean
- *  char    → Character
- *  long    → Long
- *  float   → Float
- *  byte    → Byte
- *  short   → Short
+ *  int     â†’ Integer
+ *  double  â†’ Double
+ *  boolean â†’ Boolean
+ *  char    â†’ Character
+ *  long    â†’ Long
+ *  float   â†’ Float
+ *  byte    â†’ Byte
+ *  short   â†’ Short
  * ============================================================
  */
 
@@ -50,7 +50,7 @@ public class R3_AutoBoxing {
 
         System.out.println("========== AUTOBOXING & UNBOXING DEMO ==========\n");
 
-        // ---- 1. AUTOBOXING: primitive → Wrapper ----
+        // ---- 1. AUTOBOXING: primitive â†’ Wrapper ----
         System.out.println("--- 1. AUTOBOXING ---");
 
         int primitiveInt = 42;
@@ -68,7 +68,7 @@ public class R3_AutoBoxing {
 
         System.out.println();
 
-        // ---- 2. UNBOXING: Wrapper → primitive ----
+        // ---- 2. UNBOXING: Wrapper â†’ primitive ----
         System.out.println("--- 2. UNBOXING ---");
 
         Integer wrapperObj = new Integer(100); // Wrapper object
@@ -87,11 +87,11 @@ public class R3_AutoBoxing {
         System.out.println("--- 3. AUTOBOXING IN COLLECTIONS ---");
 
         List<Integer> numbers = new ArrayList<>();
-        numbers.add(1);   // Autoboxing: int 1 → Integer
-        numbers.add(2);   // Autoboxing: int 2 → Integer
-        numbers.add(3);   // Autoboxing: int 3 → Integer
+        numbers.add(1);   // Autoboxing: int 1 â†’ Integer
+        numbers.add(2);   // Autoboxing: int 2 â†’ Integer
+        numbers.add(3);   // Autoboxing: int 3 â†’ Integer
 
-        int first = numbers.get(0); // Unboxing: Integer → int
+        int first = numbers.get(0); // Unboxing: Integer â†’ int
         System.out.println("First element (unboxed): " + first);
         System.out.println("List: " + numbers);
 
@@ -118,7 +118,7 @@ public class R3_AutoBoxing {
 
         Integer nullWrapper = null;
         try {
-            int val = nullWrapper; // Unboxing null → NullPointerException!
+            int val = nullWrapper; // Unboxing null â†’ NullPointerException!
             System.out.println(val);
         } catch (NullPointerException e) {
             System.out.println("NullPointerException! Cannot unbox null wrapper.");

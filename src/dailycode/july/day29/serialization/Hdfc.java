@@ -1,4 +1,4 @@
-package dailycode.july.day29.Serilization;
+package dailycode.july.day29.serialization;
 
 import java.io.Serializable;
 

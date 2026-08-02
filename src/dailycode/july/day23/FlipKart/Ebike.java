@@ -107,7 +107,7 @@ public class Ebike extends BaseDeliveryPartner{
         // Check only these things:
         // Is food picked?
         // Has partner reached customer?
-        // If both are true → deliver
+        // If both are true â†’ deliver
 
         Scanner sc = new Scanner(System.in);
 

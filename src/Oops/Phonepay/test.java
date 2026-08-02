@@ -1,3 +1,5 @@
+package oops.phonepay;
+
 //package oops.phonepay;
 //
 //class Test {
@@ -10,3 +12,4 @@
 //        System.out.println(" Balance is "+Test.getBalance());
 //    }
 //}
+

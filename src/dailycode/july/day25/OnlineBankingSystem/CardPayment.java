@@ -1,15 +1,15 @@
 package dailycode.july.day25.onlinebankingsystem;
 
 /**
- * CardPayment — Implements the PaymentService interface for credit/debit card payments.
+ * CardPayment â€” Implements the PaymentService interface for credit/debit card payments.
  *
- * INTERVIEW DEFINITION — 'implements' keyword:
- * → 'implements' is used to make a class agree to the CONTRACT of an interface.
- * → The class MUST provide body for ALL abstract methods declared in the interface.
- * → A class can implement MULTIPLE interfaces (achieves multiple inheritance in Java).
+ * INTERVIEW DEFINITION â€” 'implements' keyword:
+ * â†’ 'implements' is used to make a class agree to the CONTRACT of an interface.
+ * â†’ The class MUST provide body for ALL abstract methods declared in the interface.
+ * â†’ A class can implement MULTIPLE interfaces (achieves multiple inheritance in Java).
  *
  * EXAMPLE:
- *   PaymentService card = new CardPayment();  // Upcasting (Interface reference → child object)
+ *   PaymentService card = new CardPayment();  // Upcasting (Interface reference â†’ child object)
  *   card.processPayment();                    // Calls CardPayment's version at RUNTIME
  *
  * JAVA TYPE: class implementing interface
@@ -25,9 +25,9 @@ public class CardPayment implements PaymentService {
      * Processes payment using a credit/debit card.
      *
      * INTERVIEW: Why @Override here?
-     * → Even though we are implementing (not overriding a class method), @Override is
+     * â†’ Even though we are implementing (not overriding a class method), @Override is
      *   used to tell the compiler we are fulfilling the interface contract.
-     * → If the method signature doesn't match the interface, compiler gives an ERROR.
+     * â†’ If the method signature doesn't match the interface, compiler gives an ERROR.
      */
     @Override
     public void processPayment() {

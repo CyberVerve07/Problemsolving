@@ -1,21 +1,23 @@
+package oops.multiple;
+
 //package oops.Multiple;
 //// HEAD
 //
 ///**
-// * Smartphone — Implements MULTIPLE interfaces (Camera + MusicPlayer).
+// * Smartphone Ã¢â‚¬â€ Implements MULTIPLE interfaces (Camera + MusicPlayer).
 // *
 // * INTERVIEW: How does Multiple Inheritance work in Java?
-// * → Java supports Multiple Inheritance ONLY through INTERFACES.
-// * → Smartphone implements Camera AND MusicPlayer.
-// * → It MUST provide body for ALL abstract methods from BOTH interfaces:
+// * Ã¢â€ â€™ Java supports Multiple Inheritance ONLY through INTERFACES.
+// * Ã¢â€ â€™ Smartphone implements Camera AND MusicPlayer.
+// * Ã¢â€ â€™ It MUST provide body for ALL abstract methods from BOTH interfaces:
 // *   - click() from Camera
 // *   - playMusic() from MusicPlayer
 // *
 // * INTERVIEW: What if both interfaces have the same default method?
-// * → The implementing class MUST override the method to resolve the conflict.
-// * → Otherwise, the compiler gives an error (ambiguity).
+// * Ã¢â€ â€™ The implementing class MUST override the method to resolve the conflict.
+// * Ã¢â€ â€™ Otherwise, the compiler gives an error (ambiguity).
 // *
-// * NOTE: Added 'public' modifier — class name should match filename convention.
+// * NOTE: Added 'public' modifier Ã¢â‚¬â€ class name should match filename convention.
 // *
 // * JAVA TYPE: class implementing multiple interfaces
 // * OOP PILLAR: Abstraction (Multiple Inheritance via Interfaces)
@@ -30,20 +32,20 @@
 //=======
 //
 ///**
-// * Smartphone — Implements MULTIPLE interfaces (Camera + MusicPlayer).
+// * Smartphone Ã¢â‚¬â€ Implements MULTIPLE interfaces (Camera + MusicPlayer).
 // *
 // * INTERVIEW: How does Multiple Inheritance work in Java?
-// * → Java supports Multiple Inheritance ONLY through INTERFACES.
-// * → Smartphone implements Camera AND MusicPlayer.
-// * → It MUST provide body for ALL abstract methods from BOTH interfaces:
+// * Ã¢â€ â€™ Java supports Multiple Inheritance ONLY through INTERFACES.
+// * Ã¢â€ â€™ Smartphone implements Camera AND MusicPlayer.
+// * Ã¢â€ â€™ It MUST provide body for ALL abstract methods from BOTH interfaces:
 // *   - click() from Camera
 // *   - playMusic() from MusicPlayer
 // *
 // * INTERVIEW: What if both interfaces have the same default method?
-// * → The implementing class MUST override the method to resolve the conflict.
-// * → Otherwise, the compiler gives an error (ambiguity).
+// * Ã¢â€ â€™ The implementing class MUST override the method to resolve the conflict.
+// * Ã¢â€ â€™ Otherwise, the compiler gives an error (ambiguity).
 // *
-// * NOTE: Added 'public' modifier — class name should match filename convention.
+// * NOTE: Added 'public' modifier Ã¢â‚¬â€ class name should match filename convention.
 // *
 // * JAVA TYPE: class implementing multiple interfaces
 // * OOP PILLAR: Abstraction (Multiple Inheritance via Interfaces)
@@ -55,7 +57,7 @@
 // */
 //public class Smartphone implements Camera, MusicPlayfe85f421d2cb682cb4100dcce38957fd3f187bcd
 //    /**
-//     * Implementation of Camera's click() — captures a photo.
+//     * Implementation of Camera's click() Ã¢â‚¬â€ captures a photo.
 //     */
 //    @Override
 //    public void click() {
@@ -63,10 +65,11 @@
 //    }
 //
 //    /**
-//     * Implementation of MusicPlayer's playMusic() — plays music.
+//     * Implementation of MusicPlayer's playMusic() Ã¢â‚¬â€ plays music.
 //     */
 //    @Override
 //    public void playMusic() {
 //        System.out.println("Playing Music");
 //    }
 //}
+

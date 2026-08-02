@@ -1,4 +1,4 @@
-package dailycode.july.day18.JeevanSaathiConsolApplication;
+package dailycode.july.day18.jeevansaathiconsoleapplication;
 
 import java.util.List;
 

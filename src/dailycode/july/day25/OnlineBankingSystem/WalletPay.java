@@ -1,12 +1,12 @@
 package dailycode.july.day25.onlinebankingsystem;
 
 /**
- * WalletPay — Implements PaymentService for digital wallet payments (PhonePe, Paytm, etc.).
+ * WalletPay â€” Implements PaymentService for digital wallet payments (PhonePe, Paytm, etc.).
  *
  * INTERVIEW: What is Polymorphism with Interfaces?
- * → PaymentService ref = new WalletPay();  // Interface reference holding child object
- * → ref.processPayment();                  // JVM calls WalletPay's version at RUNTIME
- * → This is RUNTIME POLYMORPHISM — the method to call is decided at runtime based on
+ * â†’ PaymentService ref = new WalletPay();  // Interface reference holding child object
+ * â†’ ref.processPayment();                  // JVM calls WalletPay's version at RUNTIME
+ * â†’ This is RUNTIME POLYMORPHISM â€” the method to call is decided at runtime based on
  *   the ACTUAL object type, not the reference type.
  *
  * JAVA TYPE: class implementing interface

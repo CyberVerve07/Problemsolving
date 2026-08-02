@@ -1,6 +1,5 @@
-package dailycode.july.day18.JeevanSaathiConsolApplication;
+package dailycode.july.day18.jeevansaathiconsoleapplication;
 
-import dailycode.july17.Code1.TCS.SoftwareEngineer;
 import java.util.ArrayList;
 import java.util.List;
 

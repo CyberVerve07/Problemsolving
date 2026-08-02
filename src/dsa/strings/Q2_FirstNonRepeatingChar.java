@@ -16,17 +16,17 @@ import java.util.HashMap;
  *  Return the character or its index. Return -1 if none exists.
  *
  *  Example:
- *    Input:  "leetcode"   → Output: 'l' (index 0)
- *    Input:  "loveleetcode" → Output: 'v' (index 2)
- *    Input:  "aabb"       → Output: -1 (no unique char)
+ *    Input:  "leetcode"   â†’ Output: 'l' (index 0)
+ *    Input:  "loveleetcode" â†’ Output: 'v' (index 2)
+ *    Input:  "aabb"       â†’ Output: -1 (no unique char)
  *
  * ============================================================
- *  APPROACH 1 - BRUTE FORCE (O(n²))
+ *  APPROACH 1 - BRUTE FORCE (O(nÂ²))
  * ============================================================
  *  Logic:
  *    - For each character, scan entire string to count occurrences
- *    - If count == 1 → return that character
- *  ❌ O(n²) → too slow
+ *    - If count == 1 â†’ return that character
+ *  âŒ O(nÂ²) â†’ too slow
  *
  * ============================================================
  *  APPROACH 2 - HASHMAP (O(n) Time, O(1) Space*)
@@ -41,15 +41,15 @@ import java.util.HashMap;
  *    str = "leetcode"
  *    Pass 1: {l:1, e:3, t:1, c:1, o:1, d:1}
  *    Pass 2:
- *      index 0: 'l' → freq=1 → FOUND! Return 'l'
+ *      index 0: 'l' â†’ freq=1 â†’ FOUND! Return 'l'
  *
  *  Another example:
  *    str = "loveleetcode"
  *    Pass 1: {l:2, o:2, v:1, e:4, t:1, c:1, d:1}
  *    Pass 2:
- *      index 0: 'l' → freq=2 → skip
- *      index 1: 'o' → freq=2 → skip
- *      index 2: 'v' → freq=1 → FOUND! Return 'v'
+ *      index 0: 'l' â†’ freq=2 â†’ skip
+ *      index 1: 'o' â†’ freq=2 â†’ skip
+ *      index 2: 'v' â†’ freq=1 â†’ FOUND! Return 'v'
  *
  * ============================================================
  *  APPROACH 3 - FREQUENCY ARRAY (Faster for lowercase letters)
@@ -100,7 +100,7 @@ public class Q2_FirstNonRepeatingChar {
         return -1; // Not found
     }
 
-    //  BRUTE FORCE - O(n²) Time
+    //  BRUTE FORCE - O(nÂ²) Time
     public static char firstUniqueCharBrute(String str) {
         for (int i = 0; i < str.length(); i++) {
             boolean isUnique = true;
@@ -139,12 +139,12 @@ public class Q2_FirstNonRepeatingChar {
         /*
          * KEY INTERVIEW POINTS TO REMEMBER:
          * -----------------------------------
-         * 1. TWO PASS approach → always mention this clearly
-         * 2. Use int[26] instead of HashMap for lowercase letters → O(1) space
-         * 3. 'c' - 'a' gives index (0 to 25) → super useful trick!
+         * 1. TWO PASS approach â†’ always mention this clearly
+         * 2. Use int[26] instead of HashMap for lowercase letters â†’ O(1) space
+         * 3. 'c' - 'a' gives index (0 to 25) â†’ super useful trick!
          * 4. Handle edge cases: empty string, all same characters
          * 5. Time: O(n), Space: O(1) with frequency array
-         * 6. FOLLOW-UP: "All non-repeating chars?" → Easy, just return all with freq==1
+         * 6. FOLLOW-UP: "All non-repeating chars?" â†’ Easy, just return all with freq==1
          */
     }
 }

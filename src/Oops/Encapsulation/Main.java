@@ -1,3 +1,5 @@
+package oops.encapsulation;
+
 //package oops.encapsulation;
 //
 //public class Main {
@@ -21,3 +23,4 @@
 //        System.out.println("Age after invalid set: " + s.getAge());
 //    }
 //}
+

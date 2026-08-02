@@ -1,10 +1,12 @@
+package dailycode.july.day25.OnlineBankingSystem.interfaces;
+
 //<<<<<<< HEAD
 ////package dailycode.july.day25.OnlineBankingSystem.interfaces;
 ////
 ////
-//// * Main — Demonstrates Lambda Expression with Functional Interface.
+//// * Main Ã¢â‚¬â€ Demonstrates Lambda Expression with Functional Interface.
 //// *
-//// * INTERVIEW DEFINITION — Lambda Expression:
+//// * INTERVIEW DEFINITION Ã¢â‚¬â€ Lambda Expression:
 //// * --------------------------------------------
 //// * Q: What is a Lambda Expression?
 //// * A: A lambda expression is a SHORT, ANONYMOUS FUNCTION (no name, no class) that
@@ -13,9 +15,9 @@
 //// *    Shorthand: (parameters) -> expression (for single-line body, no braces needed)
 //// *
 //// * Q: Why do we use Lambda Expressions?
-//// * A: 1. CONCISE CODE — replace bulky anonymous inner classes with one-liners.
-//// *    2. FUNCTIONAL PROGRAMMING — treat functions as values (pass behavior as argument).
-//// *    3. READABILITY — easier to read and maintain.
+//// * A: 1. CONCISE CODE Ã¢â‚¬â€ replace bulky anonymous inner classes with one-liners.
+//// *    2. FUNCTIONAL PROGRAMMING Ã¢â‚¬â€ treat functions as values (pass behavior as argument).
+//// *    3. READABILITY Ã¢â‚¬â€ easier to read and maintain.
 //// *    4. Works ONLY with Functional Interfaces (one abstract method).
 //// *
 //// * Q: Lambda vs Anonymous Inner Class?
@@ -29,7 +31,7 @@
 //// *
 //// *    AFTER (Lambda Expression):
 //// *    Product p = message -> System.out.println(message);
-//// *    → Same result, much less code!
+//// *    Ã¢â€ â€™ Same result, much less code!
 //// *
 //// * JAVA TYPE: Lambda Expression
 //// * JAVA VERSION: Java 8..
@@ -37,7 +39,7 @@
 ////public class Main {
 ////
 ////    public static void main(String[] args) {
-////        // Lambda Expression — implements Product's publish(String) method in one line
+////        // Lambda Expression Ã¢â‚¬â€ implements Product's publish(String) method in one line
 ////        Product product = message -> System.out.println(message);
 ////        product.publish("Hello bhaji Ram Ram Sbhi ko ::::::: ::" );
 ////    }
@@ -51,9 +53,9 @@
 //package dailycode.july.day25.OnlineBankingSystem.interfaces;
 //
 ///**
-// * Main — Demonstrates Lambda Expression with Functional Interface.
+// * Main Ã¢â‚¬â€ Demonstrates Lambda Expression with Functional Interface.
 // *
-// * INTERVIEW DEFINITION — Lambda Expression:
+// * INTERVIEW DEFINITION Ã¢â‚¬â€ Lambda Expression:
 // * --------------------------------------------
 // * Q: What is a Lambda Expression?
 // * A: A lambda expression is a SHORT, ANONYMOUS FUNCTION (no name, no class) that
@@ -62,9 +64,9 @@
 // *    Shorthand: (parameters) -> expression (for single-line body, no braces needed)
 // *
 // * Q: Why do we use Lambda Expressions?
-// * A: 1. CONCISE CODE — replace bulky anonymous inner classes with one-liners.
-// *    2. FUNCTIONAL PROGRAMMING — treat functions as values (pass behavior as argument).
-// *    3. READABILITY — easier to read and maintain.
+// * A: 1. CONCISE CODE Ã¢â‚¬â€ replace bulky anonymous inner classes with one-liners.
+// *    2. FUNCTIONAL PROGRAMMING Ã¢â‚¬â€ treat functions as values (pass behavior as argument).
+// *    3. READABILITY Ã¢â‚¬â€ easier to read and maintain.
 // *    4. Works ONLY with Functional Interfaces (one abstract method).
 // *
 // * Q: Lambda vs Anonymous Inner Class?
@@ -78,7 +80,7 @@
 // *
 // *    AFTER (Lambda Expression):
 // *    Product p = message -> System.out.println(message);
-// *    → Same result, much less code!
+// *    Ã¢â€ â€™ Same result, much less code!
 // *
 // * JAVA TYPE: Lambda Expression
 // * JAVA VERSION: Java 8+
@@ -89,9 +91,10 @@
 //public class Main {
 //
 //    public static void main(String[] args) {
-//        // Lambda Expression — implements Product's publish(String) method in one line
+//        // Lambda Expression Ã¢â‚¬â€ implements Product's publish(String) method in one line
 //        Product product = message -> System.out.println(message);
 //        product.publish("Hello from Lambda Expression!");
 //    }
 //}
 //>>>>>>> fe85f421d2cb682cb4100dcce38957fd3f187bcd
+

@@ -1,4 +1,4 @@
-package dailycode.july.day23.FlipKart;
+package dailycode.july23.FlipKart;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class Bike extends BaseDeliveryPartner {
         super(partnerId, partnerName, vehicleNumber, rating, location);
     }
 
-    //() method was incorrectly placed INSIDE deliverOrder()
+    // method was incorrectly placed INSIDE deliverOrder()
     // Now it is properly defined as a separate method at class level
     @Override
     public void acceptOrder() {
@@ -109,7 +109,7 @@ public class Bike extends BaseDeliveryPartner {
         // Check only these things:
         // Is food picked?
         // Has partner reached customer?
-        // If both are true â†’ deliver
+        // If both are true → deliver
 
         Scanner sc = new Scanner(System.in);
 

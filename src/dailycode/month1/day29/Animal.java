@@ -1,3 +1,5 @@
+package dailycode.month1.day29;
+
 //package dailycode.month1.day29;
 //class Animal {
 //
@@ -36,3 +38,4 @@
 //        Dog d = new Dog("Tommy");
 //        d.display();
       //  d.sound();
+

@@ -1,10 +1,10 @@
-package oops.interphases;
+package oops.interfaces;
 
 /**
- * INTERVIEW DEFINITION — Interface:
+ * INTERVIEW DEFINITION Ã¢â‚¬â€ Interface:
  * ------------------------------------
  * Q: What is an Interface?
- * A: An interface defines a CONTRACT of behavior — it specifies WHAT methods a class
+ * A: An interface defines a CONTRACT of behavior Ã¢â‚¬â€ it specifies WHAT methods a class
  *    must have, but not HOW they are implemented. Any class that implements this interface
  *    MUST provide the body for all its abstract methods.
  *
@@ -24,7 +24,7 @@ package oops.interphases;
 interface Payment {
 
     /**
-     * Processes a payment — each implementing class defines its own logic.
+     * Processes a payment Ã¢â‚¬â€ each implementing class defines its own logic.
      * Interface methods are implicitly public and abstract.
      */
     void pay();

@@ -14,10 +14,10 @@ package revise;
  *    - CLASS:    cannot be extended (no child class allowed).
  *
  *  WHY WE USE final IN JAVA:
- *  1. IMMUTABILITY — create constants (final variables).
- *  2. SECURITY — prevent method overriding to avoid tampering.
- *  3. PERFORMANCE — JVM can inline final methods (optimization).
- *  4. DESIGN INTENT — signals "this is complete, don't extend".
+ *  1. IMMUTABILITY â€” create constants (final variables).
+ *  2. SECURITY â€” prevent method overriding to avoid tampering.
+ *  3. PERFORMANCE â€” JVM can inline final methods (optimization).
+ *  4. DESIGN INTENT â€” signals "this is complete, don't extend".
  *  5. String, Integer, Math classes are all final in Java!
  *
  *  KEY POINTS:
@@ -33,11 +33,11 @@ package revise;
  *  It can be applied to: variables, methods, blocks, nested classes.
  *
  *  WHY WE USE static IN JAVA:
- *  1. SHARED DATA — one copy shared across all instances.
- *  2. MEMORY EFFICIENCY — only one copy in memory (class-level).
- *  3. UTILITY METHODS — Math.sqrt(), Arrays.sort() are static.
- *  4. CONSTANTS — public static final int MAX = 100.
- *  5. FACTORY METHODS — getInstance() in Singleton pattern.
+ *  1. SHARED DATA â€” one copy shared across all instances.
+ *  2. MEMORY EFFICIENCY â€” only one copy in memory (class-level).
+ *  3. UTILITY METHODS â€” Math.sqrt(), Arrays.sort() are static.
+ *  4. CONSTANTS â€” public static final int MAX = 100.
+ *  5. FACTORY METHODS â€” getInstance() in Singleton pattern.
  *  6. Can be called WITHOUT creating an object.
  *
  *  KEY POINTS:
@@ -53,11 +53,11 @@ package revise;
  *  access level in Java.
  *
  *  WHY WE USE private IN JAVA:
- *  1. ENCAPSULATION — hide internal implementation details.
- *  2. DATA PROTECTION — prevent direct modification from outside.
- *  3. CONTROL ACCESS — force use of getters/setters (validation).
- *  4. REDUCES COUPLING — other classes can't depend on internal details.
- *  5. "OOP Pillar" — Encapsulation is built on private fields.
+ *  1. ENCAPSULATION â€” hide internal implementation details.
+ *  2. DATA PROTECTION â€” prevent direct modification from outside.
+ *  3. CONTROL ACCESS â€” force use of getters/setters (validation).
+ *  4. REDUCES COUPLING â€” other classes can't depend on internal details.
+ *  5. "OOP Pillar" â€” Encapsulation is built on private fields.
  *
  *  KEY POINTS:
  *  - private field: accessible only within same class.
@@ -66,10 +66,10 @@ package revise;
  *  - NOT inherited by subclasses (child can't access parent's private).
  *
  *  ACCESS MODIFIER COMPARISON:
- *  private   → same class only
- *  default   → same package
- *  protected → same package + subclasses
- *  public    → everywhere
+ *  private   â†’ same class only
+ *  default   â†’ same package
+ *  protected â†’ same package + subclasses
+ *  public    â†’ everywhere
  * ============================================================
  */
 
@@ -77,14 +77,14 @@ public class R7_FinalStaticPrivate {
 
     // ======================== STATIC MEMBERS ========================
 
-    // static variable — shared across ALL instances
+    // static variable â€” shared across ALL instances
     static int instanceCount = 0;
 
-    // static final constant — naming convention: ALL_CAPS
+    // static final constant â€” naming convention: ALL_CAPS
     static final double PI = 3.14159;
     static final int MAX_USERS = 1000;
 
-    // static block — runs ONCE when class is loaded (before main/constructor)
+    // static block â€” runs ONCE when class is loaded (before main/constructor)
     static {
         System.out.println("[STATIC BLOCK] Class loaded! One-time initialization.");
         instanceCount = 0;
@@ -92,11 +92,11 @@ public class R7_FinalStaticPrivate {
 
     // ======================== INSTANCE MEMBERS ========================
 
-    // private fields — encapsulation (HAS-A relationship with access control)
+    // private fields â€” encapsulation (HAS-A relationship with access control)
     private String name;
     private int age;
 
-    // final instance variable — must be set in constructor (blank final)
+    // final instance variable â€” must be set in constructor (blank final)
     final String id; // This person's ID cannot change after creation
 
     // Constructor
@@ -104,17 +104,17 @@ public class R7_FinalStaticPrivate {
         this.name = name;
         this.age = age;
         this.id = id; // blank final initialized here
-        instanceCount++;  // static variable shared — tracks total objects
+        instanceCount++;  // static variable shared â€” tracks total objects
     }
 
     // ======================== GETTERS / SETTERS (private field access) ========================
 
-    // public getter — controlled read access to private field
+    // public getter â€” controlled read access to private field
     public String getName() {
         return name;
     }
 
-    // public setter — controlled write access with validation
+    // public setter â€” controlled write access with validation
     public void setAge(int age) {
         if (age > 0 && age < 150) {
             this.age = age;
@@ -127,20 +127,20 @@ public class R7_FinalStaticPrivate {
         return age;
     }
 
-    // private helper method — only used internally
+    // private helper method â€” only used internally
     private String formatInfo() {
         return "[" + id + "] " + name + " (age " + age + ")";
     }
 
-    // public method — uses private helper internally
+    // public method â€” uses private helper internally
     public void display() {
         System.out.println("Person: " + formatInfo()); // calling private method
     }
 
-    // static method — belongs to class, can be called without object
+    // static method â€” belongs to class, can be called without object
     static void showCount() {
         System.out.println("Total persons created: " + instanceCount);
-        // System.out.println(name); // COMPILE ERROR — can't access instance var in static
+        // System.out.println(name); // COMPILE ERROR â€” can't access instance var in static
     }
 
     // static utility method (like Math.max)
@@ -150,7 +150,7 @@ public class R7_FinalStaticPrivate {
 
     // ======================== FINAL METHOD ========================
 
-    // final method — child classes CANNOT override this
+    // final method â€” child classes CANNOT override this
     final void showPolicy() {
         System.out.println("Company Policy: No changes allowed! (final method)");
     }
@@ -180,20 +180,20 @@ public class R7_FinalStaticPrivate {
         R7_FinalStaticPrivate p3 = new R7_FinalStaticPrivate("Charlie", 22, "ID003");
 
         // static variable updated across ALL objects
-        showCount(); // 3 — shared count
+        showCount(); // 3 â€” shared count
 
         System.out.println();
 
         // ---- 3. PRIVATE DEMO ----
         System.out.println("--- 3. PRIVATE DEMO ---");
 
-        // p1.name = "Hacker"; // COMPILE ERROR — 'name' is private!
-        // p1.age = -5;        // COMPILE ERROR — 'age' is private!
+        // p1.name = "Hacker"; // COMPILE ERROR â€” 'name' is private!
+        // p1.age = -5;        // COMPILE ERROR â€” 'age' is private!
 
         // Must use public getter/setter
         System.out.println("Get name (via getter): " + p1.getName());
         p1.setAge(26); // setter validates
-        p1.setAge(-99); // invalid — setter rejects
+        p1.setAge(-99); // invalid â€” setter rejects
         System.out.println("Get age (via getter): " + p1.getAge());
 
         p1.display(); // internally uses private formatInfo()
@@ -206,28 +206,28 @@ public class R7_FinalStaticPrivate {
         System.out.println("--- 4. FINAL VARIABLE DEMO ---");
 
         System.out.println("p1's ID (final): " + p1.id);
-        // p1.id = "NEW_ID"; // COMPILE ERROR — 'id' is final, can't reassign!
+        // p1.id = "NEW_ID"; // COMPILE ERROR â€” 'id' is final, can't reassign!
 
         // final local variable
         final int MAX_SCORE = 100;
-        // MAX_SCORE = 200; // COMPILE ERROR — final local var can't change
+        // MAX_SCORE = 200; // COMPILE ERROR â€” final local var can't change
         System.out.println("Final local var MAX_SCORE: " + MAX_SCORE);
 
         System.out.println();
 
         // ---- 5. FINAL METHOD DEMO ----
         System.out.println("--- 5. FINAL METHOD DEMO ---");
-        p1.showPolicy(); // Final method — works, but CANNOT be overridden
+        p1.showPolicy(); // Final method â€” works, but CANNOT be overridden
 
         System.out.println();
 
         // ---- 6. FINAL CLASS DEMO (shown via String) ----
         System.out.println("--- 6. FINAL CLASS (e.g., String in Java) ---");
-        // String is a final class — you cannot extend it:
+        // String is a final class â€” you cannot extend it:
         // class MyString extends String {} // COMPILE ERROR!
         String str = "Hello";
         System.out.println("String is a final class in Java: " + str.getClass().getName());
-        System.out.println("Cannot extend String or Integer — they are final classes.");
+        System.out.println("Cannot extend String or Integer â€” they are final classes.");
 
         System.out.println();
 
@@ -263,12 +263,12 @@ final class MathUtils {
 class DatabaseConnection {
     private static DatabaseConnection instance; // static single instance
 
-    // private constructor — no one outside can do: new DatabaseConnection()
+    // private constructor â€” no one outside can do: new DatabaseConnection()
     private DatabaseConnection() {
         System.out.println("DB Connection established!");
     }
 
-    // static factory method — only way to get the single instance
+    // static factory method â€” only way to get the single instance
     public static DatabaseConnection getInstance() {
         if (instance == null) {
             instance = new DatabaseConnection();

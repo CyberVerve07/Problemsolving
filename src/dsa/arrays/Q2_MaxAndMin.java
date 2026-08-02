@@ -3,9 +3,9 @@ package dsa.arrays;
 /**
  * ============================================================
  *  Q2 - FIND MAXIMUM AND MINIMUM IN ARRAY
- *  🏢 Asked In: TCS, Wipro, Infosys, Capgemini, Accenture, HCL
- *  ⭐ Difficulty: Easy
- *  📌 Topic: Array Traversal
+ *  ðŸ¢ Asked In: TCS, Wipro, Infosys, Capgemini, Accenture, HCL
+ *  â­ Difficulty: Easy
+ *  ðŸ“Œ Topic: Array Traversal
  * ============================================================
  *
  *  PROBLEM:
@@ -22,7 +22,7 @@ package dsa.arrays;
  *  Logic:
  *    - Sort the array
  *    - First element = Min, Last element = Max
- *  ❌ Sorting changes original array and takes extra time
+ *  âŒ Sorting changes original array and takes extra time
  *
  * ============================================================
  *  APPROACH 2 - OPTIMAL Single Traversal (O(n) Time, O(1) Space)
@@ -30,24 +30,24 @@ package dsa.arrays;
  *  Logic:
  *    - Initialize max = arr[0], min = arr[0]
  *    - Traverse the array from index 1
- *    - If current > max → update max
- *    - If current < min → update min
+ *    - If current > max â†’ update max
+ *    - If current < min â†’ update min
  *
  *  DRY RUN:
  *    arr = [3, 5, 4, 1, 9]
  *    Start: max=3, min=3
  *    ---
- *    i=1: val=5 → 5>3 → max=5
- *    i=2: val=4 → no change
- *    i=3: val=1 → 1<3 → min=1
- *    i=4: val=9 → 9>5 → max=9
- *    Result: max=9, min=1 ✅
+ *    i=1: val=5 â†’ 5>3 â†’ max=5
+ *    i=2: val=4 â†’ no change
+ *    i=3: val=1 â†’ 1<3 â†’ min=1
+ *    i=4: val=9 â†’ 9>5 â†’ max=9
+ *    Result: max=9, min=1 âœ…
  *
  * ============================================================
  */
 public class Q2_MaxAndMin {
 
-    // ✅ OPTIMAL SOLUTION - O(n) Time, O(1) Space
+    // âœ… OPTIMAL SOLUTION - O(n) Time, O(1) Space
     public static void findMaxMin(int[] arr) {
         if (arr == null || arr.length == 0) {
             System.out.println("Array is empty!");
@@ -72,7 +72,7 @@ public class Q2_MaxAndMin {
 
     // ============================================================
     //  BONUS VARIANT: Find Second Largest (Also Very Common!)
-    //  🏢 Asked In: Amazon, Infosys, Wipro
+    //  ðŸ¢ Asked In: Amazon, Infosys, Wipro
     // ============================================================
     public static int findSecondLargest(int[] arr) {
         int first = Integer.MIN_VALUE;  // Largest
@@ -108,10 +108,10 @@ public class Q2_MaxAndMin {
         /*
          * KEY INTERVIEW POINTS TO REMEMBER:
          * -----------------------------------
-         * 1. Always ask: "Are there duplicates?" → affects second largest logic
-         * 2. Always ask: "Can array be null or empty?" → handle edge case
+         * 1. Always ask: "Are there duplicates?" â†’ affects second largest logic
+         * 2. Always ask: "Can array be null or empty?" â†’ handle edge case
          * 3. Use Integer.MIN_VALUE and Integer.MAX_VALUE for initialization
-         * 4. Time: O(n), Space: O(1) → this is already optimal
+         * 4. Time: O(n), Space: O(1) â†’ this is already optimal
          * 5. Second Largest is a very common follow-up question!
          */
     }

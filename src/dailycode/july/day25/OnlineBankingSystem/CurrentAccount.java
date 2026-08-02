@@ -1,7 +1,7 @@
 package dailycode.july.day25.onlinebankingsystem;
 
 /**
- * INTERVIEW DEFINITION — Concrete Class Extending Abstract Class:
+ * INTERVIEW DEFINITION â€” Concrete Class Extending Abstract Class:
  * -----------------------------------------------------------------
  * Q: What is a Concrete Class?
  * A: A concrete class is a regular class that provides implementation for ALL abstract
@@ -13,8 +13,8 @@ package dailycode.july.day25.onlinebankingsystem;
  *    (deposit, checkBalance) and provides its OWN withdrawal logic (with overdraft support).
  *
  * KEY DIFFERENCE: CurrentAccount vs SavingsAccount:
- * → SavingsAccount: Requires minimum balance of ₹500, earns 7.5% interest.
- * → CurrentAccount: Supports overdraft up to ₹10,000, earns 0% interest.
+ * â†’ SavingsAccount: Requires minimum balance of â‚¹500, earns 7.5% interest.
+ * â†’ CurrentAccount: Supports overdraft up to â‚¹10,000, earns 0% interest.
  *
  * JAVA TYPE: class (concrete child class)
  * OOP PILLAR: Inheritance + Polymorphism (method overriding)
@@ -27,57 +27,57 @@ package dailycode.july.day25.onlinebankingsystem;
 public class CurrentAccount extends AccountManagement {
 
     /**
-     * Overdraft limit — current account allows withdrawal beyond zero balance up to this limit.
+     * Overdraft limit â€” current account allows withdrawal beyond zero balance up to this limit.
      *
      * INTERVIEW: What is 'private static final'?
-     * → 'private' = accessible ONLY within this class.
-     * → 'static'  = shared across all CurrentAccount instances (class-level constant).
-     * → 'final'   = value cannot be changed (immutable).
-     * → This is the Java way of defining CONSTANTS.
+     * â†’ 'private' = accessible ONLY within this class.
+     * â†’ 'static'  = shared across all CurrentAccount instances (class-level constant).
+     * â†’ 'final'   = value cannot be changed (immutable).
+     * â†’ This is the Java way of defining CONSTANTS.
      */
     private static final double OVERDRAFT_LIMIT = 10000.0;
 
     /**
-     * Constructor — initializes current account using parent constructor via super().
+     * Constructor â€” initializes current account using parent constructor via super().
      *
-     * @param accountHolderName String — name of the account holder
-     * @param accountNumber     String — unique account number
-     * @param balance           double — initial deposit amount
+     * @param accountHolderName String â€” name of the account holder
+     * @param accountNumber     String â€” unique account number
+     * @param balance           double â€” initial deposit amount
      */
     public CurrentAccount(String accountHolderName, String accountNumber, double balance) {
         super(accountHolderName, accountNumber, balance);
     }
 
     /**
-     * Withdraws money with overdraft support — allows balance to go negative up to ₹10,000.
+     * Withdraws money with overdraft support â€” allows balance to go negative up to â‚¹10,000.
      *
      * INTERVIEW: What is Runtime Polymorphism?
-     * → When the JVM decides at RUNTIME which version of an overridden method to call.
-     * → Example: AccountManagement ref = new CurrentAccount(...);
-     *   ref.withdrawal(500); → calls CurrentAccount's withdrawal, NOT AccountManagement's.
-     * → Also called Dynamic Method Dispatch.
+     * â†’ When the JVM decides at RUNTIME which version of an overridden method to call.
+     * â†’ Example: AccountManagement ref = new CurrentAccount(...);
+     *   ref.withdrawal(500); â†’ calls CurrentAccount's withdrawal, NOT AccountManagement's.
+     * â†’ Also called Dynamic Method Dispatch.
      *
-     * @param amount double — the amount to withdraw
+     * @param amount double â€” the amount to withdraw
      */
     @Override
     void withdrawal(double amount) {
         if (amount <= 0) {
             System.out.println("Invalid amount! Amount must be positive.");
         } else if (getBalance() - amount >= -OVERDRAFT_LIMIT) {
-            // Current account supports overdraft up to ₹10,000
+            // Current account supports overdraft up to â‚¹10,000
             setBalance(getBalance() - amount);
             System.out.println("Withdrawal Successful!");
-            System.out.println("Remaining Balance: ₹" + getBalance());
+            System.out.println("Remaining Balance: â‚¹" + getBalance());
             if (getBalance() < 0) {
-                System.out.println("⚠ Warning: Account is in overdraft! Overdraft used: ₹" + Math.abs(getBalance()));
+                System.out.println("âš  Warning: Account is in overdraft! Overdraft used: â‚¹" + Math.abs(getBalance()));
             }
         } else {
-            System.out.println("Withdrawal Failed! Overdraft limit of ₹" + OVERDRAFT_LIMIT + " exceeded.");
+            System.out.println("Withdrawal Failed! Overdraft limit of â‚¹" + OVERDRAFT_LIMIT + " exceeded.");
         }
     }
 
     /**
-     * @return String — "Current Account"
+     * @return String â€” "Current Account"
      */
     @Override
     String accountType() {
@@ -87,9 +87,9 @@ public class CurrentAccount extends AccountManagement {
     /**
      * Current accounts typically earn NO interest.
      *
-     * FIX: Renamed from 'CalcIntrest()' → 'calculateInterest()'.
+     * FIX: Renamed from 'CalcIntrest()' â†’ 'calculateInterest()'.
      *
-     * @return double — always returns 0.0
+     * @return double â€” always returns 0.0
      */
     @Override
     double calculateInterest() {

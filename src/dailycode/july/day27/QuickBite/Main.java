@@ -18,7 +18,7 @@ public class Main {
                 "aditya@example.com",
                 "123 Main Street, City",
                 "password123",
-                500.0 // Initial Wallet Balance = ₹500
+                500.0 // Initial Wallet Balance = â‚¹500
         );
 
         user.viewProfile();
@@ -55,14 +55,14 @@ public class Main {
         Cart cart = new Cart("CART301", user.getName(), pizza.getFoodName(), pizza.getPrice());
         cart.displayCart();
 
-        // Calculate bill with 18% GST (299 + 18% GST = ₹352.82)
+        // Calculate bill with 18% GST (299 + 18% GST = â‚¹352.82)
         cart.calculateTotal(18.0);
         double finalBillAmount = cart.getTotalAmount();
 
         // 6. Payment Service with Real Logic & Notifications
         System.out.println("\n--- MODULE 5: PAYMENT PROCESSING ---");
 
-        // Scenario A: Paying via Wallet (Wallet Balance = ₹500, Required = ₹352.82) -> Success!
+        // Scenario A: Paying via Wallet (Wallet Balance = â‚¹500, Required = â‚¹352.82) -> Success!
         System.out.println("\n--- Scenario A: Wallet Payment (Success) ---");
         Payment walletPayment = new WalletPay();
         boolean isPaid = walletPayment.processPayment(finalBillAmount, user, pizza.getFoodName());
@@ -79,7 +79,7 @@ public class Main {
             notificationService.sendOrderUpdate(user.getName(), "ORD902", "DELIVERED");
         }
 
-        // Scenario B: Paying another order via Wallet (Remaining Balance = ₹147.18, Required = ₹300) -> Fails due to low balance!
+        // Scenario B: Paying another order via Wallet (Remaining Balance = â‚¹147.18, Required = â‚¹300) -> Fails due to low balance!
         System.out.println("\n--- Scenario B: Wallet Payment (Insufficient Balance Check) ---");
         boolean secondPayment = walletPayment.processPayment(300.0, user, "Family Combo Meal");
 

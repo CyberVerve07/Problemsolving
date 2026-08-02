@@ -1,3 +1,5 @@
+package revise;
+
 //package revise;
 //
 ///*
@@ -12,9 +14,9 @@
 // *  Introduced in Java 5.
 // *
 // *  WHY WE USE IT IN JAVA:
-// *  1. CLEANER API — callers get specific type back without casting.
-// *  2. BETTER TYPE SAFETY — more precise return type at compile time.
-// *  3. FOLLOWS "PRINCIPLE OF SUBSTITUTABILITY" — child returns subtype
+// *  1. CLEANER API Ã¢â‚¬â€ callers get specific type back without casting.
+// *  2. BETTER TYPE SAFETY Ã¢â‚¬â€ more precise return type at compile time.
+// *  3. FOLLOWS "PRINCIPLE OF SUBSTITUTABILITY" Ã¢â‚¬â€ child returns subtype
 // *     which is still a valid parent type.
 // *  4. Used heavily in Builder Pattern, Factory Pattern, Cloning.
 // *  5. Eliminates explicit downcasting for the caller.
@@ -27,8 +29,8 @@
 // *  - The method name, parameters must remain SAME (it's still overriding).
 // *
 // *  RULE:
-// *  Parent returns Animal → Child CAN return Dog (Dog IS-A Animal ✓)
-// *  Parent returns Dog    → Child CANNOT return Animal (Animal is NOT Dog ✗)
+// *  Parent returns Animal Ã¢â€ â€™ Child CAN return Dog (Dog IS-A Animal Ã¢Å“â€œ)
+// *  Parent returns Dog    Ã¢â€ â€™ Child CANNOT return Animal (Animal is NOT Dog Ã¢Å“â€”)
 // *
 // *  REAL WORLD USE:
 // *  - clone() method: Object.clone() returns Object,
@@ -48,8 +50,8 @@
 //}
 //
 //class DogFactory extends AnimalFactory {
-//    // COVARIANT RETURN TYPE: returns Dog (subtype of Animal) — VALID!
-//    // Caller gets Dog directly — NO casting needed!
+//    // COVARIANT RETURN TYPE: returns Dog (subtype of Animal) Ã¢â‚¬â€ VALID!
+//    // Caller gets Dog directly Ã¢â‚¬â€ NO casting needed!
 //    @Override
 //    public Dog create() {
 //        System.out.println("Creating specific Dog...");
@@ -67,7 +69,7 @@
 //    }
 //
 //    // Object.clone() returns Object type
-//    // We override and return Prototype (covariant) — no casting needed
+//    // We override and return Prototype (covariant) Ã¢â‚¬â€ no casting needed
 //    @Override
 //    public Prototype clone() {
 //        try {
@@ -89,7 +91,7 @@
 //    String name;
 //    int age;
 //
-//    // Returns PersonBuilder — allows method chaining
+//    // Returns PersonBuilder Ã¢â‚¬â€ allows method chaining
 //    public PersonBuilder setName(String name) {
 //        this.name = name;
 //        return this;
@@ -115,7 +117,7 @@
 //        this.name = name;
 //    }
 //
-//    // Parent method — returns Animal2
+//    // Parent method Ã¢â‚¬â€ returns Animal2
 //    public Animal2 getInstance() {
 //        return new Animal2("Generic Animal");
 //    }
@@ -134,7 +136,7 @@
 //
 //    // COVARIANT: overrides getInstance(), but returns Dog2 (subtype of Animal2)
 //    @Override
-//    public Dog2 getInstance() { // Return type is Dog2, not Animal2 — COVARIANT!
+//    public Dog2 getInstance() { // Return type is Dog2, not Animal2 Ã¢â‚¬â€ COVARIANT!
 //        return new Dog2("Max");
 //    }
 //
@@ -161,9 +163,9 @@
 //        System.out.println("From AnimalFactory: " + a.name);
 //
 //        DogFactory df = new DogFactory();
-//        Dog d = df.create();          // returns Dog directly — NO casting needed!
+//        Dog d = df.create();          // returns Dog directly Ã¢â‚¬â€ NO casting needed!
 //        System.out.println("From DogFactory (Covariant): " + d.name);
-//        // Without covariant, we'd need: Dog d = (Dog) df.create(); — ugly!
+//        // Without covariant, we'd need: Dog d = (Dog) df.create(); Ã¢â‚¬â€ ugly!
 //
 //        System.out.println();
 //
@@ -205,9 +207,10 @@
 //
 //        // ---- 5. Key Rule ----
 //        System.out.println("--- RULE ---");
-//        System.out.println("Parent returns: Animal → Child can return: Dog (Dog IS-A Animal) ✓");
-//        System.out.println("Parent returns: Dog    → Child CANNOT return: Animal ✗ (Compile Error)");
+//        System.out.println("Parent returns: Animal Ã¢â€ â€™ Child can return: Dog (Dog IS-A Animal) Ã¢Å“â€œ");
+//        System.out.println("Parent returns: Dog    Ã¢â€ â€™ Child CANNOT return: Animal Ã¢Å“â€” (Compile Error)");
 //
 //        System.out.println("\n=================================================");
 //    }
 //}
+

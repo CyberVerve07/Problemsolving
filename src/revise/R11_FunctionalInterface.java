@@ -7,36 +7,36 @@ package revise;
  *
  *  DEFINITION (Interview Answer):
  *  A Functional Interface is an interface that has EXACTLY ONE
- *  abstract method (SAM — Single Abstract Method).
+ *  abstract method (SAM â€” Single Abstract Method).
  *  It CAN have any number of default and static methods.
  *  It is the foundation of Lambda Expressions in Java (Java 8+).
  *  Annotated with @FunctionalInterface (optional but recommended).
  *
  *  WHY WE USE FUNCTIONAL INTERFACES IN JAVA:
- *  1. LAMBDA EXPRESSIONS — enables concise, readable functional code.
- *  2. FUNCTIONAL PROGRAMMING — pass behavior (code) as a parameter.
- *  3. LESS BOILERPLATE — replace verbose anonymous inner classes.
- *  4. STREAMS API — map(), filter(), forEach() all use functional interfaces.
- *  5. METHOD REFERENCES — Printer::print style of coding.
- *  6. Higher-Order Functions — functions that take/return functions.
+ *  1. LAMBDA EXPRESSIONS â€” enables concise, readable functional code.
+ *  2. FUNCTIONAL PROGRAMMING â€” pass behavior (code) as a parameter.
+ *  3. LESS BOILERPLATE â€” replace verbose anonymous inner classes.
+ *  4. STREAMS API â€” map(), filter(), forEach() all use functional interfaces.
+ *  5. METHOD REFERENCES â€” Printer::print style of coding.
+ *  6. Higher-Order Functions â€” functions that take/return functions.
  *
  *  BUILT-IN FUNCTIONAL INTERFACES (java.util.function package):
- *  ┌──────────────────┬────────────────────┬──────────────────────────┐
- *  │ Interface        │ Abstract Method    │ Use Case                 │
- *  ├──────────────────┼────────────────────┼──────────────────────────┤
- *  │ Runnable         │ void run()         │ No input, no output      │
- *  │ Callable<V>      │ V call()           │ No input, returns value  │
- *  │ Function<T,R>    │ R apply(T t)       │ Transform T → R          │
- *  │ Consumer<T>      │ void accept(T t)   │ Takes T, returns nothing │
- *  │ Supplier<T>      │ T get()            │ No input, returns T      │
- *  │ Predicate<T>     │ boolean test(T t)  │ Takes T, returns boolean │
- *  │ BiFunction<T,U,R>│ R apply(T t, U u)  │ Two inputs → one output  │
- *  │ UnaryOperator<T> │ T apply(T t)       │ Same type in/out         │
- *  │ BinaryOperator<T>│ T apply(T t, T u)  │ Two same type → same type│
- *  └──────────────────┴────────────────────┴──────────────────────────┘
+ *  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+ *  â”‚ Interface        â”‚ Abstract Method    â”‚ Use Case                 â”‚
+ *  â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+ *  â”‚ Runnable         â”‚ void run()         â”‚ No input, no output      â”‚
+ *  â”‚ Callable<V>      â”‚ V call()           â”‚ No input, returns value  â”‚
+ *  â”‚ Function<T,R>    â”‚ R apply(T t)       â”‚ Transform T â†’ R          â”‚
+ *  â”‚ Consumer<T>      â”‚ void accept(T t)   â”‚ Takes T, returns nothing â”‚
+ *  â”‚ Supplier<T>      â”‚ T get()            â”‚ No input, returns T      â”‚
+ *  â”‚ Predicate<T>     â”‚ boolean test(T t)  â”‚ Takes T, returns boolean â”‚
+ *  â”‚ BiFunction<T,U,R>â”‚ R apply(T t, U u)  â”‚ Two inputs â†’ one output  â”‚
+ *  â”‚ UnaryOperator<T> â”‚ T apply(T t)       â”‚ Same type in/out         â”‚
+ *  â”‚ BinaryOperator<T>â”‚ T apply(T t, T u)  â”‚ Two same type â†’ same typeâ”‚
+ *  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
  *
  *  KEY POINTS:
- *  - Exactly ONE abstract method — this is the SAM rule.
+ *  - Exactly ONE abstract method â€” this is the SAM rule.
  *  - @FunctionalInterface: compiler checks the SAM rule for you.
  *  - Adding a second abstract method = compile error (with annotation).
  *  - Lambda = shorthand implementation of functional interface.
@@ -53,7 +53,7 @@ import java.util.stream.Collectors;
 
 @FunctionalInterface
 interface MathOperation {
-    // SAM — Single Abstract Method
+    // SAM â€” Single Abstract Method
     int operate(int a, int b);
 
     // Default methods are ALLOWED (don't violate SAM rule)
@@ -77,7 +77,7 @@ interface Validator<T> {
     boolean validate(T value);
 }
 
-// ===================== WITHOUT LAMBDA (Old way — Anonymous Class) =====================
+// ===================== WITHOUT LAMBDA (Old way â€” Anonymous Class) =====================
 // This is what Java looked like before Java 8
 
 public class R11_FunctionalInterface {
@@ -89,7 +89,7 @@ public class R11_FunctionalInterface {
         // ---- 1. OLD WAY vs LAMBDA ----
         System.out.println("--- 1. Old Way (Anonymous Class) vs Lambda ---");
 
-        // OLD WAY (verbose — before Java 8)
+        // OLD WAY (verbose â€” before Java 8)
         MathOperation addOld = new MathOperation() {
             @Override
             public int operate(int a, int b) {
@@ -98,7 +98,7 @@ public class R11_FunctionalInterface {
         };
         System.out.println("Old way (add): " + addOld.operate(10, 5));
 
-        // LAMBDA WAY (Java 8+) — same thing, much cleaner!
+        // LAMBDA WAY (Java 8+) â€” same thing, much cleaner!
         MathOperation addLambda = (a, b) -> a + b;
         MathOperation subLambda = (a, b) -> a - b;
         MathOperation mulLambda = (a, b) -> a * b;
@@ -152,7 +152,7 @@ public class R11_FunctionalInterface {
         System.out.println("intToStr: " + intToStr.apply(42));
         System.out.println("trim2: '" + trim2.apply("  spaces  ") + "'");
 
-        // andThen — chain functions
+        // andThen â€” chain functions
         Function<String, String> lenThenStr = strLength.andThen(intToStr);
         System.out.println("Chained (andThen): " + lenThenStr.apply("Hello"));
 
@@ -167,7 +167,7 @@ public class R11_FunctionalInterface {
         printer.accept("Functional Programming");
         doubler.accept(21);
 
-        // andThen — chain consumers
+        // andThen â€” chain consumers
         Consumer<String> printAndLog = printer.andThen(s -> System.out.println("  [LOGGED]"));
         printAndLog.accept("Combined Consumer");
 
@@ -245,7 +245,7 @@ public class R11_FunctionalInterface {
         System.out.println();
 
         // ---- 9. STREAMS (Functional Interface Power) ----
-        System.out.println("--- 9. Streams — Functional Interfaces in Action ---");
+        System.out.println("--- 9. Streams â€” Functional Interfaces in Action ---");
 
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
@@ -279,7 +279,7 @@ public class R11_FunctionalInterface {
         System.out.println("\n==========================================");
     }
 
-    // Method that accepts a functional interface as parameter — Higher-Order Function
+    // Method that accepts a functional interface as parameter â€” Higher-Order Function
     static void processAndPrint(List<String> items, StringTransformer transformer) {
         System.out.print("Transformed: ");
         items.forEach(item -> System.out.print(transformer.transform(item) + " "));

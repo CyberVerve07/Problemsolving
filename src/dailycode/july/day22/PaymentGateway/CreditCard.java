@@ -17,12 +17,12 @@ public class CreditCard extends PaymentGateway implements Payment {
         System.out.println("---------------------------------------");
         System.out.println("Payment Method : Credit Card");
         System.out.println("Account Holder : " + getAccountHolderName());
-        System.out.println("Current Balance: ₹" + getBalance());
+        System.out.println("Current Balance: â‚¹" + getBalance());
         System.out.println("---------------------------------------");
         System.out.println("Enter the amount to pay via Credit Card:");
         java.util.Scanner sc = new java.util.Scanner(System.in);
         double amount = sc.nextDouble();
-        // ✅ Feature: balance auto-updates after Credit Card payment via processPayment
+        // âœ… Feature: balance auto-updates after Credit Card payment via processPayment
         processPayment(amount);
     }
 

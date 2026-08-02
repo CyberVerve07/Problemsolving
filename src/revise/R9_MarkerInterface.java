@@ -7,38 +7,38 @@ package revise;
  *
  *  DEFINITION (Interview Answer):
  *  A Marker Interface (also called Tagging Interface) is an interface
- *  that has NO methods and NO fields — it is completely EMPTY.
+ *  that has NO methods and NO fields â€” it is completely EMPTY.
  *  Its sole purpose is to MARK or TAG a class to indicate to the
  *  JVM or Java framework that the class has some special capability
  *  or should be treated in a special way.
  *
  *  WHY WE USE MARKER INTERFACES IN JAVA:
- *  1. SIGNAL TO JVM — JVM/API checks instanceof to decide behavior.
+ *  1. SIGNAL TO JVM â€” JVM/API checks instanceof to decide behavior.
  *     e.g., ObjectOutputStream checks if object implements Serializable.
- *  2. METADATA — conveys information about a class without behavior.
- *  3. TYPE SAFETY — only marked classes get special treatment.
- *  4. RUNTIME CAPABILITY CHECK — code can check if a class "opted in".
+ *  2. METADATA â€” conveys information about a class without behavior.
+ *  3. TYPE SAFETY â€” only marked classes get special treatment.
+ *  4. RUNTIME CAPABILITY CHECK â€” code can check if a class "opted in".
  *
  *  FAMOUS JAVA MARKER INTERFACES:
- *  ┌─────────────────────┬──────────────────────────────────────────┐
- *  │ Interface           │ Marks for...                             │
- *  ├─────────────────────┼──────────────────────────────────────────┤
- *  │ java.io.Serializable│ JVM: object can be serialized to bytes   │
- *  │ java.lang.Cloneable │ JVM: object.clone() is allowed           │
- *  │ java.util.RandomAccess│ List: supports O(1) index access       │
- *  │ java.rmi.Remote     │ RMI: object can be accessed remotely     │
- *  └─────────────────────┴──────────────────────────────────────────┘
+ *  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+ *  â”‚ Interface           â”‚ Marks for...                             â”‚
+ *  â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+ *  â”‚ java.io.Serializableâ”‚ JVM: object can be serialized to bytes   â”‚
+ *  â”‚ java.lang.Cloneable â”‚ JVM: object.clone() is allowed           â”‚
+ *  â”‚ java.util.RandomAccessâ”‚ List: supports O(1) index access       â”‚
+ *  â”‚ java.rmi.Remote     â”‚ RMI: object can be accessed remotely     â”‚
+ *  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
  *
  *  KEY POINTS:
- *  - Has ZERO methods and ZERO fields — just a tag.
+ *  - Has ZERO methods and ZERO fields â€” just a tag.
  *  - Check using instanceof at runtime.
  *  - Modern alternative: ANNOTATIONS (@Deprecated, @Override, @Entity)
- *    → annotations are more powerful and flexible than marker interfaces.
+ *    â†’ annotations are more powerful and flexible than marker interfaces.
  *  - Marker interfaces still used for JVM-level operations (Serializable).
  *
  *  MARKER INTERFACE vs ANNOTATION:
- *  Marker Interface → cannot carry data, caught by instanceof.
- *  Annotation       → can carry data (key-value pairs), caught by reflection.
+ *  Marker Interface â†’ cannot carry data, caught by instanceof.
+ *  Annotation       â†’ can carry data (key-value pairs), caught by reflection.
  *
  *  WHEN TO USE MARKER INTERFACE TODAY:
  *  - When you need TYPE-LEVEL tagging checked via instanceof.
@@ -51,9 +51,9 @@ import java.io.*;
 
 // ===================== CUSTOM MARKER INTERFACE =====================
 
-// Empty interface — just a TAG/MARKER
+// Empty interface â€” just a TAG/MARKER
 interface Auditable {
-    // No methods, no fields — just marking that this class is auditable
+    // No methods, no fields â€” just marking that this class is auditable
 }
 
 interface Encryptable {
@@ -63,8 +63,8 @@ interface Encryptable {
 // ===================== CLASSES THAT USE MARKER =====================
 
 class UserData implements Auditable, Serializable {
-    // implements Auditable → marked for audit logging
-    // implements Serializable → marked for JVM serialization
+    // implements Auditable â†’ marked for audit logging
+    // implements Serializable â†’ marked for JVM serialization
     String username;
     String email;
 
@@ -96,7 +96,7 @@ class PaymentData implements Auditable, Encryptable, Serializable {
 }
 
 class ProductData {
-    // NOT marked — no special treatment
+    // NOT marked â€” no special treatment
     String productName;
     double price;
 
@@ -115,21 +115,21 @@ class ProductData {
 
 class DataService {
 
-    // Processes any object — but applies special logic based on marker interfaces
+    // Processes any object â€” but applies special logic based on marker interfaces
     static void process(Object obj) {
         System.out.println("Processing: " + obj.getClass().getSimpleName());
 
-        // Check marker interface — should we log audit?
+        // Check marker interface â€” should we log audit?
         if (obj instanceof Auditable) {
             System.out.println("  [AUDIT] Logging this operation to audit trail...");
         }
 
-        // Check marker interface — should we encrypt?
+        // Check marker interface â€” should we encrypt?
         if (obj instanceof Encryptable) {
             System.out.println("  [ENCRYPT] Encrypting sensitive data before saving...");
         }
 
-        // Check marker interface — can we serialize?
+        // Check marker interface â€” can we serialize?
         if (obj instanceof Serializable) {
             System.out.println("  [SERIALIZE] This object can be persisted to disk/network.");
         }
@@ -153,7 +153,7 @@ public class R9_MarkerInterface {
 
         DataService.process(user);
         DataService.process(payment);
-        DataService.process(product); // No markers — no special treatment
+        DataService.process(product); // No markers â€” no special treatment
 
         // ---- 2. instanceof Check on Marker Interface ----
         System.out.println("--- 2. instanceof Marker Check ---");
@@ -174,7 +174,7 @@ public class R9_MarkerInterface {
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(baos);
-            oos.writeObject(user);        // Works — UserData implements Serializable
+            oos.writeObject(user);        // Works â€” UserData implements Serializable
             oos.close();
 
             // Deserialize back
@@ -190,7 +190,7 @@ public class R9_MarkerInterface {
 
         System.out.println();
 
-        // ---- 4. NOT Serializable — What happens? ----
+        // ---- 4. NOT Serializable â€” What happens? ----
         System.out.println("--- 4. Not Serializable = Exception ---");
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -208,11 +208,11 @@ public class R9_MarkerInterface {
         // ---- 5. Marker Interface vs Annotation ----
         System.out.println("--- 5. Marker Interface vs Annotation ---");
         System.out.println("Marker Interface:");
-        System.out.println("  interface Auditable {}        ← empty, no data");
+        System.out.println("  interface Auditable {}        â† empty, no data");
         System.out.println("  Check: obj instanceof Auditable");
         System.out.println();
         System.out.println("Annotation (Modern Alternative):");
-        System.out.println("  @interface Auditable {}       ← can carry data");
+        System.out.println("  @interface Auditable {}       â† can carry data");
         System.out.println("  @Retention(RUNTIME)");
         System.out.println("  @Target(TYPE)");
         System.out.println("  @interface Auditable { String level() default \"INFO\"; }");

@@ -1,6 +1,6 @@
 package dailycode.july.day21.Crickbuzz.CrickInfo;
 
-// Note: Class name should ideally be WorldCup — typo kept to avoid renaming file
+// Note: Class name should ideally be WorldCup â€” typo kept to avoid renaming file
 public class WordCup extends Match implements LiveScore, ScoreCard, PlayerStats {
 
     // Fields declared at the top (Bug #12 fixed)
@@ -112,7 +112,7 @@ public class WordCup extends Match implements LiveScore, ScoreCard, PlayerStats 
 
     @Override
     public void updateScore() {
-        // empty — reserved for no-arg interface contract
+        // empty â€” reserved for no-arg interface contract
     }
 
     @Override

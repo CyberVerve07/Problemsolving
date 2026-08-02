@@ -19,7 +19,7 @@ package revise;
  *     frameworks (Spring, Hibernate), deserialization, etc.
  *
  *  KEY POINTS:
- *  - Requires EXPLICIT CAST — compiler won't do it automatically.
+ *  - Requires EXPLICIT CAST â€” compiler won't do it automatically.
  *  - Can throw ClassCastException at RUNTIME if object is not
  *    actually an instance of the child class.
  *  - ALWAYS use instanceof check before downcasting to be SAFE.
@@ -68,16 +68,16 @@ public class R2_DownCasting {
 
         System.out.println("========== DOWNCASTING DEMO ==========\n");
 
-        // Step 1: Upcasting — storing Circle as Shape
+        // Step 1: Upcasting â€” storing Circle as Shape
         Shape shape = new Circle(); // Upcasting (implicit)
-        shape.draw(); // "Drawing a Circle" — polymorphism
+        shape.draw(); // "Drawing a Circle" â€” polymorphism
 
-        // shape.getArea(); // COMPILE ERROR — Shape doesn't know getArea()
+        // shape.getArea(); // COMPILE ERROR â€” Shape doesn't know getArea()
 
         System.out.println();
 
-        // Step 2: DOWNCASTING — getting Circle back from Shape
-        // SAFE DOWNCASTING — always use instanceof first!
+        // Step 2: DOWNCASTING â€” getting Circle back from Shape
+        // SAFE DOWNCASTING â€” always use instanceof first!
         if (shape instanceof Circle) {
             Circle c = (Circle) shape; // Explicit downcast
             System.out.println("After Downcasting:");
@@ -100,9 +100,9 @@ public class R2_DownCasting {
 
         System.out.println();
 
-        // Step 4: Modern Java 16+ — Pattern Matching instanceof (cleaner syntax)
+        // Step 4: Modern Java 16+ â€” Pattern Matching instanceof (cleaner syntax)
         Shape s = new Circle();
-        if (s instanceof Circle circle) { // Pattern matching — auto downcast
+        if (s instanceof Circle circle) { // Pattern matching â€” auto downcast
             System.out.println("Pattern Matching (Java 16+): Area = " + circle.getArea());
         }
 
