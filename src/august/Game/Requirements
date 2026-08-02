@@ -1,0 +1,46 @@
+1. Player
+
+Fields:
+
+name
+health
+level
+currentWeapon
+
+Methods:
+
+move()
+attack()
+takeDamage(int damage)
+heal(int amount)
+showStatus()s
+
+
+
+   Module2   Interface class for
+   attack()
+   damage
+
+
+
+
+    Module3
+     3. Enemy
+
+     Fields:
+
+     name
+     health
+
+     Methods:
+
+     attack()
+     takeDamage()
+     showHealth()
+
+     Create:
+
+     Goblin
+     Dragon
+
+     Both should attack differently.

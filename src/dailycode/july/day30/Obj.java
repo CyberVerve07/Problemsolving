@@ -1,6 +1,7 @@
 package dailycode.july.day30;
 
-public class Obj {
+public class
+Obj {
 
     String name;
     String adress;

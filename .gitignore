@@ -1,4 +1,6 @@
 ### IntelliJ IDEA ###
+.idea/
+*.iml
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
@@ -27,3 +29,13 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Root Clutter & Scratch Files ###
+Aditya
+Aditya.ser
+Day1.iml
+Order src
+Result src
+scratch_*
+txt
+*.ser
