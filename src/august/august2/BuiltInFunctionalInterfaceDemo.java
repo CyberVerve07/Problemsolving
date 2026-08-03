@@ -49,7 +49,7 @@ public class BuiltInFunctionalInterfaceDemo {
         System.out.println("Generated Random Number: " + randomValue.get());
         System.out.println("Current Date: " + currentDate.get());
 
-        // 5. BiFunction<T, U, R> -> Takes two arguments of types T and U, returns result of type R
+        // 5. Function<T, U, R> -> Takes two arguments of types T and U, returns result of type R
         System.out.println("\n5. BiFunction<T, U, R> Example:");
         BiFunction<String, String, String> concatenate = (str1, str2) -> str1 + " " + str2;
         System.out.println("Combined String: " + concatenate.apply("August", "2026"));

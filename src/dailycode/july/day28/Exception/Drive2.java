@@ -1,4 +1,4 @@
-package dailycode.july.day28.Exception;
+package dailycode.july.day28.exception;
 
 public class Drive2 {
     public static void main(String[] args) {
@@ -11,10 +11,9 @@ public class Drive2 {
           catch (ArrayIndexOutOfBoundsException e){
               System.out.println("Exception is Handel: ");
           }
-          finally {
-              System.out.println("Iam Run Always : ");
-          }
-        System.out.println("Bhai ab ya finally kya ha ");
+
+
+
 
     }
 }

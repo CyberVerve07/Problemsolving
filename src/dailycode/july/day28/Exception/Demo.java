@@ -1,4 +1,4 @@
-package dailycode.july.day28.Exception;
+package dailycode.july.day28.exception;
 
 public class Demo {
 

@@ -1,4 +1,4 @@
-package dailycode.july.day28.Exception;
+package dailycode.july.day28.exception;
 
 import java.util.Arrays;
 
@@ -23,6 +23,7 @@ public class Driver {
         }
         System.out.println("Hello");
         System.out.println();
+        System.out.println("Solved");
 
           //What is Exception and try catch Block in JAva
 
