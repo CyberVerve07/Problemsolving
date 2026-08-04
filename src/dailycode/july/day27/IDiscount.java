@@ -31,6 +31,8 @@ class Driver {
 
         Function<Integer, Integer> function = (amt) -> amt * 100;
         System.out.println("Function result: " + function.apply(100));
+
+
     }
 }
 

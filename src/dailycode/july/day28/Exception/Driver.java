@@ -7,15 +7,12 @@ public class Driver {
     public static void main(String[] args) {
         int arr[] = new int[9];
 
-
         try {
             System.out.println(arr[29]);
             int result= 9/0;
         }
         catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Array index is out of bounds");
-
-
 
         }
         catch (ArithmeticException e) {

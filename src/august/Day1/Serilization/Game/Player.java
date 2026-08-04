@@ -1,4 +1,4 @@
-package august.Game;
+package august.Day1.Serilization.Game;
 
 public class Player {
 

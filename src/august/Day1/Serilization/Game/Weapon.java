@@ -1,4 +1,4 @@
-package august.Game;
+package august.Day1.Serilization.Game;
 abstract class Weapon {
 
     String name;
