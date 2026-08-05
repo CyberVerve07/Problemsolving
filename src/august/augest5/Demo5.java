@@ -9,11 +9,8 @@ public class Demo5 {
             throw new RuntimeException(e);
         }
 
-
-
     }
 }
-
 
   //The Class.forName() method in Java is a static method used to dynamically
 // load and initialize a class at runtime based on its fully qualified string name.
