@@ -1,0 +1,7 @@
+Singleton is a Creational Design Pattern that ensures only one instance of a class is created
+ throughout the application's
+lifecycle and provides a global access point to that instance.
+
+
+  /Copile time vs Runtime
+  Class.forname

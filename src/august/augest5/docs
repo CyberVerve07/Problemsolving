@@ -1,0 +1,13 @@
+//Exception
+//Design pattens
+//Revision
+//Learn about Complexity
+
+
+
+
+  Driver1 driver1=new Driver(); //static loading
+  Class.forName("com.kodewala.exception:"); //dynamic
+
+
+   Checked Exception is -> Filenotfound,
