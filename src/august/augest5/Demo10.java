@@ -9,7 +9,6 @@ public class Demo10 {
             System.out.println(e.getMessage());
         }
 
-
     }
 
     public  static void movieTicket( String movieName, String time ,String duration,  int seatNO) throws IllegalArgumentException  {

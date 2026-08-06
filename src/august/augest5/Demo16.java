@@ -13,7 +13,7 @@ public class Demo16 {
     }
 
     public static void main(String[] args) {
-        int number = 5;
+        int number = 4;
         int result = factorial(number);
 
         System.out.println("The factorial of " + number + " is: " + result);
