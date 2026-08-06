@@ -2,13 +2,11 @@ package august.augest5;
 
 public class Demo5 {
     public static void main(String[] args) {
-
         try {
             Class.forName("txt Java");  //File name not Exist so it throws an exception ::
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-
     }
 }
 
