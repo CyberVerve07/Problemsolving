@@ -13,6 +13,8 @@ public class Demo1 {
         users.add("Karan");
         users.add("Raman");
         System.out.println(users);
+        users.add("Prachi");
+        System.out.println(users);
 
         //Collection in java is a set of classes and interfaces that provide a ready-made
         //Data structure Algorithm and used to store manage ,manipulate the group of obj dynamically
