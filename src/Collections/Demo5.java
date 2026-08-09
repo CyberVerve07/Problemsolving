@@ -16,6 +16,9 @@ public class Demo5 {
            list.add("Ram");
            list.add("Shyam");
            list.add("Madhav");
+            list.remove(2);
+
+
         System.out.println(list);
     }
 }
