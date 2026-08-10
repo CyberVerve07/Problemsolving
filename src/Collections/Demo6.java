@@ -18,12 +18,7 @@ public class Demo6 {
         //Sorting
         Collections.sort(list);
         System.out.println(list);
-
-
-
           //Sorting in Descending order
-
-
          Collections.sort(list.reversed());
         System.out.println(list);
 
