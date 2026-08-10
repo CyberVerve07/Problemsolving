@@ -19,4 +19,6 @@ public class Demo1 {
         //Collection in java is a set of classes and interfaces that provide a ready-made
         //Data structure Algorithm and used to store manage ,manipulate the group of obj dynamically
     }
+
+
 }
