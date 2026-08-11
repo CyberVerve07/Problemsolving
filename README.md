@@ -1,18 +1,20 @@
 # 🚀 200 Days Java & Full-Stack Backend Learning Challenge
 
-Welcome to my personal 200-day Java and backend development learning repository! This project serves as a dedicated space to track my daily coding practice, algorithms, object-oriented design, and advanced backend development concepts.
+Welcome to my personal 200-day Java and backend development learning repository! This project serves as a dedicated space to track my daily coding practice, algorithms, object-oriented design, exception handling, design patterns, and Java Collections Framework.
 
 ---
 
 ## 📅 Challenge Overview
-*   **Goal**: Learn full backend development from scratch.
+*   **Goal**: Master core Java, object-oriented design, collections framework, and full backend development from scratch.
 *   **Duration**: 200 Days.
 *   **Language**: Java.
 *   **Key Focus Areas**:
     *   Java Basics & Flow Control (Loops, Conditionals)
     *   Data Structures (Arrays, String Manipulation)
     *   Object-Oriented Programming (OOP: Encapsulation, Inheritance, Polymorphism, Abstraction)
-    *   Algorithms & Problem Solving
+    *   Design Patterns (Singleton variations with Reflection, Serialization & Cloning defenses)
+    *   Exception Handling (Try-Catch-Finally, Custom Exceptions, Throws)
+    *   Java Collections Framework (List, ArrayList, Iterators, Collections utility)
     *   Backend Foundations (Database Integration, APIs, Frameworks, etc.)
 
 ---
@@ -21,37 +23,49 @@ Welcome to my personal 200-day Java and backend development learning repository!
 
 The codebase is organized into clean, modular packages directly under the `src` folder:
 
-*   **`dailycode/`**: Contains all daily exercises, categorized by date and problem set to keep tracking easy and conflict-free:
-    *   `dailycode.july01` to `dailycode.july07`
-    *   `dailycode.month1` (with sub-packages for specific days like `day27`, `day28`, `day29`, `day30`)
-    *   `dailycode.problems` (miscellaneous practice sets)
+*   **`Collections/`**: Java Collections Framework hands-on practice (`Demo1` to `Demo13`):
+    *   `List` interface & `ArrayList` dynamic resizing
+    *   Iterating using `Iterator` & enhanced for-loops
+    *   Bulk operations: `addAll`, `removeAll`, `clear`, `contains`, `set`, `get`
+*   **`oops/`**: Comprehensive Object-Oriented Programming demonstrations:
+    *   `oops.abstraction`: Abstract classes (`Animal`) and concrete implementations (`Dog`)
+    *   `oops.encapsulation`: Private fields, getters, setters, and data protection (`Student`, `Details`)
+    *   `oops.inheritance`: Class hierarchies and `super()` constructor chaining
+    *   `oops.polymorphism`: Compile-time (Method Overloading) & Runtime (Method Overriding)
+    *   `oops.student`, `oops.transport`, `oops.bankaccount`, `oops.phonepay`
+*   **`DesignPattens/`**: Design Pattern implementations:
+    *   `singleton`: Eager, Lazy, Synchronized, Double-Checked Locking (DCL), Bill Pugh, and Enum Singleton
+    *   Defenses against Reflection attacks, Serialization breaks (`readResolve`), and Cloning attacks
+*   **`august/`**: Monthly progress tracking and exception handling:
+    *   Custom Exception Handling (`InsufficientBalanceException`, `UserAlreadyExist`)
+    *   Nested try-catch blocks and try-with-resources
+    *   Serialization & Deserialization (`Share`, `Main`)
+    *   Marker Interfaces & Object Cloning (Shallow vs Deep Copying)
+*   **`revise/`**: Revision modules covering Java type system concepts:
+    *   `UpCasting`, `DownCasting`, `AutoBoxing`, `IsARelationship`, `CovariantReturnType`, `MarkerInterface`, `CloneableInterface`
 *   **`loops/`**: Core Java loops syntax and exercises (`Code01` to `Code21`).
 *   **`array/`**: Array manipulation and search/sort exercises (`Code01` to `Code09`).
-*   **`oops/`**: Demonstrations of core OOP principles:
-    *   `oops.inheritance` (class hierarchies like `Animal`, `Dog`, `Vehicle`, `Car`, `Person`, and `Employee`)
-    *   `oops.encapsulation` (getters, setters, and data protection in `Student`)
-    *   `oops.abstraction`, `oops.polymorphism`, `oops.bankaccount`, `oops.phonepay`
-*   **`oops.student/`**: Exercises revolving around oops.student data structures.
-*   **`oops.transport/`**: Real-world object modeling for oops.transport classes.
+*   **`dsa/`**: Data Structures & Algorithms practice sets.
+*   **`dailycode/`**: Daily coding exercises organized by month and date.
 
 ---
 
 ## 🛠️ How to Compile & Run
 
 ### 1. Compile the files
-You can compile any Java file using the terminal:
+You can compile any individual Java file using the terminal:
 ```bash
-javac src/loops/Code01.java
+javac src/Collections/Demo1.java
 ```
-Or to compile all files and place them in the output (`out/`) directory:
+Or to compile all files into the output (`out/`) directory:
 ```bash
-javac -d out src/**/*.java
+javac -d out (Get-ChildItem -Recurse -Filter *.java src | Select-Object -ExpandProperty FullName)
 ```
 
 ### 2. Run a class
-Run any compiled class containing a `main` method (e.g. `Employee` inside `oops.inheritance`):
+Run any compiled class containing a `main` method (e.g. `Demo1` inside `Collections`):
 ```bash
-java -cp out oops.inheritance.Employee
+java -cp out Collections.Demo1
 ```
 
 ---
@@ -61,10 +75,11 @@ java -cp out oops.inheritance.Employee
 | Milestone | Target | Description | Status |
 | :--- | :--- | :--- | :--- |
 | **Phase 1** | Days 1 - 30 | Java Syntax, Loops, Arrays, and String Basics | ✅ Completed |
-| **Phase 2** | Days 31 - 60 | OOP Principles & Object Design | 🔄 In Progress |
-| **Phase 3** | Days 61 - 100 | Data Structures, File I/O, Exception Handling | ⏳ Upcoming |
-| **Phase 4** | Days 101 - 150 | Database (SQL/NoSQL) & JDBC / Spring Boot Intro | ⏳ Upcoming |
-| **Phase 5** | Days 151 - 200 | Building REST APIs, Security, Deployment & Cloud | ⏳ Upcoming |
+| **Phase 2** | Days 31 - 60 | OOP Principles (Encapsulation, Inheritance, Polymorphism, Abstraction, Design Patterns) | ✅ Completed |
+| **Phase 3** | Days 61 - 90 | Exception Handling (Try-Catch, Custom Exceptions, Throw/Throws, Nested Try) | ✅ Completed |
+| **Phase 4** | Days 91 - 120 | Java Collections Framework (`List`, `ArrayList`, `Iterator`, Sets, Maps) | 🔄 In Progress |
+| **Phase 5** | Days 121 - 160 | Advanced Data Structures, File I/O & Streams API | ⏳ Upcoming |
+| **Phase 6** | Days 161 - 200 | Database (SQL/NoSQL), REST APIs, Spring Boot & Deployment | ⏳ Upcoming |
 
 ---
 

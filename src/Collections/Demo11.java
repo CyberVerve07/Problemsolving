@@ -33,8 +33,8 @@ public class Demo11 {
 
         System.out.println(list);
         System.out.println(list.size());
-        System.out.println(list.get(0));
-        System.out.println(list.get(10));
+        System.out.println("First element: " + list.get(0));
+        System.out.println("Last element: " + list.get(list.size() - 1));
 
 
     }

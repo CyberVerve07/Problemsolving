@@ -1,7 +1,5 @@
 package august.augest6;
 
-import java.nio.file.attribute.UserDefinedFileAttributeView;
-
 public class Registration {
 
     public boolean doRegistration(String userId) {
@@ -14,9 +12,9 @@ public class Registration {
             status = true;
         } else {
             System.out.println("User is available in db..." + userId);
-            throw new UnsupportedOperationException("User is already exist ");
+            throw new UserAlreadyExist("User already exists: " + userId);
         }
-            return status;
+        return status;
 
     }
 
