@@ -37,6 +37,7 @@ The codebase is organized into clean, modular packages directly under the `src` 
     *   `singleton`: Eager, Lazy, Synchronized, Double-Checked Locking (DCL), Bill Pugh, and Enum Singleton
     *   Defenses against Reflection attacks, Serialization breaks (`readResolve`), and Cloning attacks
 *   **`august/`**: Monthly progress tracking and exception handling:
+    *   `august.augest11`: Deep Dive into `ArrayList` architecture (5 programs covering internal working, 1.5x resizing algorithm, memory shifting, performance optimization with `ensureCapacity()` & `trimToSize()`, and custom `MyArrayList<T>` implementation).
     *   Custom Exception Handling (`InsufficientBalanceException`, `UserAlreadyExist`)
     *   Nested try-catch blocks and try-with-resources
     *   Serialization & Deserialization (`Share`, `Main`)
