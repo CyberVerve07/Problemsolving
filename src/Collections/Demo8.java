@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Demo8 {
     public static void main(String[] args) {
-
         // Pluralized variable name. Using List interface for the reference type.
         List<String> employeeNames = new ArrayList<>(10);
 
@@ -19,7 +18,6 @@ public class Demo8 {
         employeeNames.add("Kitu");
         employeeNames.add("Ashish");
         employeeNames.add("Ashish");
-
         // Use enhanced for-loop for clean iteration
         for (String name : employeeNames) {
             if (name.startsWith("P")) {
