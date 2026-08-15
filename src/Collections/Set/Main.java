@@ -21,6 +21,30 @@ public class Main {
         System.out.println(name==name2);
 
 
+        //Collection framework in java is a srt o classes and interfaces that  provide inbuild data structure and
+        //easy to store,manipulate the data elements ::
+        //List is a interface in java collection framework it is represent the order of collection
+        //and also allow to duplicate elements
+        //in list duplicate elements allowed because in list their is no machinist to compare the values
+
+        //Arraylist is a resizable array that allow duplicate elements and order manner its default size is 10
+        //Arraylist provide us index based access:
+
+
+        // Arraylist internally working it is use an array internally the default size is 10 it increase size by 50%
+        //old array +new array .1.5
+
+         //Array list is better when we use the get and read operation or insert the element in the last element its
+        //timeComplexity will be become 0(1).
+        //list allows duplicates because the List contract permits duplicate elements.
+        //list allow the duplicate elements because the list contract permits duplicate elements :
+    //   The commonly taught default initial capacity is 10,
+// but the no-argument constructor can defer allocation until the first element is added.
+
+
+
+
+
     }
 
 }
