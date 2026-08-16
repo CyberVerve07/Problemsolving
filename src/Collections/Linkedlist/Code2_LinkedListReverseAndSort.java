@@ -6,8 +6,8 @@ import java.util.LinkedList;
 /**
  * ============================================================
  *  CODE 2 - REVERSING & SORTING LINKEDLIST USING COLLECTIONS
- *  🏢 Asked In: Amazon, Flipkart, Tech Mahindra, Mindtree
- *  ⭐ Topic: Collections.reverse(), Collections.sort(), Comparators
+ *   Asked In: Amazon, Flipkart, Tech Mahindra, Mindtree
+ *   Topic: Collections.reverse(), Collections.sort(), Comparators
  * ============================================================
  *
  * ============================================================
@@ -35,7 +35,7 @@ public class Code2_LinkedListReverseAndSort {
 
         // 1. Reversing the LinkedList in-place - O(N)
         Collections.reverse(numbers);
-        System.out.println("Reversed List      : " + numbers);
+        System.out.println("Reversed List : " + numbers);
 
         // 2. Sorting in Ascending Order - O(N log N) using TimSort
         Collections.sort(numbers);
