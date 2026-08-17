@@ -1,4 +1,4 @@
-package dailycode.july.day30.ImmutableClass;
+package dailycode.july.day30.immutableclass;
 
 public class Example1 {
     public static void main(String[] args) {

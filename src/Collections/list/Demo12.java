@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Demo12 {
     public static void main(String[] args) {
 
-        //Collection is a set of interfaces and classes that provide the in build ds and allow us to store modify and
-        // manipulate the data elements :
+        // Collection is a framework of interfaces and classes providing built-in data structures
+        // that allow us to store, modify, and manipulate data elements.
 
-         //list is an interface in Collection list is used to it allow to use the duplicate elements
+        // List is an interface in Collection framework that allows duplicate elements.
 
-         //array list is an class
-        //Ordered way data store/default size is 10 and // index based acess and duplicacy acess is alllowed
+        // ArrayList is a class implementing List interface.
+        // It stores data in an ordered way, default initial capacity is 10, and allows index-based access and duplicate elements.
 
 
         ArrayList<Integer> num=new ArrayList<>();   //Default size is 10

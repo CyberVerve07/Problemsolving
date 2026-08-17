@@ -1,4 +1,4 @@
-package dailycode.july.day30.ImmutableClass;
+package dailycode.july.day30.immutableclass;
 
 final class Employee {
 

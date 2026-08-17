@@ -43,6 +43,7 @@ public class Code5_LinkedListDuplicatesAndFrequency {
         LinkedList<String> uniqueList = new LinkedList<>(uniqueSet);
         System.out.println("List Without Duplicates: " + uniqueList);
 
+
         System.out.println("\n=== 3. MIN AND MAX ELEMENTS ===");
         String minItem = Collections.min(uniqueList); // Lexicographical min - O(N)
         String maxItem = Collections.max(uniqueList); // Lexicographical max - O(N)

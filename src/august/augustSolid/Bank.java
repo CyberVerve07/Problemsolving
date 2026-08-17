@@ -1,4 +1,4 @@
-package augustSolid;
+package august.augustSolid;
 
 public class Bank {
 
