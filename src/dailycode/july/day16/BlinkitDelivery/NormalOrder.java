@@ -1,4 +1,4 @@
-package dailycode.july.day16.BlinkitDelivery;
+package dailycode.july.day16.blinkitdelivery;
 
 public class NormalOrder  extends Order{
 

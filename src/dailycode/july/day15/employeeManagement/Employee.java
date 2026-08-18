@@ -1,4 +1,4 @@
-package dailycode.july.day15.employeeManagement;
+package dailycode.july.day15.employeemanagement;
 
 public class Employee {
     //Create Employee Details

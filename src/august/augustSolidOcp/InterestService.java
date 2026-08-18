@@ -7,7 +7,7 @@ public class InterestService {
 
     public double computeInterest(Account account, InterestCalculator calculator) {
         double interest = calculator.calculateInterest(account.getBalance());
-        System.out.println("Calculated Interest for Account [" + account.getAccountId() + "]: ₹" + interest);
+        System.out.println("Calculated Interest for Account [" + account.getAccountId() + "]: " + interest);
         return interest;
     }
 }
