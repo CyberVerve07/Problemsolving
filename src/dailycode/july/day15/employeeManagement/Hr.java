@@ -1,16 +1,12 @@
+/*
 package dailycode.july.day15.employeeManagement;
 
-public class Hr extends  Employee{
+public class Hr extends Employee {
     public Hr( String employeeName,String employeeId, int age, String email, String phoneNo, String department, double salary) {
         super(  employeeName,  employeeId, age, email, phoneNo, department, salary);
-
-
     }
 
-
     void calculateSalary() {
-
-
             double recruitmentAllowance = 5000;
             double hiringBonus = 2000;
 
@@ -25,12 +21,12 @@ public class Hr extends  Employee{
 
     @Override
     void work() {
-        System.out.println("HR is Find the  new Employess:::");
+        System.out.println("HR is Find the new Employess:::");
     }
 
     @Override
     void present() {
         System.out.println("Hr is Makring attendence in 9:00AM: "+this.employeeName);
-
     }
 }
+*/

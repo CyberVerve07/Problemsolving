@@ -1,6 +1,6 @@
-package dailycode.july.day16.BlinkitDelivery;
+package dailycode.july.day16.blinkitdelivery;
 
-public class ExpressDelivery extends Order{
+public class ExpressDelivery extends Order {
     public ExpressDelivery(String customerName, String productId) {
         super(customerName, productId);
     }
@@ -8,6 +8,6 @@ public class ExpressDelivery extends Order{
     @Override
     void placeOrder() {
         super.placeOrder();
-        System.out.println(" Your Order is Delivered in 5 minutes with a special gift  "+getProductId());
+        System.out.println("Your Order is Delivered in 5 minutes with a special gift: " + getProductId());
     }
 }

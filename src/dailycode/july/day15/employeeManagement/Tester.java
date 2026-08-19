@@ -1,3 +1,4 @@
+/*
 package dailycode.july.day15.employeeManagement;
 
 public  class Tester extends  Employee{
@@ -31,3 +32,4 @@ public  class Tester extends  Employee{
         System.out.println("Tester is marking Attendence  at 9:50AM:"+this.employeeName);
     }
 }
+*/

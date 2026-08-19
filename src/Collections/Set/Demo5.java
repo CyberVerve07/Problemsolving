@@ -12,7 +12,7 @@ public class Demo5 {
         product.add("One plus");
         //hash code  s generated
         System.out.println();
-        int hash ="Realme7".hashCode();
+        int hash ="RealMe7".hashCode();
         int spreadHash =hash ^ (hash>>>16);
         int bucketNumber=spreadHash &15;
         System.out.println(bucketNumber);

@@ -1,3 +1,4 @@
+/*
 package dailycode.july.day16.blinkitdelivery;
 
 public class NormalOrder  extends Order{
@@ -12,3 +13,4 @@ public class NormalOrder  extends Order{
         System.out.println("Your Order is delivered in 20 to 40 minutes : "+getProductId());
     }
 }
+*/

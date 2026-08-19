@@ -40,7 +40,7 @@ public class CurrentAccount implements WithdrawableAccount {
             return;
         }
         balance += amount;
-        System.out.println("[CurrentAccount] Deposited ₹" + amount + " | New Balance: ₹" + balance);
+        System.out.println("[CurrentAccount] Deposited " + amount + " | New Balance: " + balance);
     }
 
     @Override
@@ -50,10 +50,10 @@ public class CurrentAccount implements WithdrawableAccount {
             return;
         }
         if (balance - amount < -overdraftLimit) {
-            System.out.println("[CurrentAccount] Overdraft limit exceeded! Limit: ₹" + overdraftLimit);
+            System.out.println("[CurrentAccount] Overdraft limit exceeded! Limit: " + overdraftLimit);
             return;
         }
         balance -= amount;
-        System.out.println("[CurrentAccount] Withdrew ₹" + amount + " | Remaining Balance: ₹" + balance);
+        System.out.println("[CurrentAccount] Withdrew " + amount + " | Remaining Balance: " + balance);
     }
 }

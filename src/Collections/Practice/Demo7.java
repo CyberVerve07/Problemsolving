@@ -10,7 +10,7 @@ public class Demo7 {
 
 
        ArrayList<String> list=new ArrayList<>(Arrays.asList("A","B", "C","D"));
-        ArrayList <String>sub= (ArrayList) list.subList(1,3);
+        List<String> sub = list.subList(1, 3);
         list.remove(0);
         System.out.println(list);
 
