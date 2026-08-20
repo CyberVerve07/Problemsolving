@@ -1,5 +1,5 @@
 package Collections.Set.TreeSet;
 
-public record Employee(String name,String id, double price){
+public record Employe(String name,String id, double price){
 
 }

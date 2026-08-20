@@ -1,4 +1,5 @@
 package Collections.Set.TreeSet;
 
-public class Drive3 {
+public interface Comparable<T> {
+    int compareTo(T o);
 }

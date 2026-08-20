@@ -18,6 +18,7 @@ public class LinkedHashSetDemo {
         System.out.println(searchHistory);
         // Output: [Java Tutorial, Spring Boot Guide, HashMap Internal Working]
         // Notice that duplicates are rejected, and the insertion order remains intact.
+        //It maintains doubly linked list
 
         // 2. CONTAINS (SEARCH) OPERATION -> Time Complexity: O(1) average time
         boolean found = searchHistory.contains("Spring Boot Guide");
