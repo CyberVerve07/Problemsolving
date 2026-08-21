@@ -4,6 +4,7 @@ import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
+
         TreeSet<Employee> employees = new TreeSet<>();
 
         employees.add(new Employee(50000));

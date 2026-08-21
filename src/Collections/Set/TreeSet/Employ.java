@@ -5,6 +5,7 @@ class Employee implements Comparable<Employee> {
     int salary;
 
     Employee(int salary) {
+
         this.salary = salary;
     }
 
@@ -12,4 +13,7 @@ class Employee implements Comparable<Employee> {
     public int compareTo(Employee other) {
         return this.salary - other.salary;
     }
+
+
+
 }

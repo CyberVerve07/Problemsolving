@@ -1,0 +1,16 @@
+Create an Employee class with:
+
+employeeId
+employeeName
+department
+salary
+
+Requirements:
+
+Use only TreeSet.
+Employees should be sorted by salary in descending order.
+employeeId should be unique.
+If two employees have the same salary but different IDs, both should be stored.
+If two employees have the same ID, they should be treated as duplicates, even if their salaries are different.
+Use Comparable<Employee>.
+Do not use HashSet, HashMap, or Comparator.
