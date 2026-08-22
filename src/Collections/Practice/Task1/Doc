@@ -1,0 +1,12 @@
+Requirements
+Store employees in a TreeSet.
+Employees should be sorted by salary ascending.
+If two employees have the same salary, sort them by id ascending.
+If both salary and id are same, treat them as duplicates.
+Add at least 6 employees, including:
+two employees with same salary
+two employees with same salary + same id
+Print the final sorted employees.
+Expected concept
+
+You should use:

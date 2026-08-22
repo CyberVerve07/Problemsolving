@@ -1,38 +1,38 @@
 package Collections.Set.TreeSet.Task;
 
-import Collections.Set.TreeSet.Order;
-
 import java.util.TreeSet;
 
 public class Main {
+
     public static void main(String[] args) {
 
-
-        TreeSet<Product> odr = new TreeSet<>();
+        TreeSet<Product> products = new TreeSet<>();
 
         Product product1 = new Product("123", "Clothes", "Dispatch", 800);
-        Product product2 = new Product("557", "iPhone16", "Shipped", 80000);
+        Product product2 = new Product("557", "IPhone16", "Shipped", 80000);
         Product product3 = new Product("908", "AC", "Delivered", 30000);
-        Product product4 = new Product("123", "WashingMachine", "Delivered", 800);
+        Product product4 = new Product("123", "WashingMachine", "Delivered", 30000);
         Product product5 = new Product("987", "T-shirt", "Shipped", 700);
-        Product product6 = new Product("345", "Laptop", "Shipped", 800);
 
-        odr.add(product1);
-        odr.add(product2);
-        odr.add(product3);
-        odr.add(product4);
-        odr.add(product5);
-        odr.add(product6);
+        addProduct(products, product1);
+        addProduct(products, product2);
+        addProduct(products, product3);
+        addProduct(products, product4);
+        addProduct(products, product5);
 
-        //use for loop for iterate
-        for (Product product : odr) {
-            System.out.println(product.productId + " " + product.productName + " " + product.status + " " + product.price);
+        for (Product product : products) {
+            System.out.println(product);
+        }
+    }
+    static void addProduct(TreeSet<Product> products, Product newProduct) {
+
+        for (Product product : products) {
+
+            if (product.productId.equals(newProduct.productId)) {
+                return; // duplicate productId → don't add
+            }
         }
 
-
+        products.add(newProduct);
     }
-
 }
-
-
-//Star patten ->
