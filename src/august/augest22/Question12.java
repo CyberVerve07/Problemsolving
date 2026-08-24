@@ -11,5 +11,6 @@ public class Question12 {
         Animal a = new Cat();
         Dog d = (Dog) a;
         System.out.println("Done");
+
     }
 }
