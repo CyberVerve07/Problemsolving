@@ -1,4 +1,6 @@
 package august;
 
-public class augest25 {
+interface  augest25 {
+ 
+
 }

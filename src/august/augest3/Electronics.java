@@ -1,4 +1,12 @@
 package august.augest3;
 
-public class Electronics {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Electronics implements OrderService{
+    @Override
+    public void Details() {
+
+
+    }
 }

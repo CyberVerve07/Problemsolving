@@ -1,4 +1,18 @@
 package august.augest3;
 
-public class OrderService {
+ interface OrderService {
+
+
+      abstract  void  Details();
+
+
+       default void discount(){
+           System.out.println("Discount is applied: 5%");
+
+       }
+
+
+
+
+
 }
