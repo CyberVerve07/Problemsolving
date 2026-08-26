@@ -1,4 +1,4 @@
-package Collections.Practice;
+package Collection.Practice;
 
 public class Hr extends  Demo10{
     public Hr(String employeeId, String employeeName, String address, String phoneNO, double salary) {

@@ -1,7 +1,6 @@
-package Collections.Map;
+package Collection.Map;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class Example1 {

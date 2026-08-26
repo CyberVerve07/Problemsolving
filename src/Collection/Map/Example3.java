@@ -1,6 +1,5 @@
-package Collections.Map;
+package Collection.Map;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 

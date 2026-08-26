@@ -1,7 +1,6 @@
-package Collections;
+package Collection;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Demo1 {
     public static void main(String[] args) {

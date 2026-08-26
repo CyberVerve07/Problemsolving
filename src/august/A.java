@@ -1,6 +1,10 @@
 package august;
 
-interface  augest25 {
+interface  A {
+
+    default void show(){
+        System.out.println("Show A");
+    }
  
 
 }

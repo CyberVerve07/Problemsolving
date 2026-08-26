@@ -1,4 +1,4 @@
-package Collections.Practice.Task1;
+package Collection.Practice.Task1;
 
 import java.util.TreeSet;
 

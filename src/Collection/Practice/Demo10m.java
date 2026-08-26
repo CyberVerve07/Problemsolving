@@ -1,4 +1,4 @@
-package Collections.Practice;
+package Collection.Practice;
 
 public class Demo10m {
     public static void main(String[] args) {

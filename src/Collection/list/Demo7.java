@@ -1,4 +1,4 @@
-package Collections.list;
+package Collection.list;
 //List is an interface in Java's Collection Framework that represents an ordered collection of elements.
 // It allows duplicate elements and provides index-based access.
 import java.util.ArrayList;

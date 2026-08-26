@@ -1,4 +1,4 @@
-package Collections.Practice;
+package Collection.Practice;
 
 public class User1 implements  Order{
     @Override

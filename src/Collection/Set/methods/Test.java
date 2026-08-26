@@ -1,4 +1,4 @@
-package Collections.Set.methods;
+package Collection.Set.methods;
 
 public class Test {
     public static void main(String[] args) {

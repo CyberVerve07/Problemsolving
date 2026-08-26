@@ -1,6 +1,4 @@
-package Collections.Set;
-
-import dailycode.month1.day30.Test;
+package Collection.Set;
 
 import java.util.HashSet;
 import java.util.Set;

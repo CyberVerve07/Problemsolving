@@ -224,7 +224,7 @@ public class Student implements Comparable<Student> {
     }
 }
 
-// Usage: Collections.sort(studentList);
+// Usage: Collection.sort(studentList);
 ```
 
 ```java
@@ -233,7 +233,7 @@ Comparator<Student> nameComparator = (s1, s2) -> s1.name.compareTo(s2.name);
 Comparator<Student> ageThenName = Comparator.comparingInt((Student s) -> s.age)
                                            .thenComparing(s -> s.name);
 
-// Usage: Collections.sort(studentList, nameComparator);
+// Usage: Collection.sort(studentList, nameComparator);
 ```
 
 | Feature | `Comparable` | `Comparator` |
@@ -284,11 +284,11 @@ Comparator<Student> ageThenName = Comparator.comparingInt((Student s) -> s.age)
 
 ### Q7: How to make an `ArrayList` unmodifiable/read-only?
 > **Answer:**
-> 1. `Collections.unmodifiableList(existingList)` (Throws `UnsupportedOperationException` on modification).
+> 1. `Collection.unmodifiableList(existingList)` (Throws `UnsupportedOperationException` on modification).
 > 2. `List.of("A", "B", "C")` (Java 9+ immutable list).
 
 ### Q8: How to make an `ArrayList` synchronized?
-> **Answer:** Use `List<String> synList = Collections.synchronizedList(new ArrayList<>());`. Always synchronize manually when iterating over it!
+> **Answer:** Use `List<String> synList = Collection.synchronizedList(new ArrayList<>());`. Always synchronize manually when iterating over it!
 
 ### Q9: Difference between `HashMap` and `Hashtable`?
 > **Answer:**
@@ -298,10 +298,10 @@ Comparator<Student> ageThenName = Comparator.comparingInt((Student s) -> s.age)
 ### Q10: How does `CopyOnWriteArrayList` achieve thread safety?
 > **Answer:** Every write operation (`add`, `set`, `remove`) makes a **fresh copy** of the underlying array. Iterators operate on the old immutable snapshot, preventing `ConcurrentModificationException` without needing explicit synchronization. Ideal for read-heavy, write-rare scenarios.
 
-### Q11: What is the difference between `Collection` and `Collections`?
+### Q11: What is the difference between `Collection` and `Collection`?
 > **Answer:** 
 > - `Collection` is an **Interface** (`java.util.Collection`).
-> - `Collections` is an **Utility Class** (`java.util.Collections`) containing static methods like `sort()`, `binarySearch()`, `reverse()`, `unmodifiableList()`.
+> - `Collection` is an **Utility Class** (`java.util.Collection`) containing static methods like `sort()`, `binarySearch()`, `reverse()`, `unmodifiableList()`.
 
 ### Q12: What is the difference between `SynchronizedMap` and `ConcurrentHashMap`?
 > **Answer:**
@@ -343,8 +343,8 @@ Comparator<Student> ageThenName = Comparator.comparingInt((Student s) -> s.age)
 ### Q23: What changes were introduced in Java 8 HashMap for worst-case lookup?
 > **Answer:** Before Java 8, worst-case collision lookup in a bucket was $O(n)$ (LinkedList). In Java 8+, if a bucket has $\ge 8$ elements and capacity $\ge 64$, it converts the LinkedList to a **Red-Black Tree**, reducing worst-case time to $O(\log n)$.
 
-### Q24: What is `Collections.emptyList()` and why should we use it instead of `new ArrayList<>()`?
-> **Answer:** `Collections.emptyList()` returns an immutable, shared singleton empty list instance without creating new objects in memory. It prevents unnecessary object creation when returning empty collections from methods.
+### Q24: What is `Collection.emptyList()` and why should we use it instead of `new ArrayList<>()`?
+> **Answer:** `Collection.emptyList()` returns an immutable, shared singleton empty list instance without creating new objects in memory. It prevents unnecessary object creation when returning empty collections from methods.
 
 ### Q25: How to sort a Map by Value in Java 8+?
 > **Answer:**

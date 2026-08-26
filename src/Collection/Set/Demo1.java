@@ -1,4 +1,4 @@
-package Collections.Set;
+package Collection.Set;
 
  class Demo{
      String name="Puppy";

@@ -1,4 +1,4 @@
-package Collections.Set.TreeSet.Task;
+package Collection.Set.TreeSet.Task;
 
 import java.util.TreeSet;
 

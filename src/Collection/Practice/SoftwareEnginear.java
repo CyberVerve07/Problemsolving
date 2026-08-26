@@ -1,4 +1,4 @@
-package Collections.Practice;
+package Collection.Practice;
 
 public class SoftwareEnginear extends Demo10 {
 

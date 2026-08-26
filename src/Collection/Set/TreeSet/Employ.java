@@ -1,4 +1,4 @@
-package Collections.Set.TreeSet;
+package Collection.Set.TreeSet;
 
 class Employee implements Comparable<Employee> {
 

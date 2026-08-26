@@ -1,4 +1,4 @@
-package Collections.Practice;
+package Collection.Practice;
 
 public class Techlead extends Demo10 {
     public Techlead(String employeeId, String employeeName, String address, String phoneNO, double salary) {

@@ -1,4 +1,4 @@
-package Collections.Practice.Task1;
+package Collection.Practice.Task1;
 
 public class Employee implements Comparable<Employee> {
     private String name;

@@ -1,4 +1,4 @@
-package Collections.Set.TreeSet;
+package Collection.Set.TreeSet;
 
 public class Order implements Comparable {
     String orderName;

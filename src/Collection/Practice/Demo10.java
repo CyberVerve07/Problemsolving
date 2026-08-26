@@ -1,4 +1,4 @@
-package Collections.Practice;
+package Collection.Practice;
 
 public  abstract class Demo10 {
 

@@ -1,4 +1,4 @@
-package Collections.Set;
+package Collection.Set;
 
 public class Demo3 {
 

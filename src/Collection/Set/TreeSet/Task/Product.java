@@ -1,4 +1,4 @@
-package Collections.Set.TreeSet.Task;
+package Collection.Set.TreeSet.Task;
 
 public class Product implements Comparable<Product> {
 

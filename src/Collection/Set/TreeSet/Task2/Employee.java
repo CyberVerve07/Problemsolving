@@ -1,4 +1,4 @@
-package Collections.Set.TreeSet.Task2;
+package Collection.Set.TreeSet.Task2;
 
 public class Employee implements  Comparable {
      String employeeID;

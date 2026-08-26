@@ -1,6 +1,5 @@
-package Collections.Practice;
+package Collection.Practice;
 
-import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
 
 public class Demo5 {

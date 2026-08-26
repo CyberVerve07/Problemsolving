@@ -1,4 +1,4 @@
-package Collections.Set.methods;
+package Collection.Set.methods;
 
 public class Demo1 {
     String userName;

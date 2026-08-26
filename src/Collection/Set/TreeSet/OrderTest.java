@@ -1,6 +1,5 @@
-package Collections.Set.TreeSet;
+package Collection.Set.TreeSet;
 
-import java.util.Iterator;
 import java.util.TreeSet;
 
 public class OrderTest {
