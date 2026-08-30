@@ -1,4 +1,17 @@
 package Java8.Lambda;
 
-public class Demo1 {
+class A{
+
+    static void sayHello(){
+        System.out.println("Hello");
+    }
+}
+
+public class Demo1 extends A {
+
+    public static void main(String[] args) {
+
+         A.sayHello();
+
+    }
 }

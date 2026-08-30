@@ -1,4 +1,7 @@
 package Java8.Lambda;
 
-public interface MyInterface {
+interface MyInterface {
+
+    void show();
+
 }

@@ -1,4 +1,4 @@
 package Java8.Lambda;
 
-public class Demo3 {
-}
+import java.util.Arrays;
+import java.util.List;
