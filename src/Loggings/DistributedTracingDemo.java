@@ -101,7 +101,7 @@ public class DistributedTracingDemo {
         log.info(context.formatLogMessage("5. Sending SMS and Email confirmation to customer. Done!"));
         
         System.out.println("\n=========================================================");
-        System.out.println("✅ Notice how ALL logs share the EXACT SAME Trace ID: " + traceId);
+        System.out.println(" Notice how ALL logs share the EXACT SAME Trace ID: " + traceId);
         System.out.println("   In Kibana/Loki/Datadog, searching 'TraceID=" + traceId + "'");
         System.out.println("   instantaneously reveals the complete execution path across all 4 services!");
         System.out.println("=========================================================");

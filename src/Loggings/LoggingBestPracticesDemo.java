@@ -8,7 +8,7 @@ import java.util.logging.Logger;
  *                    LOGGING BEST PRACTICES VS BAD PRACTICES
  * ===================================================================================
  * 
- * 📌 WHY IS System.out.println() BAD IN BACKEND PRODUCTION?
+ *  WHY IS System.out.println() BAD IN BACKEND PRODUCTION?
  * 1. Synchronous I/O: System.out blocks the main thread, severely degrading API performance under high load.
  * 2. No Log Levels: You cannot disable debug prints in Production without modifying code.
  * 3. No Timestamp / Thread Info: Does not show thread name, class, line number, or exact timestamp.
@@ -63,10 +63,10 @@ public class LoggingBestPracticesDemo {
         String userId = "USR-4092";
         double amount = 250.75;
 
-        // ❌ BAD PRACTICE 1: Using System.out.println
+        //  BAD PRACTICE 1: Using System.out.println
         // System.out.println("User " + userId + " paid " + amount);
 
-        // ❌ BAD PRACTICE 2: Swallowing Exception with e.printStackTrace()
+        //  BAD PRACTICE 2: Swallowing Exception with e.printStackTrace()
         try {
             int result = 10 / 0;
         } catch (ArithmeticException e) {
@@ -75,7 +75,7 @@ public class LoggingBestPracticesDemo {
             logger.log(Level.SEVERE, "Failed arithmetic operation for userId: " + userId, e);
         }
 
-        // ❌ BAD PRACTICE 3: Expensive String Concatenation when log level is disabled
+        //  BAD PRACTICE 3: Expensive String Concatenation when log level is disabled
         // SLF4J / Log4j solution: Use parameterized placeholders like log.info("User {} paid {}", userId, amount)
         // Java Logger solution: Use Supplier lambda so string is formatted ONLY if level is enabled.
         logger.log(Level.INFO, () -> String.format("GOOD: User %s successfully processed payment of $%.2f", userId, amount));
@@ -86,7 +86,7 @@ public class LoggingBestPracticesDemo {
     /**
      * 3. SENSITIVE DATA (PII) MASKING
      * 
-     * 🚨 CRITICAL BACKEND RULE: Never log Passwords, Credit Card numbers, CVV, SSN, or API Keys in plain text!
+     *  CRITICAL BACKEND RULE: Never log Passwords, Credit Card numbers, CVV, SSN, or API Keys in plain text!
      * Doing so violates GDPR, PCI-DSS, and HIPAA compliance!
      */
     private static void demonstratePiiMasking() {
@@ -95,10 +95,10 @@ public class LoggingBestPracticesDemo {
         String creditCard = "4532-8910-1112-9988";
         String password = "SuperSecretPassword123!";
 
-        // ❌ BAD: Logging raw credit card or password
+        //  BAD: Logging raw credit card or password
         // logger.info("Processing card: " + creditCard + " with pass: " + password);
 
-        // ✅ GOOD: Mask sensitive fields before logging
+        //  GOOD: Mask sensitive fields before logging
         String maskedCard = maskCreditCard(creditCard);
         logger.info("Processing transaction with card: " + maskedCard + " [Password masked]");
 
