@@ -17,6 +17,7 @@ public class Demo1 {
           cities.add("Rajasthan");
           cities.add("Gujarat");
           cities.add("Kolkata");
+          Collections.sort(cities);
           Iterator<String> itr= cities.iterator();
           while (itr.hasNext()){
               String element=(String) itr.next();
