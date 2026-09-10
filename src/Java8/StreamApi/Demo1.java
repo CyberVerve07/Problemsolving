@@ -9,14 +9,12 @@ public class Demo1 {
 
      List<String> products=new ArrayList<>();
 
-
         products.add("Apple");
         products.add("LG");
         products.add("God raj");
         products.add("Samsung");
 
           //We can add for process
-
 
       //using iterator
 

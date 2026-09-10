@@ -14,10 +14,10 @@ public class Demo5 {
         //In stream we have two operation
         //Intermediate ->>> Don't perform operation until it is not required
         //Terminate ->> Ends the Stream Pipeline :
-        // theree are severals ways to create a Stream in java
+        // there are several's ways to create a Stream in java
 
 
-          //The first operation is to process the elemenst  of the list
+          //The first operation is to process the element  of the list
 
 
          List<Integer>numbers= Arrays.asList(5,1,2,4,6,7,8,9);
@@ -25,9 +25,8 @@ public class Demo5 {
         System.out.println(numbers);
 
 
-            numbers.stream()
-
-                    .filter(n->n%2==0);//Oeration 1 for keep Even Numbers:
+            numbers.stream().filter(n->n%2==0);
+            //Operation 1 for keep Even Numbers:
         numbers.stream()
         .map(n->n*10);  //Operation is to perform the operation is divided by 10;
 
