@@ -1,4 +1,4 @@
 package Java8.StreamApi;
 
-public class Demo13 {
+public class Demo24 {
 }
