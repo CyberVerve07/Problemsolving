@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class Demoo25 {
+public class Demo25 {
 
     public static void main(String[] args) {
 
@@ -24,10 +24,7 @@ public class Demoo25 {
         ));
 
         employee.stream()
-                .sorted(
-                        Comparator.comparing((Employee e) -> e.employeeName)
-                                .thenComparingDouble(e -> e.salary)
-                )
+                .sorted(Comparator.comparing((Employee e) -> e.employeeName).thenComparingDouble(e -> e.salary))
                 .forEach(System.out::println);
     }
 }
