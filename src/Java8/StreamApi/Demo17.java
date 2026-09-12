@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Demo17 {
-    //From the list  of Integer find the odd numbers  and return the squatres
+    //From the list  of Integer find the odd numbers  and return the squares
 
 
     public static void main(String[] args) {

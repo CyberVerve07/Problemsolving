@@ -19,10 +19,8 @@ public class Demo19 {
         Optional<Integer> result = list.stream()
                 .distinct() //remove the duplicate
                 .sorted(Comparator.reverseOrder()) //to sort the elemnts
-                .skip(1)//skip the number
+                .skip(2)//skip the number
                 .findFirst();
-
-
         System.out.println(result);
     }
 }

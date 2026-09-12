@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Code14 {
 
     static int pin = 1234;
-    static String name;
+    public static String name;
     static double balance;
 
     static void login() {
