@@ -25,7 +25,8 @@ public class Demo29 {
 
         // Your Stream API implementation here
 
-        Map<String, Double> average = employees.stream().collect(Collectors.groupingBy(e -> e.getDepartment(),
+        Map<String, Double> average = employees.stream()
+                .collect(Collectors.groupingBy(e -> e.getDepartment(),
                 Collectors.averagingDouble(avg -> avg.getSalary())
 
         ));
