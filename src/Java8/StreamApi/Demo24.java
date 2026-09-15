@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 public class Demo24 {
     public static void main(String[] args) {
 
-        // so from a list of employee find the top 2 highest paid employye
+        // so from a list of employee find the top 2 highest paid employee
 
         List<Employee> employees = new ArrayList<>(Arrays.asList(
                 new Employee("Aditya", 12000),
