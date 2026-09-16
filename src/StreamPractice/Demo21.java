@@ -21,7 +21,7 @@ public class Demo21 {
                 new Employee1("Pooja", "Sales", 6500)
 
         ));
-        //Find the first employee whose salary is great than 50 k
+        //Find the first employee whose salary is greater than 50 k
 
         // Your Stream API logic here
 

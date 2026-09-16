@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Demo26 {
-    //Given a list of employee count how many employess are in each Department
+    //Given a list of employee count how many employees are in each Department
 
 
     public static void main(String[] args) {

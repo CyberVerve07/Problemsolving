@@ -22,10 +22,10 @@ public class Demo22 {
                 new Employee2("Pooja", "Sales", 65000)
 
         ));
-//From a list of employee find the 2 highest paid emloyee in the lisy
+//From a list of employee find the 2 highest paid employee in the list
         // Your Stream API logic here
 
-        //sort this list in the desending order  that will
+        //sort this list in the descending order  that will
 
 
         List<Employee2> result = employee2s.stream()
