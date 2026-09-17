@@ -12,6 +12,8 @@ public class Demo2Test {
          thread.start();
          //Concurrency = dealing with multiple tasks
         //Parallelism = executing multiple tasks simultaneously
+//Task means work
+        //main method is the code which is executing by main thread
 
 
 
