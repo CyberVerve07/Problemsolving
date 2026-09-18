@@ -5,7 +5,7 @@ public class TestDemo3 {
 
      Thread t1=new Thread();
 
-        System.out.println("The Crrent thread is "+Thread.currentThread().getName());
+        System.out.println("The Current thread is "+Thread.currentThread().getName());
         System.out.println("ID of the thread "+Thread.currentThread().getId());
 
         Thread thread=new Thread(()->System.out.println("Name of my thread name is :"+
