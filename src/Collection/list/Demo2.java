@@ -10,9 +10,9 @@ public class Demo2 {
         List<String> list = new ArrayList<>();
         list.add("Aditya");
         list.add("Harsh");
-        list.add("Shivanshu");
+        list.add("Shivani");
         list.add("Shubham");
-        list.add("Dineash");
+        list.add("Dinesh");
         System.out.println("Initial List: " + list);
 
         // List 2 initialization & bulk operations
