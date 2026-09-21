@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Question 1: Race Condition & Solution
  * --------------------------------------
  * Problem: Jab do ya do se zyada threads shared resource ko concurrently bina synchronization
- * ke modify karte hain, to final output timing/order par depend karta hai (Race Condition).
+ * ke modify karte chain, to final output timing/order par depend on karta hai (Race Condition).
  * Solution:
  * 1. 'synchronized' keyword use karna (Locking mechanism)
  * 2. 'AtomicInteger' use karna (Lock-free atomic CAS operations)
@@ -35,7 +35,7 @@ public class P1_RaceConditionDemo {
     public static void main(String[] args) throws InterruptedException {
         SharedCounter counter = new SharedCounter();
 
-        // Do threads create karenge jo har ek counter ko 10,000 baar increment karenge
+        // Do threads create Karen jo har ek counter ko 10,000 baar increment karenge
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < 10000; i++) {
                 counter.incrementUnsafe();
@@ -55,7 +55,7 @@ public class P1_RaceConditionDemo {
         t1.start();
         t2.start();
 
-        // Main thread wait karega jab tak t1 aur t2 complete na ho jayein
+        // Main thread wait Karena jab tak t1 aur t2 complete na ho jayein
         t1.join();
         t2.join();
 

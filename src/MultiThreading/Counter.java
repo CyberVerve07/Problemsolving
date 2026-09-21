@@ -7,6 +7,8 @@ public class Counter {
          count++;
      }
 
+    public void increment() {
+    }
 }
 class Test0{
 
