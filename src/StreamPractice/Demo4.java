@@ -12,8 +12,8 @@ public class Demo4 {
 
                 new HighestPaidEmployee("Aditya", "IT", 90000),
                 new HighestPaidEmployee("Rohan", "IT", 82000),
-                new HighestPaidEmployee("Prachi", "HR", 95000),
-                new HighestPaidEmployee("Kritika", "HR", 88000),
+                new HighestPaidEmployee("Rachid", "HR", 95000),
+                new HighestPaidEmployee("Kartik", "HR", 88000),
                 new HighestPaidEmployee("Harsh", "Finance", 120000),
                 new HighestPaidEmployee("Kartik", "Finance", 100000),
                 new HighestPaidEmployee("Siya", "Sales", 75000)
