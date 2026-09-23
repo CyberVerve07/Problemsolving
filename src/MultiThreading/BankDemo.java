@@ -4,46 +4,51 @@ class BankAccount {
 
     private int balance = 1000;
 
-    public  synchronized void  withdraw(int amount) {
+    public void withdraw(int amount) {
 
-        if (balance >= amount) {
+        synchronized (this) { // Synchronized  block is the better. to done synchronization in java
 
-            System.out.println(Thread.currentThread().getName()
-                    + " is withdrawing " + amount);
+            if (balance >= amount) {
 
-            balance = balance - amount;
+                System.out.println(Thread.currentThread().getName()
+                        + " is withdrawing " + amount);
 
-            System.out.println(Thread.currentThread().getName()
-                    + " remaining balance: " + balance);
-        } else {
-            System.out.println("Insufficient balance");
+                balance = balance - amount;
+
+                System.out.println(Thread.currentThread().getName()
+                        + " remaining balance: " + balance);
+            } else {
+                System.out.println("Insufficient balance");
+            }
         }
     }
 
-    public int getBalance() {
-        return balance;
+        public int getBalance () {
+            return balance;
+        }
     }
-}
 
-public class BankDemo {
+    public class BankDemo {
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
 
-        BankAccount account = new BankAccount();
+            BankAccount account = new BankAccount();
 
-        Thread t1 = new Thread(() -> {
-            account.withdraw(700);
-        }, "Thread-1");
+            Thread t1 = new Thread(() -> {
+                account.withdraw(700);
+            }, "Thread-1");
 
-        Thread t2 = new Thread(() -> {
-            account.withdraw(700);
-        }, "Thread-2");
+            Thread t2 = new Thread(() -> {
+                account.withdraw(700);
+            }, "Thread-2");
 
-        t1.start();
-        t2.start();
+            t1.start();
+            t2.start();
+        }
     }
-}
+
 //At a time, only one thread can acquire the required monitor lock and execute
 // the synchronized code guarded by that lock.
 //we are controlling the order of access to shared resources.
 //Only one thread at a time can execute the synchronized critical section protected by the same lock.
+//Synchronization block is mostly suitable for done the Synchronization in java

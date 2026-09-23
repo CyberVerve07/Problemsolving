@@ -4,34 +4,36 @@ class TicketSystem {
 
     int tickets = 1;
 
+    void bookTicket() {
 
-  synchronized   void  bookTicket() {
 
-        if (tickets > 0) {
-            System.out.println("Ticket available");
+        synchronized (this) {
 
-            tickets--;
+            if (tickets > 0) {
 
-            System.out.println("Ticket booked");
+                System.out.println("Ticket available for::" + Thread.currentThread().getName());
+                tickets--;   //Decrement the ticket by 1
+                System.out.println("Ticket booked by ::" + Thread.currentThread().getName());
+            } else {
+                System.out.println("Ticket not available for " + Thread.currentThread().getName());
+            }
         }
     }
 }
 
+public class Demo14 {
 
- class Demo14{
-     public static void main(String[] args) {
+    public static void main(String[] args) {
 
-         TicketSystem ticketSystem=new TicketSystem();
+        TicketSystem ticketSystem = new TicketSystem();
 
-           Thread t1=new Thread(()->ticketSystem.bookTicket());
-         System.out.println("Ticket is booking by the User 1 "+Thread.currentThread().getName());
+        Thread t1 = new Thread(() -> ticketSystem.bookTicket(), "User-1");
 
-          Thread t2=new Thread(()->ticketSystem.bookTicket());
-         System.out.println("Ticket is booking by the User 2:"+Thread.currentThread().getName());
-         t1.start();
-         t2.start();
+        Thread t2 = new Thread(() -> ticketSystem.bookTicket(), "User-2");
+        Thread t3=new Thread(()-> ticketSystem.bookTicket(),"User3");
 
-
-     }
-
- }
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
