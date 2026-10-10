@@ -1,122 +1,275 @@
-# 🚀 200 Days Java & Full-Stack Backend Learning Challenge
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&random=false&width=700&lines=%F0%9F%94%A5+200+Days+Java+%26+Backend+Mastery;Not+just+DSA+%E2%80%94+Full-Stack+Backend+Builder;OOP+%7C+Streams+%7C+Threads+%7C+Observability;Building+Production-Grade+Java+Skills+%F0%9F%9A%80" alt="Typing SVG" />
+</p>
 
-Welcome to my personal 200-day Java and backend development learning repository! This project serves as a dedicated space to track my daily coding practice, algorithms, object-oriented design, exception handling, design patterns, Java Collection Framework, and modern Java 8+ functional programming & Stream API.
-
----
-
-## 📅 Challenge Overview
-*   **Goal**: Master core Java, object-oriented design, collections framework, Java 8 Functional Programming & Stream API, and full backend development from scratch.
-*   **Duration**: 200 Days.
-*   **Language**: Java (JDK 8+ / Modern Java).
-*   **Key Focus Areas**:
-    *   Java Basics & Flow Control (Loops, Conditionals)
-    *   Data Structures & Algorithms (Arrays, Strings, Frequency Maps, Sorting)
-    *   Object-Oriented Programming (OOP: Encapsulation, Inheritance, Polymorphism, Abstraction)
-    *   Design Patterns (Singleton variations with Reflection, Serialization & Cloning defenses)
-    *   Exception Handling (Try-Catch-Finally, Custom Exceptions, Throws, Try-with-resources)
-    *   Java Collection Framework (List, ArrayList internals, Iterators, Sets, Maps)
-    *   ⚡ **Java 8 & Stream API (Current Focus)**:
-        *   Lambda Expressions & Functional Interfaces
-        *   Stream Pipeline: Intermediate (`filter`, `map`, `flatMap`, `sorted`, `distinct`, `peek`) & Terminal operations (`collect`, `reduce`, `count`, `findFirst`, `anyMatch`)
-        *   Advanced Collectors: `groupingBy`, `partitioningBy`, `toMap`, `summarizingDouble`, `mapping`, downstream collectors
-        *   Complex Real-World Aggregations (Employee salary analytics, Department rankings, Order processing, Top-K problems)
-        *   Solving DSA & Interview Challenges using Streams
-    *   Multi-Threading & Concurrency
-    *   Observability & Enterprise Logging (Distributed tracing, Metrics, Logging best practices)
-    *   Backend Foundations (Database Integration, APIs, Frameworks, Spring Boot)
+<p align="center">
+  <a href="https://github.com/CyberVerve07"><img src="https://img.shields.io/badge/GitHub-CyberVerve07-181717?style=for-the-badge&logo=github" /></a>
+  <img src="https://img.shields.io/badge/Language-Java%2017+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Duration-200%20Days-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-In%20Progress-brightgreen?style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=CyberVerve07&style=for-the-badge&color=blue" alt="Profile Views" />
+</p>
 
 ---
 
-## 📁 Repository Structure
+## 🧠 What This Repo Really Is
 
-The codebase is organized into clean, modular packages directly under the `src` folder:
+> **This is NOT just a DSA repository.**
 
-*   🔥 **`Java8/` & `StreamPractice/` (Active Focus - Stream API Mastery)**:
-    *   **`Java8.StreamApi`**: 50+ comprehensive Stream API programs covering:
-        *   Filtering, transformation, mapping, sorting, and distinct filtering
-        *   `findFirst`, `findAny`, `anyMatch`, `allMatch`, `noneMatch`
-        *   Aggregations with `Collectors.groupingBy`, `Collectors.partitioningBy`, `Collectors.averagingDouble`
-        *   Real-world domain models (`Employee`, `DeptEmployee`, `Transaction`, `AvgSalary`)
-        *   Second highest salary, department-wise highest paid employee, finding duplicates
-    *   **`Java8.StreamsInterview`**: High-frequency real-world interview challenges:
-        *   `P1_TopEarnersPerDepartment`: Nested grouping & top earner extraction per department
-        *   `P2_TopKWords`: Word frequency counting, custom sorting, and top-K selection
-        *   `P3_FirstNonRepeatingChar`: LinkedHashMap / Stream frequency order resolution
-        *   `P4_PartitioningSummary`: Statistical summaries by condition (`partitioningBy` + `summarizingInt`)
-        *   `P5_ComplexOrderAggregation`: Multi-level order aggregation, status grouping, and revenue computation
-    *   **`Java8.StreamDSA`**: Solving core DSA problems using functional streams:
-        *   `CountFrequency`, `FindDuplicates`, `LongestString`, `MergetwoList`, `Reverse`, `SecondHighestSalary`, `SortList`
-    *   **`Java8.Lambda`**: Functional interfaces, custom lambdas, method references, and consumer/supplier contracts.
-    *   **`Java8.Order`**: E-commerce domain modeling with functional transformations.
-    *   **`StreamPractice/`**: 35+ dedicated exercises (`Demo1` to `Demo28`, `HighestPaidEmployee`, etc.) applying Stream transformations to realistic business scenarios.
+This is a **200-day deep dive** into becoming a production-ready Java Backend Engineer — covering everything from writing your first loop to building enterprise-grade observability patterns.
 
-*   **`Collection/`**: Java Collection Framework hands-on practice (`Demo1` to `Demo13`):
-    *   `List` interface & `ArrayList` dynamic resizing
-    *   Iterating using `Iterator` & enhanced for-loops
-    *   Bulk operations: `addAll`, `removeAll`, `clear`, `contains`, `set`, `get`
+Every line of code here is **handwritten, learned, and practiced** — no copy-paste, no shortcuts.
 
-*   **`oops/`**: Comprehensive Object-Oriented Programming demonstrations:
-    *   `oops.abstraction`: Abstract classes (`Animal`) and concrete implementations (`Dog`)
-    *   `oops.encapsulation`: Private fields, getters, setters, and data protection (`Student`, `Details`)
-    *   `oops.inheritance`: Class hierarchies and `super()` constructor chaining
-    *   `oops.polymorphism`: Compile-time (Method Overloading) & Runtime (Method Overriding)
-    *   `oops.student`, `oops.transport`, `oops.bankaccount`, `oops.phonepay`
-
-*   **`DesignPattens/`**: Design Pattern implementations:
-    *   `singleton`: Eager, Lazy, Synchronized, Double-Checked Locking (DCL), Bill Pugh, and Enum Singleton
-    *   Defenses against Reflection attacks, Serialization breaks (`readResolve`), and Cloning attacks
-
-*   **`august/`**: Deep dive modules and exception handling:
-    *   `august.augest11`: Deep Dive into `ArrayList` architecture (5 programs covering internal working, 1.5x resizing algorithm, memory shifting, performance optimization with `ensureCapacity()` & `trimToSize()`, and custom `MyArrayList<T>` implementation).
-    *   Custom Exception Handling (`InsufficientBalanceException`, `UserAlreadyExist`)
-    *   Nested try-catch blocks and try-with-resources
-    *   Serialization & Deserialization (`Share`, `Main`)
-    *   Marker Interfaces & Object Cloning (Shallow vs Deep Copying)
-
-*   **`MultiThreading/`**: Thread lifecycle, synchronization, concurrency, and thread safety demonstrations.
-*   **`Loggings/`**: Production-grade observability patterns (Distributed Tracing, Metrics & Monitoring, Logging Best Practices).
-*   **`revise/`**: Revision modules covering Java type system concepts:
-    *   `UpCasting`, `DownCasting`, `AutoBoxing`, `IsARelationship`, `CovariantReturnType`, `MarkerInterface`, `CloneableInterface`
-*   **`loops/`**: Core Java loops syntax and exercises (`Code01` to `Code21`).
-*   **`array/`**: Array manipulation and search/sort exercises (`Code01` to `Code09`).
-*   **`dsa/`**: Data Structures & Algorithms practice sets.
-*   **`dailycode/`**: Daily coding exercises organized by month and date.
-
----
-
-## 🛠️ How to Compile & Run
-
-### 1. Compile the files
-You can compile any individual Java file using the terminal:
-```bash
-javac src/Java8/StreamsInterview/P2_TopKWords.java
 ```
-Or to compile all files into the output (`out/`) directory:
+📦 300+ Java Programs | 7 Learning Phases | 15+ Packages | Real-World Patterns
+```
+
+---
+
+## 🏗️ Core Pillars of This Journey
+
+<table>
+<tr>
+<td align="center" width="20%">
+
+### ☕ Java Core
+Loops, Arrays, Strings, Type System, Flow Control
+
+**21+ programs**
+
+</td>
+<td align="center" width="20%">
+
+### 🧱 OOP & Design
+Encapsulation, Inheritance, Polymorphism, Abstraction, Singleton (6 variants)
+
+**25+ programs**
+
+</td>
+<td align="center" width="20%">
+
+### ⚡ Java 8 & Streams
+Lambdas, Functional Interfaces, Stream Pipeline, Collectors, GroupingBy
+
+**100+ programs**
+
+</td>
+<td align="center" width="20%">
+
+### 🧵 Multi-Threading
+Thread Lifecycle, Synchronization, Deadlocks, Fork/Join, Wait-Notify
+
+**37+ programs**
+
+</td>
+<td align="center" width="20%">
+
+### 📡 Observability
+Distributed Tracing, Metrics, Logging Best Practices
+
+**5 enterprise patterns**
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🗂️ Repository Architecture
+
+```
+src/
+├── 🔥 Java8/                    ← Java 8 Feature Mastery
+│   ├── StreamApi/               ← 50+ Stream programs (filter, map, reduce, collect)
+│   ├── StreamsInterview/        ← Top interview patterns (Top-K, Aggregations, Partitioning)
+│   ├── StreamDSA/               ← DSA problems solved with Streams
+│   ├── Lambda/                  ← Functional interfaces, method references
+│   └── Order/                   ← E-commerce domain modeling
+│
+├── 🔥 StreamPractice/           ← 52 dedicated Stream exercises with real business models
+│
+├── 🧵 MultiThreading/           ← Concurrency deep dive
+│   ├── Race Conditions, Synchronization, Deadlocks
+│   ├── sleep(), yield(), join(), wait()/notify()
+│   ├── Fork/Join Framework (P6_ForkJoinDemo - 11KB!)
+│   ├── Daemon Threads, Thread Communication
+│   └── Real-world: BankDemo, MovieTicket booking
+│
+├── 📡 Loggings/                 ← Enterprise Observability
+│   ├── DistributedTracingDemo   ← Trace propagation patterns
+│   ├── MetricsAndMonitoringDemo ← Custom metrics & health checks
+│   ├── LoggingBestPracticesDemo ← Production logging standards
+│   ├── ObservabilityOverview    ← The 3 pillars explained
+│   └── OrderService             ← Full instrumented service
+│
+├── 🧱 Oops/                     ← Object-Oriented Programming
+│   ├── abstraction/             ← Abstract classes & contracts
+│   ├── encapsulation/           ← Data hiding & validation
+│   ├── inheritance/             ← Class hierarchies & super()
+│   ├── polymorphism/            ← Overloading & Overriding
+│   └── Real-world: BankAccount, PhonePay, Transport, Student
+│
+├── 🎨 DesignPattens/            ← Design Pattern Mastery
+│   └── singleton/               ← 6 variants + defense against
+│       │                           Reflection, Serialization & Cloning attacks
+│       └── Singleton_Pattern_Interview_Guide.md  ← Full interview prep doc
+│
+├── 📚 Collection/               ← Java Collections Framework
+│   └── List, ArrayList internals, Iterator, bulk ops (13 demos)
+│
+├── 🛡️ august/                   ← Deep Dive Modules
+│   ├── ArrayList Architecture   ← 5 programs on internals & 1.5x resizing
+│   ├── Custom MyArrayList<T>    ← Built from scratch
+│   ├── Exception Handling       ← Custom exceptions, nested try, try-with-resources
+│   ├── Serialization            ← Serialize/Deserialize workflows
+│   └── Object Cloning           ← Shallow vs Deep copy
+│
+├── 📊 dsa/                      ← Data Structures & Algorithms
+│   ├── arrays/                  ← TwoSum, Kadane's, DNF, Max-Min (6 programs)
+│   ├── linkedlist/              ← Reverse, Cycle Detection, Merge, Middle (5 programs)
+│   └── strings/                 ← Palindrome, Anagram, Longest Substring (5 programs)
+│
+├── 📅 dailycode/                ← Daily Coding Consistency
+│   ├── july/                    ← 27+ days of daily practice
+│   ├── july23/                  ← Extended practice
+│   ├── month1/                  ← First month archive
+│   ├── patterns/                ← Pattern printing exercises
+│   └── problems/                ← Mixed problem sets
+│
+├── 🔄 revise/                   ← Concept Revision
+│   └── UpCasting, DownCasting, AutoBoxing, Covariant Returns,
+│       MarkerInterface, CloneableInterface
+│
+├── 🔁 loops/                    ← Core loop mastery (21 programs)
+└── 📐 array/                    ← Array manipulation (9 programs)
+```
+
+---
+
+## 🎯 Topic Breakdown & Highlights
+
+### ⚡ Java 8 & Stream API — `100+ Programs`
+
+The biggest section. Not just `filter().map().collect()` — real engineering patterns:
+
+| Category | Programs | Highlights |
+|:---|:---:|:---|
+| **Stream Pipeline** | 50+ | `filter`, `map`, `flatMap`, `sorted`, `distinct`, `peek`, `reduce` |
+| **Advanced Collectors** | 15+ | `groupingBy`, `partitioningBy`, `toMap`, `summarizingDouble`, downstream collectors |
+| **Interview Patterns** | 5 | Top-K earners, first non-repeating char, complex order aggregation |
+| **Stream + DSA** | 7 | Frequency counting, duplicates, second highest salary using Streams |
+| **Business Models** | 52 | Employee analytics, department rankings, transaction processing |
+
+### 🧵 Multi-Threading & Concurrency — `37+ Programs`
+
+Not just `Thread.start()` — real concurrency problems:
+
+- ✅ **Race Conditions** — Demonstrated & fixed with `synchronized`
+- ✅ **Deadlock Detection** — Classic 2-lock deadlock scenario
+- ✅ **Thread Communication** — `wait()` / `notify()` / `notifyAll()`
+- ✅ **Fork/Join Framework** — Parallel computation with `RecursiveTask`
+- ✅ **Real-World Scenarios** — Bank account transfers, Movie ticket booking
+- ✅ **Thread Control** — `sleep()`, `yield()`, `join()`, Daemon threads
+
+### 📡 Enterprise Observability — `5 Production Patterns`
+
+This isn't taught in most bootcamps:
+
+- 🔍 **Distributed Tracing** — Request correlation across services
+- 📊 **Metrics & Monitoring** — Custom counters, health checks
+- 📝 **Logging Best Practices** — Structured logging, log levels
+- 🏗️ **Full Instrumented Service** — `OrderService` with complete observability
+
+### 📊 DSA — `16 Core Problems, Multiple Approaches`
+
+Each problem has **brute force → optimal** progression with detailed comments:
+
+| Topic | Problems |
+|:---|:---|
+| **Arrays** | TwoSum, Max/Min, Reverse, Kadane's Algorithm, Move Zeros, Dutch National Flag |
+| **Linked List** | Reverse, Cycle Detection (Floyd's), Find Middle, Merge Sorted, Remove Nth from End |
+| **Strings** | Palindrome Check, First Non-Repeating Char, Anagram, Reverse Words, Longest Substring Without Repeating |
+
+---
+
+## 📈 Learning Roadmap & Progress
+
+```
+Phase 1 ████████████████████ 100%  ✅ Java Syntax, Loops, Arrays, Strings
+Phase 2 ████████████████████ 100%  ✅ OOP + Design Patterns (Singleton Mastery)
+Phase 3 ████████████████████ 100%  ✅ Exception Handling + Serialization + Cloning
+Phase 4 ████████████████████ 100%  ✅ Collections Framework (ArrayList Internals)
+Phase 5 ██████████████████░░  95%  🔄 Java 8 Streams + Functional Programming
+Phase 6 ████████████░░░░░░░░  60%  🔄 Multi-Threading + Observability
+Phase 7 ░░░░░░░░░░░░░░░░░░░░   0%  ⏳ Spring Boot + REST APIs + Deployment
+```
+
+| Phase | Days | Focus | Status |
+|:---|:---|:---|:---:|
+| **Phase 1** | 1 → 30 | Java Syntax, Loops, Arrays, String Basics | ✅ |
+| **Phase 2** | 31 → 60 | OOP Principles & Singleton Design Pattern (6 variants + defenses) | ✅ |
+| **Phase 3** | 61 → 90 | Exception Handling, Serialization, Marker Interfaces, Cloning | ✅ |
+| **Phase 4** | 91 → 120 | Java Collections Framework, ArrayList internals, Custom `MyArrayList<T>` | ✅ |
+| **Phase 5** | 121 → 160 | Java 8 Features, Stream API Mastery, Lambdas, Interview Patterns | 🔄 |
+| **Phase 6** | 161 → 180 | Multi-Threading, Concurrency, Enterprise Observability & Logging | 🔄 |
+| **Phase 7** | 181 → 200 | Database (SQL/NoSQL), REST APIs, Spring Boot & Deployment | ⏳ |
+
+---
+
+## 🛠️ Tech Stack
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/OOP-Design%20Patterns-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Stream%20API-Java%208+-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Multi--Threading-Concurrency-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Observability-Logging%20%7C%20Tracing%20%7C%20Metrics-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/DSA-Arrays%20%7C%20LinkedList%20%7C%20Strings-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Coming%20Soon-Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" />
+</p>
+
+---
+
+## ▶️ How to Run
+
+```bash
+# Clone the repo
+git clone https://github.com/CyberVerve07/Problemsolving.git
+cd Problemsolving
+
+# Compile all files
+javac -d out $(find src -name "*.java")
+
+# Run any program (example: Fork/Join Demo)
+java -cp out MultiThreading.P6_ForkJoinDemo
+
+# Run Stream Interview Problem
+java -cp out Java8.StreamsInterview.P1_TopEarnersPerDepartment
+
+# Run DSA Problem
+java -cp out dsa.arrays.Q1_TwoSum
+```
+
+**PowerShell users:**
 ```powershell
 javac -d out (Get-ChildItem -Recurse -Filter *.java src | Select-Object -ExpandProperty FullName)
-```
-
-### 2. Run a class
-Run any compiled class containing a `main` method (e.g. `P2_TopKWords` inside `Java8.StreamsInterview`):
-```bash
-java -cp out Java8.StreamsInterview.P2_TopKWords
+java -cp out Java8.StreamApi.Demo49
 ```
 
 ---
 
-## 📈 Learning Log & Milestones
+## 🤝 Connect
 
-| Milestone | Target | Description | Status |
-| :--- | :--- | :--- | :--- |
-| **Phase 1** | Days 1 - 30 | Java Syntax, Loops, Arrays, and String Basics | ✅ Completed |
-| **Phase 2** | Days 31 - 60 | OOP Principles (Encapsulation, Inheritance, Polymorphism, Abstraction, Design Patterns) | ✅ Completed |
-| **Phase 3** | Days 61 - 90 | Exception Handling (Try-Catch, Custom Exceptions, Throw/Throws, Nested Try) | ✅ Completed |
-| **Phase 4** | Days 91 - 120 | Java Collection Framework (`List`, `ArrayList`, `Iterator`, Sets, Maps) | ✅ Completed |
-| **Phase 5** | Days 121 - 160 | **Java 8 Features & Stream API Mastery** (Lambdas, Collectors, Grouping, DSA & Interview Patterns) | 🔄 **In Progress** |
-| **Phase 6** | Days 161 - 180 | Multi-Threading, Concurrency & Enterprise Observability / Logging | ⏳ Upcoming |
-| **Phase 7** | Days 181 - 200 | Database (SQL/NoSQL), REST APIs, Spring Boot & Deployment | ⏳ Upcoming |
+<p align="center">
+  <a href="https://github.com/CyberVerve07"><img src="https://img.shields.io/badge/GitHub-Follow%20Me-181717?style=for-the-badge&logo=github" /></a>
+</p>
 
 ---
 
-> *"Consistency is the key. Keep coding every day!"* 💻🔥
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=18&duration=3000&pause=2000&color=58A6FF&center=true&vCenter=true&random=false&width=600&lines=Consistency+beats+talent+when+talent+doesn't+show+up.;300%2B+programs+and+counting...;Not+just+DSA+%E2%80%94+Building+real+backend+skills.+%F0%9F%94%A5" alt="Footer Typing SVG" />
+</p>
 
+<p align="center">
+  ⭐ Star this repo if you found it helpful!
+</p>
