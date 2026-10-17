@@ -5,22 +5,29 @@ import java.util.logging.Logger;
 
 /**
  * ===================================================================================
- *               DISTRIBUTED TRACING & MDC (MAPPED DIAGNOSTIC CONTEXT)
+ * DISTRIBUTED TRACING & MDC (MAPPED DIAGNOSTIC CONTEXT)
  * ===================================================================================
  * 
  * 📌 PROBLEM IN MICROSERVICES ARCHITECTURE:
  * When a user clicks "Buy Now", the request goes through:
- *   [Client UI] -> [API Gateway] -> [Order Service] -> [Payment Service] -> [Inventory Service] -> [Email Service]
+ * [Client UI] -> [API Gateway] -> [Order Service] -> [Payment Service] ->
+ * [Inventory Service] -> [Email Service]
  * 
- * If the request fails, how do you find which service caused the error out of 100 microservices?
- * Searching logs by timestamp alone is impossible because thousands of requests happen simultaneously!
+ * If the request fails, how do you find which service caused the error out of
+ * 100 microservices?
+ * Searching logs by timestamp alone is impossible because thousands of requests
+ * happen simultaneously!
  * 
  * 💡 SOLUTION: DISTRIBUTED TRACING
- * 1. Trace ID: Generated at the API Gateway for the ENTIRE transaction workflow. Passed in HTTP Header: `X-Trace-Id`.
- * 2. Span ID: Represents a single unit of work inside one service (e.g. `OrderService.createOrder()`). Passed in HTTP Header: `X-Span-Id`.
- * 3. MDC (Mapped Diagnostic Context): Automatically attaches Trace ID & Span ID to EVERY log output in Java (SLF4J/Logback).
+ * 1. Trace ID: Generated at the API Gateway for the ENTIRE transaction
+ * workflow. Passed in HTTP Header: `X-Trace-Id`.
+ * 2. Span ID: Represents a single unit of work inside one service (e.g.
+ * `OrderService.createOrder()`). Passed in HTTP Header: `X-Span-Id`.
+ * 3. MDC (Mapped Diagnostic Context): Automatically attaches Trace ID & Span ID
+ * to EVERY log output in Java (SLF4J/Logback).
  * 
- * Tools used in industry: OpenTelemetry, Jaeger, Zipkin, AWS X-Ray, Datadog APM.
+ * Tools used in industry: OpenTelemetry, Jaeger, Zipkin, AWS X-Ray, Datadog
+ * APM.
  * 
  * ===================================================================================
  */
@@ -28,7 +35,8 @@ public class DistributedTracingDemo {
 
     private static final Logger log = Logger.getLogger(DistributedTracingDemo.class.getName());
 
-    // TraceContext simulation class (In real Spring Boot / Quarkus, handled by OpenTelemetry or Micrometer Tracing)
+    // TraceContext simulation class (In real Spring Boot / Quarkus, handled by
+    // OpenTelemetry or Micrometer Tracing)
     public static class TraceContext {
         private final String traceId;
         private final String spanId;
@@ -40,12 +48,20 @@ public class DistributedTracingDemo {
             this.serviceName = serviceName;
         }
 
-        public String getTraceId() { return traceId; }
-        public String getSpanId() { return spanId; }
-        public String getServiceName() { return serviceName; }
+        public String getTraceId() {
+            return traceId;
+        }
+
+        public String getSpanId() {
+            return spanId;
+        }
+
+        public String getServiceName() {
+            return serviceName;
+        }
 
         public String formatLogMessage(String message) {
-            return String.format("[%s] [TraceID: %s] [SpanID: %s] %s", 
+            return String.format("[%s] [TraceID: %s] [SpanID: %s] %s",
                     serviceName, traceId, spanId, message);
         }
     }
@@ -57,7 +73,7 @@ public class DistributedTracingDemo {
 
         // 1. User initiates checkout at API Gateway
         String globalTraceId = "tr-" + UUID.randomUUID().toString().substring(0, 8);
-        System.out.println("🌐 Incoming Request at API Gateway. Assigned Trace ID: " + globalTraceId + "\n");
+        System.out.println("Incoming Request at API Gateway. Assigned Trace ID: " + globalTraceId + "\n");
 
         // Call Service 1: API Gateway
         apiGatewayHandler(globalTraceId);
@@ -99,7 +115,7 @@ public class DistributedTracingDemo {
         TraceContext context = new TraceContext(traceId, spanId, "NOTIFICATION-SERVICE");
 
         log.info(context.formatLogMessage("5. Sending SMS and Email confirmation to customer. Done!"));
-        
+
         System.out.println("\n=========================================================");
         System.out.println(" Notice how ALL logs share the EXACT SAME Trace ID: " + traceId);
         System.out.println("   In Kibana/Loki/Datadog, searching 'TraceID=" + traceId + "'");
