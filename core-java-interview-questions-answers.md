@@ -34,7 +34,7 @@
 # 1. Java Platform and Execution
 
 ### Q1. What is Java, and why is it platform-independent?
-**Interview answer:** Java is a high-level, class-based programming language whose source code is compiled into platform-independent bytecode. A compatible JVM on each operating system executes that bytecode, so the same compiled program can run on different platforms.
+**Interview answer:** Java is a high-level, Object oriented  programming language whose source code is compiled into platform-independent bytecode. A compatible JVM on each operating system executes that bytecode, so the same compiled program can run on different platforms.
 
 **Deeper point:** Platform independence is not magic: the bytecode format and Java APIs are standardised, while each platform needs a JVM implementation. Native libraries, OS-specific file paths, and environment assumptions can still make an application platform-dependent.
 
