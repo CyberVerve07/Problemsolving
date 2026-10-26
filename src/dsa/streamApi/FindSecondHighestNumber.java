@@ -1,23 +1,22 @@
 package dsa.streamApi;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.Optional;
 
-public class Demo6 {
-    //Find the Second-highest number of the list
-
+public class FindSecondHighestNumber {
     public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(10, 84, 90, 30, 24, 4, 304, 50, 98);
 
-        List<Integer>list= Arrays.asList(10,84,90,30,24,4,304,50,98);
+        Optional<Integer> secondHighest = numbers.stream()
+                .distinct()                         // 1. Deduplicate first to reduce sort overhead
+                .sorted(Comparator.reverseOrder())  // 2. Sort remaining elements descending
+                .skip(1)                            // 3. Bypass the largest element
+                .findFirst();                       // 4. Terminal operation returning Optional
 
-        Stream<Integer> limit = list.stream()
-                .sorted(Comparator.reverseOrder())
-                .distinct()
-                .skip(1)
-                .limit(1);
-        System.out.println(limit);
-
-
+        secondHighest.ifPresentOrElse(num -> System.out.println("Second highest: " + num),
+                () -> System.out.println("List does not contain at least two distinct numbers.")
+        );
     }
 }
