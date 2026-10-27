@@ -1,0 +1,79 @@
+import java.util.concurrent.TimeUnit;
+
+/**
+ * A thread-safe Token Bucket rate limiter implementation.
+ */
+public class TokenBucket {
+    private final long capacity;
+    private final long refillTokensPerSecond;
+    
+    private double currentTokens;
+    private long lastRefillTimestampNanos;
+
+    /**
+     * @param capacity              Maximum number of tokens the bucket can hold.
+     * @param refillTokensPerSecond Number of tokens added to the bucket per second.
+     */
+    public TokenBucket(long capacity, long refillTokensPerSecond) {
+        this.capacity = capacity;
+        this.refillTokensPerSecond = refillTokensPerSecond;
+        this.currentTokens = capacity; // Start full
+        this.lastRefillTimestampNanos = System.nanoTime();
+    }
+
+    /**
+     * Attempts to consume a specified number of tokens.
+     * 
+     * @param tokens Number of tokens to consume.
+     * @return true if tokens were successfully consumed, false otherwise.
+     */
+    public synchronized boolean tryConsume(long tokens) {
+        refill();
+
+        if (currentTokens >= tokens) {
+            currentTokens -= tokens;
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Lazily refixes tokens based on the time elapsed since the last consumption attempt.
+     */
+    private void refill() {
+        long now = System.nanoTime();
+        long elapsedTimeNanos = now - lastRefillTimestampNanos;
+
+        // Convert elapsed time to seconds
+        double elapsedTimeSeconds = (double) elapsedTimeNanos / TimeUnit.SECONDS.toNanos(1);
+        
+        // Calculate new tokens to add
+        double tokensToAdd = elapsedTimeSeconds * refillTokensPerSecond;
+
+        if (tokensToAdd > 0) {
+            currentTokens = Math.min(capacity, currentTokens + tokensToAdd);
+            lastRefillTimestampNanos = now;
+        }
+    }
+
+    // Quick demonstration
+    public static void main(String[] args) throws InterruptedException {
+        // Capacity: 5 tokens, Refill Rate: 2 tokens per second
+        TokenBucket limiter = new TokenBucket(5, 2);
+
+        // Consume 5 tokens immediately (Burst capability)
+        for (int i = 1; i <= 6; i++) {
+            System.out.println("Request " + i + ": " + (limiter.tryConsume(1) ? "Allowed" : "Rejected"));
+        }
+
+        // Wait 1 second to let it refill ~2 tokens
+        System.out.println("\n--- Waiting 1 second ---\n");
+        Thread.sleep(1000);
+
+        // Try consuming again
+        for (int i = 7; i <= 10; i++) {
+            System.out.println("Request " + i + ": " + (limiter.tryConsume(1) ? "Allowed" : "Rejected"));
+        }
+    }
+}
