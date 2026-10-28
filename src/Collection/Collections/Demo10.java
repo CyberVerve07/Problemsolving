@@ -14,7 +14,7 @@ public class Demo10 {
         System.out.println(list);
 
 
-        //USe the hashset for removing the duplia=cate elements
+        //USe the hashset for removing the duplia=cat elements
 
           HashSet<Integer> remove =new HashSet<>(list);
 

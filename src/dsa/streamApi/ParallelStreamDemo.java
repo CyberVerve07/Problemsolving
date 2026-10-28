@@ -1,3 +1,5 @@
+package dsa.streamApi;
+import  java.util.logging.Logger;
 import java.util.List;
 
 public class ParallelStreamDemo {
@@ -14,5 +16,8 @@ public class ParallelStreamDemo {
         System.out.println("\nParallel Stream:");
         numbers.parallelStream().forEach(n -> System.out.println(Thread.currentThread().getName() + " -> " + n)
         );
+
+
+
     }
 }
