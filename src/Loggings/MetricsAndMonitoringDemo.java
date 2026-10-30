@@ -11,22 +11,20 @@ import java.util.concurrent.atomic.AtomicLong;
  *                    METRICS & MONITORING IN BACKEND ENGINEERING
  * ===================================================================================
  * 
- * 📌 WHAT IS MONITORING AND WHY DO WE USE METRICS?
+ *  WHAT IS MONITORING AND WHY DO WE USE METRICS?
  * - Monitoring tracks overall system health by collecting numerical measurements (metrics) over time.
  * - Dashboards (e.g., Grafana) plot these metrics to give real-time graphs of CPU, memory, traffic, and latency.
- * - Alerts (e.g., Alertmanager, PagerDuty) trigger when metrics breach thresholds (e.g. "Error rate > 5% for 5 mins").
+ * - Alerts (e.g., Alert manager, PagerDuty) trigger when metrics breach thresholds (e.g. "Error rate > 5% for 5 mins").
  * 
- * 📐 KEY MONITORING FRAMEWORKS:
+ *  KEY MONITORING FRAMEWORKS:
  * 1. RED Pattern (For Microservices & Web APIs):
  *    - Rate: Request per second (QPS / RPS).
  *    - Errors: Number or percentage of failing requests.
  *    - Duration: Time taken to serve requests (Latency / Percentiles: p50, p90, p99).
- * 
  * 2. USE Pattern (For Infrastructure & Host Resources):
  *    - Utilization: % of resource actively used (e.g., 85% CPU utilization).
  *    - Saturation: Work queue depth / backlog (e.g., DB Connection pool queue length).
  *    - Errors: Count of resource error events.
- * 
  * ===================================================================================
  */
 public class MetricsAndMonitoringDemo {
@@ -118,6 +116,7 @@ public class MetricsAndMonitoringDemo {
         System.out.println("   - Error Rate % = rate(http_requests_errors_total[5m]) / rate(http_requests_total[5m]) * 100");
         System.out.println("=========================================================");
     }
+
 
     private static long getPercentile(List<Long> latencies, int percentile) {
         if (latencies.isEmpty()) return 0;

@@ -3,11 +3,11 @@ package dsa.arrays;
 /**
  * ============================================================
  *  Q5 - MOVE ALL ZEROS TO END / SORT 0s 1s 2s (Dutch National Flag)
- *  🏢 Asked In: Microsoft, Amazon, Adobe, Snapdeal, OYO, Walmart
- *  ⭐ Difficulty: Medium
- *  📌 Topic: Two Pointer / Dutch National Flag Algorithm
+ *   Asked In: Microsoft, Amazon, Adobe, Snapdeal, OYO, Walmart
+ *   Difficulty: Medium
+ *   Topic: Two Pointer / Dutch National Flag Algorithm
  * ============================================================
- *
+
  *  PROBLEM A: Move All Zeros to End
  *  ----------------------------------
  *  Given an array, move all 0s to the end while maintaining
@@ -34,12 +34,11 @@ package dsa.arrays;
  *    i=2: 0   → skip
  *    i=3: 3   → arr[insertPos]=3, insertPos=2 → [1,3,0,3,12]
  *    i=4: 12  → arr[insertPos]=12, insertPos=3 → [1,3,12,3,12]
- *    Fill rest with 0: → [1,3,12,0,0] ✅
- *
+ *    Fill rest with 0: → [1,3,12,0,0]  *
  * ============================================================
  *  PROBLEM B: Sort Array of 0s, 1s, 2s
  *  ======================================
- *  🔥 DUTCH NATIONAL FLAG ALGORITHM (Asked heavily in MNCs!)
+ *   DUTCH NATIONAL FLAG ALGORITHM (Asked heavily in MNCs!)
  *  ----------------------------------
  *  Given array containing only 0s, 1s, and 2s, sort it in O(n).
  *
@@ -66,13 +65,13 @@ package dsa.arrays;
  *    arr[mid]=2 → swap(arr[2],arr[4]) → [0,0,1,1,2,2], high=3
  *    arr[mid]=1 → mid=3
  *    arr[mid]=1 → mid=4 → mid > high → STOP
- *    Result: [0,0,1,1,2,2] ✅
+ *    Result: [0,0,1,1,2,2]
  *
  * ============================================================
  */
 public class Q5_ZerosAndDNF {
 
-    // ✅ PROBLEM A: Move All Zeros to End - O(n) Time, O(1) Space
+    //  PROBLEM A: Move All Zeros to End - O(n) Time, O(1) Space
     public static void moveZerosToEnd(int[] arr) {
         int insertPos = 0; // Position for next non-zero element
 
@@ -91,7 +90,7 @@ public class Q5_ZerosAndDNF {
         }
     }
 
-    // ✅ PROBLEM B: Dutch National Flag - Sort 0s, 1s, 2s
+    //  PROBLEM B: Dutch National Flag - Sort 0s, 1s, 2s
     //              O(n) Time, O(1) Space - SINGLE PASS!
     public static void dutchNationalFlag(int[] arr) {
         int low = 0;
@@ -114,7 +113,7 @@ public class Q5_ZerosAndDNF {
                 int temp = arr[mid];
                 arr[mid] = arr[high];
                 arr[high] = temp;
-                high--; // ⚠️ DON'T increment mid here! Check new arr[mid]
+                high--; //  DON'T increment mid here! Check new arr[mid]
             }
         }
     }

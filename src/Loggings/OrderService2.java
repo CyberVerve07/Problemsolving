@@ -13,7 +13,7 @@ public class OrderService2 {
 
         try {
             // Order placement logic yahan aayega
-            log.info("Order placed successfully: " + orderId);
+            log.info("Order placed  /.successfully: " + orderId);
 
         } catch (Exception ex) {
             log.log(Level.SEVERE, "Order placement failed: " + orderId, ex);
