@@ -13,4 +13,7 @@ public class Demo {
         Student s = new Student(90);
         System.out.println(s.marks);
     }
+
+    public void start() {
+    }
 }
